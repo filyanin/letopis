@@ -1,6 +1,6 @@
 // Летопись героя: работа без интернета.
 // При выкладке новой версии увеличьте число в VERSION.
-const VERSION = 'letopis-v1';
+const VERSION = 'letopis-v2';
 const CORE = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 
 self.addEventListener('install', e => {
