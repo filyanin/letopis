@@ -45,6 +45,8 @@ h1,h2,h3{font-family:var(--f-display);font-weight:400;margin:0;text-wrap:balance
 .bar-in{display:flex;align-items:center;gap:8px;min-height:60px;padding-block:6px}
 .bar h1{font-size:22px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .trim{height:17px;background:conic-gradient(from -45deg at 50% 100%,var(--ink) 90deg,transparent 0) 0 0/16px 9px repeat-x,radial-gradient(circle,var(--ink) 1.7px,transparent 2.2px) 8px 11px/16px 6px repeat-x}
+.trim-wrap{position:relative}
+
 .status{font-size:12px;color:var(--muted);white-space:nowrap}
 .status.bad{color:var(--accent);font-weight:700}
 .ibtn{width:44px;height:44px;display:grid;place-items:center;border:2px solid var(--ink);background:var(--card);flex:none;padding:0}
@@ -105,6 +107,9 @@ select.inp{border:2px solid var(--ink);padding:8px 10px;background:var(--card)}
 /* stats */
 .terem{display:flex;flex-direction:column;align-items:center}
 .terem svg{width:78%;max-width:340px;display:block;color:var(--ink)}
+.terem svg.spire{width:56%;max-width:260px;margin:-2px 0 -3px}
+.terem svg.roof{margin-bottom:-3px;width:calc(78% + 24px);max-width:364px}
+.terem .stats:not(.vera){border-left-width:4px;border-right-width:4px;position:relative}
 .terem .stats{width:78%;max-width:340px;border:2px solid var(--ink);border-top:0;background:var(--card)}
 .terem .stat{border:0;border-bottom:2px solid var(--ink)}
 .terem .stat:last-child{border-bottom:0}
@@ -151,7 +156,7 @@ select.inp{border:2px solid var(--ink);padding:8px 10px;background:var(--card)}
 .danger-pips{display:inline-flex;gap:2px;vertical-align:1px;margin-left:6px}
 .danger-pips i{width:6px;height:10px;border:1px solid var(--ink)}
 .danger-pips i.on{background:var(--accent);border-color:var(--accent)}
-@media (max-width:420px){.terem svg,.terem .stats{width:100%}.terem .stats.vera{width:78%}}
+@media (max-width:420px){.terem svg,.terem .stats{width:100%}.terem .stats.vera,.terem svg.spire{width:78%}.terem svg.roof{width:calc(100% + 16px);margin-left:-8px;margin-right:-8px}}
 .stats{display:flex;flex-direction:column}
 .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 @media (max-width:330px){.grid2{grid-template-columns:minmax(0,1fr)}}
@@ -361,6 +366,66 @@ body::after{right:env(safe-area-inset-right,0px);transform:scaleX(-1)}
 .hp-ctl .hp-max{margin-left:0}
 .hp-ctl{flex-wrap:nowrap}
 .hp-ctl .hp-max{white-space:nowrap}
+.credit{margin:0;font-size:14px;color:var(--muted);font-style:italic;display:flex;align-items:baseline;gap:8px}
+.credit span{min-width:0}
+.credit::before{content:"";width:8px;height:8px;position:relative;top:-1px;background:var(--accent);transform:rotate(45deg);flex:none}
+.credit b{font-style:normal;color:var(--ink);font-family:var(--f-display);font-weight:400;font-size:16px}
+
+.bar{position:sticky}
+
+/* Сноровка: резная доска */
+.frame{position:relative}
+.frame.snor{border:3px solid var(--ink);outline:1.5px solid var(--ink);outline-offset:-9px;padding:20px 16px;background:repeating-linear-gradient(135deg,transparent 0 9px,color-mix(in srgb,var(--ink) 6%,transparent) 9px 10px),var(--sunk);box-shadow:5px 5px 0 var(--ink)}
+.fr-c{position:absolute;width:26px;height:26px;background:var(--accent);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Cg transform='translate%2813 13%29'%3E%3Cellipse cx='0' cy='-6.5' rx='2.6' ry='5' transform='rotate%280%29'/%3E%3Cellipse cx='0' cy='-6.5' rx='2.6' ry='5' transform='rotate%2845%29'/%3E%3Cellipse cx='0' cy='-6.5' rx='2.6' ry='5' transform='rotate%2890%29'/%3E%3Cellipse cx='0' cy='-6.5' rx='2.6' ry='5' transform='rotate%28135%29'/%3E%3Cellipse cx='0' cy='-6.5' rx='2.6' ry='5' transform='rotate%28180%29'/%3E%3Cellipse cx='0' cy='-6.5' rx='2.6' ry='5' transform='rotate%28225%29'/%3E%3Cellipse cx='0' cy='-6.5' rx='2.6' ry='5' transform='rotate%28270%29'/%3E%3Cellipse cx='0' cy='-6.5' rx='2.6' ry='5' transform='rotate%28315%29'/%3E%3Ccircle r='3' fill='white'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Cg transform='translate%2813 13%29'%3E%3Cellipse cx='0' cy='-6.5' rx='2.6' ry='5' transform='rotate%280%29'/%3E%3Cellipse cx='0' cy='-6.5' rx='2.6' ry='5' transform='rotate%2845%29'/%3E%3Cellipse cx='0' cy='-6.5' rx='2.6' ry='5' transform='rotate%2890%29'/%3E%3Cellipse cx='0' cy='-6.5' rx='2.6' ry='5' transform='rotate%28135%29'/%3E%3Cellipse cx='0' cy='-6.5' rx='2.6' ry='5' transform='rotate%28180%29'/%3E%3Cellipse cx='0' cy='-6.5' rx='2.6' ry='5' transform='rotate%28225%29'/%3E%3Cellipse cx='0' cy='-6.5' rx='2.6' ry='5' transform='rotate%28270%29'/%3E%3Cellipse cx='0' cy='-6.5' rx='2.6' ry='5' transform='rotate%28315%29'/%3E%3Ccircle r='3' fill='white'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat;z-index:1}
+.fr-c.tl{top:-13px;left:-13px} .fr-c.tr{top:-13px;right:-13px} .fr-c.bl{bottom:-13px;left:-13px} .fr-c.br{bottom:-13px;right:-13px}
+.frame.snor .stat{box-shadow:3px 3px 0 var(--ink)}
+/* Нрав: рушник */
+.frame.nrav{background:var(--card);border-left:2px solid var(--hair);border-right:2px solid var(--hair);padding:0 14px;display:flex;flex-direction:column;gap:14px;box-shadow:inset 0 0 0 1px var(--hair)}
+.frame.nrav .stitch{height:16px;margin:12px -14px 0;background:var(--accent);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='16' viewBox='0 0 24 16'%3E%3Cg stroke='black' stroke-width='1.4' stroke-linecap='round' fill='none'%3E%3Cpath d='M10.5 1.5 l3 3 M13.5 1.5 l-3 3' /%3E%3Cpath d='M7.5 4.5 l3 3 M10.5 4.5 l-3 3' /%3E%3Cpath d='M13.5 4.5 l3 3 M16.5 4.5 l-3 3' /%3E%3Cpath d='M4.5 7.5 l3 3 M7.5 7.5 l-3 3' /%3E%3Cpath d='M16.5 7.5 l3 3 M19.5 7.5 l-3 3' /%3E%3Cpath d='M7.5 10.5 l3 3 M10.5 10.5 l-3 3' /%3E%3Cpath d='M13.5 10.5 l3 3 M16.5 10.5 l-3 3' /%3E%3Cpath d='M10.5 12 l3 3 M13.5 12 l-3 3' /%3E%3Cpath d='M10.5 7.5 l3 3 M13.5 7.5 l-3 3' /%3E%3Cpath d='M0 7.5 l3 3 M3 7.5 l-3 3' /%3E%3Cpath d='M21 7.5 l3 3 M24 7.5 l-3 3' /%3E%3C/g%3E%3C/svg%3E") 0 0/24px 16px repeat-x;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='16' viewBox='0 0 24 16'%3E%3Cg stroke='black' stroke-width='1.4' stroke-linecap='round' fill='none'%3E%3Cpath d='M10.5 1.5 l3 3 M13.5 1.5 l-3 3' /%3E%3Cpath d='M7.5 4.5 l3 3 M10.5 4.5 l-3 3' /%3E%3Cpath d='M13.5 4.5 l3 3 M16.5 4.5 l-3 3' /%3E%3Cpath d='M4.5 7.5 l3 3 M7.5 7.5 l-3 3' /%3E%3Cpath d='M16.5 7.5 l3 3 M19.5 7.5 l-3 3' /%3E%3Cpath d='M7.5 10.5 l3 3 M10.5 10.5 l-3 3' /%3E%3Cpath d='M13.5 10.5 l3 3 M16.5 10.5 l-3 3' /%3E%3Cpath d='M10.5 12 l3 3 M13.5 12 l-3 3' /%3E%3Cpath d='M10.5 7.5 l3 3 M13.5 7.5 l-3 3' /%3E%3Cpath d='M0 7.5 l3 3 M3 7.5 l-3 3' /%3E%3Cpath d='M21 7.5 l3 3 M24 7.5 l-3 3' /%3E%3C/g%3E%3C/svg%3E") 0 0/24px 16px repeat-x;border-top:0}
+.frame.nrav .stitch+.grid2{border-top:2px solid var(--accent);padding-top:14px}
+.frame.nrav .grid2{border-bottom:2px solid var(--accent);padding-bottom:14px}
+.frame.nrav .grid2 + .stitch{margin:0 -14px}
+.frame.nrav .fringe{height:14px;margin:0 -16px -14px;background:repeating-linear-gradient(90deg,var(--muted) 0 1.5px,transparent 1.5px 6px);-webkit-mask:linear-gradient(#000,transparent);mask:linear-gradient(#000,transparent)}
+.frame.nrav .stat{background:var(--paper)}
+.frame.nrav{padding:0 10px}
+.frame.nrav .grid2{gap:8px}
+.frame.nrav .stat.v{padding:10px 4px}
+.frame.nrav .stat.v label{font-size:14.5px;overflow-wrap:normal;gap:4px}
+.frame.nrav .stat.v label .sico{width:18px;max-width:18px;height:18px}
+.frame.nrav .stitch{margin-left:-10px;margin-right:-10px}
+.frame.nrav .fringe{margin-left:-12px;margin-right:-12px}
+
+/* Вера: киот-кокошник */
+.kiot{position:relative;width:62%;max-width:280px;display:flex;flex-direction:column;align-items:stretch;filter:drop-shadow(4px 4px 0 var(--ink))}
+.kiot-top{height:30px;background:var(--ink);clip-path:path('M0 30 C0 18 12 14 24 14 C30 14 34 8 40 8 C46 8 50 0 0 0 Z');display:none}
+.kiot .stats.vera{width:100%!important;max-width:none!important;border:3px solid var(--ink)!important;border-radius:50% 50% 0 0/56px 56px 0 0;overflow:hidden;position:relative;background:var(--card)}
+.kiot .stats.vera::before{content:"";position:absolute;inset:6px;border:1.5px solid var(--accent);border-radius:50% 50% 0 0/50px 50px 0 0;pointer-events:none;opacity:.8}
+.kiot .stats.vera .stat{background:radial-gradient(ellipse at 50% 22%,color-mix(in srgb,var(--temp) 35%,transparent),transparent 60%),var(--tint)!important;padding-top:40px!important}
+.kiot .stats.vera .stat::after{content:"";position:absolute;left:50%;top:16px;width:9px;height:9px;margin-left:-4.5px;background:var(--accent);transform:rotate(45deg)}
+.kiot::after{content:"";height:10px;margin:0 -10px;background:var(--ink);clip-path:polygon(0 0,100% 0,calc(100% - 8px) 100%,8px 100%)}
+@media (max-width:420px){.kiot{width:80%}}
+/* Низ терема: сруб и подклет */
+.terem .stats:not(.vera){position:relative}
+.terem .stats:not(.vera)::before,.terem .stats:not(.vera)::after{content:"";position:absolute;top:-2px;bottom:-2px;width:12px;background:radial-gradient(circle at 6px 6px,var(--card) 0 2px,var(--ink) 2.6px 3.6px,var(--sunk) 4px 5px,var(--ink) 5.4px 6px,transparent 6.4px) 0 0/12px 12px repeat-y}
+.terem .stats:not(.vera)::before{left:-15px}
+.terem .stats:not(.vera)::after{right:-15px}
+.podklet{position:relative;width:calc(78% + 24px);max-width:364px;height:26px;border:2.5px solid var(--ink);border-top-width:4px;background:
+ linear-gradient(var(--ink),var(--ink)) 0 50%/100% 1.5px no-repeat,
+ repeating-linear-gradient(90deg,transparent 0 22px,var(--ink) 22px 23.5px) 0 0/100% 50% no-repeat,
+ repeating-linear-gradient(90deg,transparent 0 11px,var(--ink) 11px 12.5px,transparent 12.5px 22px) 0 100%/100% 50% no-repeat,
+ var(--sunk);box-shadow:4px 4px 0 var(--ink)}
+.podklet .stair{position:absolute;left:50%;bottom:-14px;width:84px;margin-left:-42px;height:36px;background:
+ linear-gradient(var(--ink),var(--ink)) 0 33%/100% 2px no-repeat,
+ linear-gradient(var(--ink),var(--ink)) 0 66%/100% 2px no-repeat,
+ var(--card);border:2.5px solid var(--ink);clip-path:polygon(14% 0,86% 0,100% 100%,0 100%)}
+.terem .stats + .podklet{margin-top:-2px}
+.terem{padding-bottom:16px}
+@media (max-width:420px){.podklet{width:calc(100% + 16px);margin-left:-8px;margin-right:-8px}}
+
+/* Геральдическая кайма главной: кремлёвские зубцы */
+.herald{position:relative;height:32px;margin-top:4px;background:var(--ink);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='32' viewBox='0 0 40 32'%3E%3Cpath d='M0 24 H40 V27 H0 Z'/%3E%3Cpath d='M0 29.5 H40 V32 H0 Z'/%3E%3Cpath d='M3 23 V9 L0 2 H7 L10 7 L13 2 H20 L17 9 V23 Z'/%3E%3Cpath d='M6 14 H14 V18 H6 Z' fill='white' opacity='0'/%3E%3C/svg%3E") 0 0/40px 32px repeat-x;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='32' viewBox='0 0 40 32'%3E%3Cpath d='M0 24 H40 V27 H0 Z'/%3E%3Cpath d='M0 29.5 H40 V32 H0 Z'/%3E%3Cpath d='M3 23 V9 L0 2 H7 L10 7 L13 2 H20 L17 9 V23 Z'/%3E%3Cpath d='M6 14 H14 V18 H6 Z' fill='white' opacity='0'/%3E%3C/svg%3E") 0 0/40px 32px repeat-x}
+.herald-wrap{position:relative}
+.herald-loz{position:absolute;left:0;right:0;bottom:0;height:32px;background:var(--accent);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='32' viewBox='0 0 40 32'%3E%3Cpath d='M30 6 L34 12.5 L30 19 L26 12.5 Z'/%3E%3Cpath d='M10 13 L12 15.5 L10 18 L8 15.5 Z'/%3E%3C/svg%3E") 0 0/40px 32px repeat-x;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='32' viewBox='0 0 40 32'%3E%3Cpath d='M30 6 L34 12.5 L30 19 L26 12.5 Z'/%3E%3Cpath d='M10 13 L12 15.5 L10 18 L8 15.5 Z'/%3E%3C/svg%3E") 0 0/40px 32px repeat-x}
 </style>
 </head>
 <body>
@@ -637,9 +702,9 @@ function render(){
 }
 function renderHome(){
  var h='<header class="bar"><div class="gut"><div class="col bar-in"><h1>Летопись героя</h1>'+
-  '<span id="status" class="status'+(statusBad?' bad':'')+'">'+esc(status)+'</span></div></div><div class="trim"></div></header>';
+  '<span id="status" class="status'+(statusBad?' bad':'')+'">'+esc(status)+'</span></div></div><div class="herald-wrap" aria-hidden="true"><div class="herald"></div><i class="herald-loz"></i></div></header>';
  h+='<main class="gut" style="padding-bottom:calc(32px + env(safe-area-inset-bottom,0px))"><div class="col stack">';
- h+='<div class="sec"><h2 class="home-title">Твои герои</h2><div class="orn" aria-hidden="true"><svg viewBox="0 0 46 16"><path d="M23 1 L30 8 L23 15 L16 8 Z" fill="var(--accent)"/><circle cx="8" cy="8" r="2.5" fill="currentColor"/><circle cx="38" cy="8" r="2.5" fill="currentColor"/></svg></div><p class="hint">Герои хранятся только на этом устройстве. Чтобы перенести героя или сберечь его, скачай файл .save.</p></div>';
+ h+='<div class="sec"><h2 class="home-title">Твои герои</h2><p class="credit"><span>Сеттинг создан командой <b>«Грядут Приключения»</b></span></p><div class="orn" aria-hidden="true"><svg viewBox="0 0 46 16"><path d="M23 1 L30 8 L23 15 L16 8 Z" fill="var(--accent)"/><circle cx="8" cy="8" r="2.5" fill="currentColor"/><circle cx="38" cy="8" r="2.5" fill="currentColor"/></svg></div><p class="hint">Герои хранятся только на этом устройстве. Чтобы перенести героя или сберечь его, скачай файл .save.</p></div>';
  if(!storageOK) h+='<div class="warn">Этот браузер не даёт сохранять данные. Всё, что вы введёте, пропадёт после закрытия страницы — скачайте .save перед уходом.</div>';
  h+='<div class="row-btns"><button class="btn pri" data-act="new">'+svg(IC.plus)+'Новый герой</button><button class="btn" data-act="import">'+svg(IC.open)+'Открыть .save</button></div>';
  if(!store.chars.length) h+='<div class="empty">Пока нет ни одного героя. Создайте нового или откройте файл .save.</div>';
@@ -747,18 +812,18 @@ function tabStati(c){
   '<div class="hp-ctl"><button class="btn sm" data-act="heal" style="border-color:var(--paper);background:transparent;color:var(--paper)">Исцелить</button>'+
   '<label class="hp-max">Предел <input id="s-hpmax" data-f="health.max" data-type="num" type="number" inputmode="numeric" value="'+fmt(c.health.max)+'"></label></div></section>';
  h+='<div class="sec">'+secHead('u-terem','Терем души')+'<div class="terem">'+
-  '<div class="stats vera">'+statCard(c,'vera','Вера')+'</div>'+
-  '<svg viewBox="0 0 300 26" aria-hidden="true" style="margin-bottom:-2px"><path d="M150 0 V26 M140 8 H160" stroke="currentColor" stroke-width="4" fill="none"/><path d="M143 17 L150 11 L157 17 L150 23 Z" fill="currentColor"/></svg>'+
-  '<svg viewBox="0 0 300 64" aria-hidden="true"><path d="M6 62 L150 6 L294 62" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M40 62 L150 20 L260 62" fill="none" stroke="currentColor" stroke-width="2"/><path d="M150 6 V0" stroke="currentColor" stroke-width="4"/></svg>'+
+  '<div class="kiot"><div class="kiot-top" aria-hidden="true"></div><div class="stats vera">'+statCard(c,'vera','Вера')+'</div></div>'+
+  '<svg class="spire" viewBox="0 0 300 40" aria-hidden="true"><path d="M150 0 V9" stroke="currentColor" stroke-width="3"/><path d="M150 9 C138 17 138 27 150 31 C162 27 162 17 150 9 Z" style="fill:var(--accent)" stroke="currentColor" stroke-width="2"/><path d="M150 13 C145 18 145 25 150 28" fill="none" stroke="currentColor" stroke-width="1" opacity=".6"/><path d="M150 31 V40 M142 36 H158" stroke="currentColor" stroke-width="3"/></svg>'+
+  '<svg class="roof" viewBox="0 0 300 150" aria-hidden="true"><defs><pattern id="shingle" width="10" height="7" patternUnits="userSpaceOnUse"><path d="M0 7 A5 5 0 0 1 10 7" fill="none" stroke="currentColor" stroke-width="1" opacity=".55"/></pattern></defs><path d="M30 148 L150 32 L270 148 Z" style="fill:var(--card)"/><path d="M2 148 L150 10 L298 148 L270 148 L150 32 L30 148 Z" fill="url(#shingle)"/><path d="M2 148 L150 10 L298 148" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linejoin="round"/><path d="M30 148 L150 32 L270 148" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M150.0 32.0 A10.4 12.0 0 0 0 135.0 46.5 A10.4 12.0 0 0 0 120.0 61.0 A10.4 12.0 0 0 0 105.0 75.5 A10.4 12.0 0 0 0 90.0 90.0 A10.4 12.0 0 0 0 75.0 104.5 A10.4 12.0 0 0 0 60.0 119.0 A10.4 12.0 0 0 0 45.0 133.5 A10.4 12.0 0 0 0 30.0 148.0 " fill="none" stroke="currentColor" stroke-width="2"/><path d="M150.0 32.0 A10.4 12.0 0 0 1 165.0 46.5 A10.4 12.0 0 0 1 180.0 61.0 A10.4 12.0 0 0 1 195.0 75.5 A10.4 12.0 0 0 1 210.0 90.0 A10.4 12.0 0 0 1 225.0 104.5 A10.4 12.0 0 0 1 240.0 119.0 A10.4 12.0 0 0 1 255.0 133.5 A10.4 12.0 0 0 1 270.0 148.0 " fill="none" stroke="currentColor" stroke-width="2"/><circle cx="146.7" cy="44.1" r="1.8" fill="currentColor"/><circle cx="131.7" cy="58.6" r="1.8" fill="currentColor"/><circle cx="116.7" cy="73.2" r="1.8" fill="currentColor"/><circle cx="101.7" cy="87.7" r="1.8" fill="currentColor"/><circle cx="86.7" cy="102.2" r="1.8" fill="currentColor"/><circle cx="71.7" cy="116.7" r="1.8" fill="currentColor"/><circle cx="56.7" cy="131.2" r="1.8" fill="currentColor"/><circle cx="41.7" cy="145.7" r="1.8" fill="currentColor"/><circle cx="153.3" cy="44.1" r="1.8" fill="currentColor"/><circle cx="168.3" cy="58.6" r="1.8" fill="currentColor"/><circle cx="183.3" cy="73.2" r="1.8" fill="currentColor"/><circle cx="198.3" cy="87.7" r="1.8" fill="currentColor"/><circle cx="213.3" cy="102.2" r="1.8" fill="currentColor"/><circle cx="228.3" cy="116.7" r="1.8" fill="currentColor"/><circle cx="243.3" cy="131.2" r="1.8" fill="currentColor"/><circle cx="258.3" cy="145.7" r="1.8" fill="currentColor"/><path d="M146 32 H154 V58 L158 62 L150 72 L142 62 L146 58 Z" style="fill:var(--card)" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="150" cy="64" r="2.5" style="fill:var(--accent)"/><circle cx="150" cy="112" r="22" fill="none" style="stroke:var(--accent)" stroke-width="2.5"/><circle cx="150" cy="112" r="27" fill="none" style="stroke:var(--accent)" stroke-width="1.2" opacity=".7"/><path d="M155.5 114.3 Q160.3 121.7 170.3 120.4 Q164.1 112.4 155.5 114.3 Z" style="fill:var(--accent)" opacity=".85"/><path d="M152.3 117.5 Q150.4 126.1 158.4 132.3 Q159.7 122.3 152.3 117.5 Z" style="fill:var(--accent)" opacity=".85"/><path d="M147.7 117.5 Q140.3 122.3 141.6 132.3 Q149.6 126.1 147.7 117.5 Z" style="fill:var(--accent)" opacity=".85"/><path d="M144.5 114.3 Q135.9 112.4 129.7 120.4 Q139.7 121.7 144.5 114.3 Z" style="fill:var(--accent)" opacity=".85"/><path d="M144.5 109.7 Q139.7 102.3 129.7 103.6 Q135.9 111.6 144.5 109.7 Z" style="fill:var(--accent)" opacity=".85"/><path d="M147.7 106.5 Q149.6 97.9 141.6 91.7 Q140.3 101.7 147.7 106.5 Z" style="fill:var(--accent)" opacity=".85"/><path d="M152.3 106.5 Q159.7 101.7 158.4 91.7 Q150.4 97.9 152.3 106.5 Z" style="fill:var(--accent)" opacity=".85"/><path d="M155.5 109.7 Q164.1 111.6 170.3 103.6 Q160.3 102.3 155.5 109.7 Z" style="fill:var(--accent)" opacity=".85"/><circle cx="150" cy="112" r="4" style="fill:var(--accent)"/><path d="M0 148 H34 M266 148 H300" stroke="currentColor" stroke-width="4"/></svg>'+
   '<div class="stats">';
  TEREM.forEach(function(f){h+=statCard(c,f[0],f[1])});
- h+='</div></div></div></div>';
- h+='<div class="sec">'+secHead('u-snor','Сноровка')+'<div class="grid3">';
+ h+='</div><div class="podklet" aria-hidden="true"><span class="stair"></span></div></div></div></div>';
+ h+='<div class="sec">'+secHead('u-snor','Сноровка')+'<div class="frame snor"><span class="fr-c tl"></span><span class="fr-c tr"></span><span class="fr-c bl"></span><span class="fr-c br"></span><div class="grid3">';
  SNOR.forEach(function(f){h+=statCard(c,f[0],f[1])});
- h+='</div></div></div>';
- h+='<div class="sec">'+secHead('u-nrav','Нрав')+'<div class="grid2">';
+ h+='</div></div></div></div>';
+ h+='<div class="sec">'+secHead('u-nrav','Нрав')+'<div class="frame nrav"><div class="stitch" aria-hidden="true"></div><div class="grid2">';
  NRAV.forEach(function(f){h+=statCard(c,f[0],f[1])});
- h+='</div></div></div>';
+ h+='</div><div class="stitch" aria-hidden="true"></div><div class="fringe" aria-hidden="true"></div></div></div></div>';
  return h;
 }
 function secHead(key,title,count,big){
@@ -870,7 +935,7 @@ function mapSvg(c){
 function tabMir(c){
  var sel=mapSel||c.where||'desyat';
  var h='<section class="sec">'+secHead('mir-map','Карта Тверди')+
-  '<p class="hint">Мать-река делит Твердь на четыре царства. Нажмите на землю, чтобы открыть заметки о ней или отметить, где сейчас герой.</p>'+
+  '<p class="credit"><span>Мир Тверди, Терема и Подпола — сеттинг команды <b>«Грядут Приключения»</b></span></p><p class="hint">Мать-река делит Твердь на четыре царства. Нажмите на землю, чтобы открыть заметки о ней или отметить, где сейчас герой.</p>'+
   '<div class="map">'+mapSvg(c)+'</div>'+
   '<div class="box realm-info"><div class="realm-head"><h3>'+realmName(sel)+'</h3>'+
   (c.where===sel?'<span class="here">'+svg('<path d="M6 21 V3 L19 7.5 L6 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>')+'Герой здесь</span>':'<button class="btn sm" data-act="setWhere" data-k="'+sel+'">Герой сейчас здесь</button>')+'</div>'+
@@ -887,7 +952,7 @@ function tabSpravka(){
  FOES.forEach(function(f){h+='<div class="ref-item"><div><b>'+f[1]+'</b>'+dangerPips(f[0])+'<p>'+f[2]+'</p></div></div>'});
  h+='</div></details><details class="ref"><summary>Боги-персты</summary><div class="ref-body">';
  GODS.forEach(function(g){h+='<div class="ref-item">'+svg(g[2],'0 0 32 32')+'<div><b>'+g[0]+'</b><p>'+g[1]+'</p></div></div>'});
- h+='</div></details><details class="ref"><summary>Три мира</summary><div class="ref-body">';
+ h+='</div></details><details class="ref"><summary>Три мира</summary><div class="ref-body"><p class="credit" style="margin:0"><span>Сеттинг создан командой <b>«Грядут Приключения»</b></span></p>';
  WORLDS.forEach(function(w){h+='<div class="ref-item"><div><b>'+w[0]+'</b><p>'+w[1]+'</p></div></div>'});
  h+='</div></details>';
  return h;
