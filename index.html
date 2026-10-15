@@ -1236,6 +1236,321 @@ form[data-plform] .inp{flex:1 1 160px}
 .fr-spd b{font-family:var(--f-display);font-weight:400;font-size:19px;font-variant-numeric:tabular-nums}
 .fight-bar .btn .sico{width:16px;height:16px}
 .tok-h .sico{width:26px;height:26px}
+
+/* мини-квесты */
+.st-view{margin:0 0 12px}
+.st-view span{display:inline-flex;align-items:center;gap:6px}
+.st-view svg{width:18px;height:18px}
+.mq-list{display:flex;flex-direction:column;gap:12px;margin-bottom:12px}
+.mq-card{border:2px solid var(--ink);background:var(--card);box-shadow:4px 4px 0 var(--mir);padding:10px 12px;display:flex;flex-direction:column;gap:8px}
+.mq-top{display:flex;gap:10px;align-items:flex-start}
+.mq-ic{width:36px;height:36px;flex:none;display:grid;place-items:center;border:2px solid var(--mir);color:var(--mir);background:var(--mir-bg)}
+.mq-ic svg{width:22px;height:22px}
+.mq-ttl{display:flex;flex-direction:column;gap:2px;min-width:0}
+.mq-ttl b{font-family:var(--f-display);font-weight:400;font-size:19px;line-height:1.15}
+.mq-ttl small{color:var(--muted);font-size:13px}
+.mq-hook{margin:0;font-size:14.5px}
+.mq-card .row-btns{display:flex;flex-wrap:wrap;gap:8px}
+.mq-card .row-btns .btn{flex:1 1 auto;width:auto}
+.mq-ttl .chip{align-self:flex-start}
+.mq-steps{margin:0;padding:0 0 0 4px;list-style:none;counter-reset:mq;display:flex;flex-direction:column;gap:4px;border-left:2px dashed var(--mir)}
+.mq-steps li{counter-increment:mq;display:flex;align-items:center;gap:8px;padding-left:10px;font-size:14.5px}
+.mq-steps li::before{content:counter(mq);font-size:11px;font-weight:700;width:18px;height:18px;border-radius:50%;background:var(--mir);color:var(--card);display:grid;place-items:center;margin-left:-20px;flex:none}
+.mq-steps .sg-att{position:static;display:inline-flex;gap:3px}
+.mq-steps .sg-att svg{width:15px;height:15px;color:var(--muted)}
+.mq-ed{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-direction:column;gap:10px}
+.mq-st{border:1.5px solid var(--hair);border-left:4px solid var(--mir);background:var(--paper);padding:8px;display:flex;flex-direction:column;gap:6px}
+.mq-st-h{display:flex;align-items:center;gap:6px}
+.mq-st-h>i{font-style:normal;font-weight:700;width:24px;height:24px;border-radius:50%;background:var(--mir);color:var(--card);display:grid;place-items:center;flex:none;font-size:13px}
+.mq-st-h .inp{flex:1;min-width:0}
+.mq-att{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.mq-chip{display:inline-flex;align-items:center;gap:4px;border:1.5px solid var(--hair);background:var(--card);padding:2px 2px 2px 6px;font-size:13px}
+.mq-chip svg{width:15px;height:15px;color:var(--muted)}
+.mq-chip button{border:0;background:none;width:26px;height:26px;font-size:16px;color:var(--muted)}
+.sg-node.mq{border-color:var(--mir);border-style:dashed;box-shadow:3px 3px 0 var(--mir);background:color-mix(in srgb,var(--mir-bg) 60%,var(--card))}
+.sg-mq{position:absolute;left:-11px;top:-11px;width:22px;height:22px;border-radius:50%;background:var(--mir);color:var(--card);display:grid;place-items:center;font-style:normal}
+.sg-mq svg{width:14px;height:14px}
+.sp-mq svg{color:var(--mir)}
+.sp-card.mq{border-color:var(--mir)}
+.mq-note{display:flex;flex-wrap:wrap;align-items:center;gap:8px;border:1.5px dashed var(--mir);background:var(--mir-bg);padding:8px 10px;font-size:14px}
+.mq-note>svg{width:20px;height:20px;color:var(--mir)}
+.mq-note span{flex:1;min-width:140px}
+.chk{display:flex;align-items:center;gap:8px;font-size:15px}
+.chk input{width:20px;height:20px;accent-color:var(--accent)}
+.sp-mqtag{margin:0 0 4px;display:flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--mir);letter-spacing:.04em;text-transform:uppercase}
+.sp-mqtag svg{width:16px;height:16px}
+
+/* поиск, выбор сцены, скрытое */
+.npick{max-height:44vh;overflow:auto}
+.npick label small{display:block;font-size:12.5px;color:var(--muted);font-weight:400}
+.npick .np-x b{color:var(--muted)}
+.np-none{padding:10px 12px;margin:0}
+.mq-list .np-none{border:1.5px dashed var(--hair);text-align:center}
+.hd-box{border:2px dashed var(--accent);background:color-mix(in srgb,var(--accent) 5%,var(--card));padding:8px 10px;display:flex;flex-direction:column;gap:6px;margin:10px 0}
+.hd-box.empty-hd{border-color:var(--hair);background:transparent}
+.hd-h{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.hd-h b{display:flex;align-items:center;gap:6px;font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--accent)}
+.hd-h svg{width:18px;height:18px}
+.hd-list{display:flex;flex-direction:column;gap:4px}
+.hd-row{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--hair);padding:5px 6px}
+.hd-row.done{opacity:.75}
+.hd-ic{width:34px;height:34px;flex:none;display:grid;place-items:center;border:1px solid var(--hair)}
+.hd-ic svg{width:24px;height:24px}
+.hd-mk{width:24px;height:24px;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);font-weight:400;font-family:var(--f-display)}
+.hd-t{flex:1;min-width:0;display:flex;flex-direction:column}
+.hd-t b{font-size:15px}
+.hd-t small{font-size:12.5px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fogq .hd-box{margin:8px 0 0}
+
+/* экран игроков */
+.scr-on{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;border:2px solid var(--good);background:color-mix(in srgb,var(--good) 10%,var(--card));padding:5px 8px;font-weight:700;color:var(--good);flex:1 1 100%}
+.scr-on.sm{flex:none}
+.scr-on .btn{flex:none!important}
+.scr-dot{width:10px;height:10px;border-radius:50%;background:var(--good);box-shadow:0 0 0 0 var(--good);animation:scrPulse 1.6s infinite}
+@keyframes scrPulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--good) 60%,transparent)}100%{box-shadow:0 0 0 10px transparent}}
+.scr-body{background:#0e0d0c;overflow:hidden}
+.scr-body .app,.scr-body #app{max-width:none;margin:0;padding:0}
+.scr{position:fixed;inset:0;display:flex;flex-direction:column;background:#0e0d0c;color:#eee;padding:14px 18px;gap:10px}
+.scr-top{display:flex;justify-content:space-between;align-items:center;min-height:40px;transition:opacity .4s}
+.scr-top b{font-family:var(--f-display);font-weight:400;font-size:clamp(22px,3vw,40px);letter-spacing:.02em}
+.scr-fs{display:inline-flex;align-items:center;gap:8px;background:#222;color:#eee;border:1.5px solid #555;padding:8px 14px;font-size:16px;font-weight:700;transition:opacity .4s}
+.scr-fs svg{width:20px;height:20px}
+.scr.calm{cursor:none}
+.scr.calm .scr-fs{opacity:0;pointer-events:none}
+.scr-stage{flex:1;min-height:0;display:flex;gap:18px;align-items:center;justify-content:center}
+.scr-map{height:100%;width:100%;display:grid;place-items:center;min-width:0}
+.scr-map.with-leg{width:auto;flex:1}
+.scr-map .pmap{width:min(100%,calc((100vh - 90px) * var(--ar)));border:3px solid #444;background:var(--paper);max-height:100%}
+.scr-leg{flex:0 0 min(30vw,380px);max-height:100%;overflow:auto;margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:clamp(15px,1.4vw,22px);line-height:1.3}
+.scr-leg li{display:flex;gap:10px;align-items:flex-start}
+.scr-leg b{flex:none;width:1.8em;height:1.8em;display:grid;place-items:center;background:#A8281C;color:#fff;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);font-family:var(--f-display);font-weight:400}
+.scr-idle{text-align:center;display:flex;flex-direction:column;align-items:center;gap:18px;color:#d9d0c0}
+.scr-idle h1{font-family:var(--f-display);font-weight:400;font-size:clamp(40px,7vw,96px);margin:0;color:#f3ead8}
+.scr-idle p{margin:0;font-size:clamp(16px,1.8vw,24px);opacity:.75}
+.scr-orn{width:min(60vw,560px);height:18px;background:repeating-linear-gradient(90deg,#A8281C 0 10px,transparent 10px 22px,#d9d0c0 22px 26px,transparent 26px 38px);opacity:.7}
+.scr-in{animation:scrIn .6s ease-out}
+@keyframes scrIn{from{opacity:0;transform:scale(.985)}to{opacity:1;transform:none}}
+.scr-rev{animation:scrRev 1.2s ease-out}
+@keyframes scrRev{0%{filter:brightness(.35) blur(2px)}100%{filter:none}}
+.scr-chg{animation:scrChg 1.4s ease-out}
+@keyframes scrChg{0%{box-shadow:inset 0 0 0 3px #E9BE45}100%{box-shadow:inset 0 0 0 0 transparent}}
+@media (prefers-reduced-motion:reduce){.scr-in,.scr-rev,.scr-chg,.scr-dot{animation:none}}
+
+/* справка мастера */
+.guide{position:fixed;inset:0;z-index:80;background:var(--paper);overflow:auto;-webkit-overflow-scrolling:touch}
+body.gd-lock{overflow:hidden}
+.gd-col{max-width:760px;margin:0 auto;padding:12px 16px calc(40px + env(safe-area-inset-bottom,0px))}
+.gd-top{display:flex;align-items:center;gap:8px;position:sticky;top:0;background:var(--paper);padding:6px 0;z-index:1;border-bottom:2px solid var(--ink)}
+.gd-top h2{margin:0;font-family:var(--f-display);font-weight:400;font-size:26px}
+.gd-srch{margin:12px 0 10px}
+.gd-toc{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.gd-toc button{border:1.5px solid var(--ink);background:var(--card);padding:6px 10px;font-size:13.5px;font-weight:700;min-height:36px}
+.gd-toc button:disabled{opacity:.35}
+.gd-body{display:flex;flex-direction:column;gap:10px}
+.gd-sec{border:2px solid var(--ink);background:var(--card);box-shadow:3px 3px 0 var(--ink);scroll-margin-top:60px}
+.gd-sec summary{cursor:pointer;padding:12px 14px;font-family:var(--f-display);font-size:21px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.gd-sec summary::-webkit-details-marker{display:none}
+.gd-sec summary::after{content:"";width:10px;height:10px;border-right:2.4px solid currentColor;border-bottom:2.4px solid currentColor;transform:rotate(45deg);margin-right:4px;flex:none}
+.gd-sec[open] summary::after{transform:rotate(-135deg)}
+.gd-sec[open] summary{border-bottom:1.5px solid var(--hair)}
+.gd-in{padding:4px 14px 14px;font-size:15.5px;line-height:1.5}
+.gd-in h4{margin:14px 0 4px;font-size:13px;letter-spacing:.07em;text-transform:uppercase;color:var(--accent)}
+.gd-in p{margin:8px 0}
+.gd-in ul{margin:4px 0;padding-left:20px;display:flex;flex-direction:column;gap:5px}
+.gd-if{margin-top:12px;border-left:4px solid var(--ill);background:color-mix(in srgb,var(--ill) 9%,var(--card));padding:8px 12px}
+.gd-if>b{display:block;font-size:13px;letter-spacing:.07em;text-transform:uppercase;color:var(--ill)}
+.gd-help-link{display:inline-flex;align-items:center;gap:6px}
+
+/* союзники в бестиарии */
+.bside-f{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.bside-f small{opacity:.7;font-weight:400;margin-left:4px}
+.bcard.side-svoi{box-shadow:4px 4px 0 var(--good);border-color:var(--good)}
+.bcard.side-inoe{box-shadow:4px 4px 0 var(--mg-morok)}
+.sp-att.ally{border-left-color:var(--good)}
+
+.fr-ini .tok-h svg,.fr-ini svg{width:16px;height:16px;color:var(--accent)}
+.fr-ini.empty{border-style:dashed}
+.fr-ini.empty b{color:var(--muted)}
+.ini-list{display:flex;flex-direction:column;border:2px solid var(--ink)}
+.ini-row{display:flex;align-items:center;gap:10px;padding:8px 10px;border-bottom:1px solid var(--hair);background:var(--card);border-left:4px solid var(--muted)}
+.ini-row:last-child{border-bottom:0}
+.ini-row.side-vrag{border-left-color:var(--rat)} .ini-row.side-svoi{border-left-color:var(--good)}
+.ini-row span{flex:1;min-width:0;font-weight:700;display:flex;flex-direction:column}
+.ini-row small{font-weight:400;font-size:12.5px;color:var(--muted)}
+.ini-row .inp{width:76px;flex:none;text-align:center;font-size:20px}
+.ini-one{width:90px;text-align:center;font-size:24px}
+
+/* бой на экране игроков */
+.sf-list{list-style:none;margin:0;padding:0;width:min(100%,1400px);max-height:100%;overflow:auto;display:grid;grid-template-columns:1fr;gap:10px;align-content:start}
+.sf-list.two{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-auto-flow:column}
+.sf-row{display:flex;align-items:center;gap:14px;background:#1c1a17;border:2px solid #3a3631;border-left:8px solid #6b655d;padding:10px 16px;color:#eee;transition:background .3s,border-color .3s}
+.sf-row.side-vrag{border-left-color:#C0392B} .sf-row.side-svoi{border-left-color:#3E8E4E} .sf-row.side-inoe{border-left-color:#4A6FA5}
+.sf-row.cur{background:#2c2620;border-color:#E9BE45;border-left-width:8px;box-shadow:0 0 0 3px rgba(233,190,69,.35)}
+.sf-row.down{opacity:.45}
+.sf-n{font-family:var(--f-display);font-size:clamp(20px,2vw,30px);color:#8d857a;width:1.6em;text-align:center;flex:none}
+.sf-ic{width:clamp(30px,3vw,46px);height:clamp(30px,3vw,46px);flex:none;color:#d9d0c0}
+.sf-ic svg{width:100%;height:100%}
+.sf-main{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
+.sf-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.sf-name{font-family:var(--f-display);font-weight:400;font-size:clamp(20px,2.2vw,34px);line-height:1.1}
+.sf-side{font-size:clamp(11px,1vw,15px);letter-spacing:.08em;text-transform:uppercase;color:#a49c90}
+.sf-turn{background:#E9BE45;color:#1a1408;font-weight:700;padding:2px 10px;font-size:clamp(12px,1.1vw,16px);text-transform:uppercase;letter-spacing:.06em}
+.sf-down{border:1.5px solid #C0392B;color:#ff8d78;padding:1px 8px;font-size:clamp(12px,1.1vw,16px);text-transform:uppercase}
+.sf-hp{display:flex;align-items:center;gap:12px}
+.sf-bar{flex:1;max-width:520px;height:clamp(10px,1vw,16px);background:#3a3631;position:relative;overflow:hidden}
+.sf-bar i{position:absolute;inset:0 auto 0 0;background:#C0392B;transition:width .6s ease}
+.sf-row.side-svoi .sf-bar i{background:#3E8E4E} .sf-row.side-inoe .sf-bar i{background:#4A6FA5}
+.sf-hpn{font-size:clamp(16px,1.5vw,24px);color:#cfc6b8;white-space:nowrap}
+.sf-hpn b{font-family:var(--f-display);font-weight:400;font-size:1.35em;color:#fff}
+.sf-tok{display:flex;flex-wrap:wrap;gap:6px}
+.sf-tok .tok{background:#26231f;color:#eee;font-size:clamp(13px,1.1vw,17px);min-height:auto;padding:3px 10px 3px 6px}
+.sf-tok .tok.tone-bad{--tc:#e0604f} .sf-tok .tok.tone-warn{--tc:#d9a066} .sf-tok .tok.tone-magic{--tc:#c79be0} .sf-tok .tok.tone-good{--tc:#7FC08B} .sf-tok .tok.tone-neu{--tc:#93B2EC}
+.sf-tok .tok b{color:#111}
+.sf-spd{flex:none;display:flex;flex-direction:column;align-items:center;min-width:clamp(64px,6vw,96px);color:#a49c90}
+.sf-spd .sico{width:clamp(16px,1.4vw,22px);height:clamp(16px,1.4vw,22px)}
+.sf-spd small{font-size:clamp(10px,.9vw,13px);letter-spacing:.06em;text-transform:uppercase}
+.sf-spd b{font-family:var(--f-display);font-weight:400;font-size:clamp(24px,2.4vw,40px);color:#fff;line-height:1}
+@media (max-width:900px){.sf-list.two{grid-template-columns:1fr}}
+
+/* состояние здоровья */
+.hpst{--hc:#3E8E4E;display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--hc);letter-spacing:.03em;white-space:nowrap}
+.hpst i{display:inline-flex;gap:2px;font-style:normal}
+.hpst i b,.hpst i u b{display:block;width:5px;height:12px;background:var(--hc);transform:skewX(-14deg)}
+.hpst i u{display:inline-flex;gap:2px;text-decoration:none}
+.hpst i u b{background:color-mix(in srgb,var(--hc) 22%,transparent)}
+.hpst.sm{font-size:12.5px;flex:1 1 100%}
+.hpst.sm i b{width:4px;height:9px}
+.hpst.big{font-family:var(--f-display);font-weight:400;font-size:clamp(18px,1.8vw,30px);letter-spacing:.02em;padding:2px 14px 2px 10px;border:2px solid var(--hc);background:color-mix(in srgb,var(--hc) 16%,#1c1a17);color:#fff;text-shadow:0 1px 0 rgba(0,0,0,.4);gap:12px}
+.hpst.big i b{width:clamp(5px,.5vw,8px);height:clamp(12px,1.2vw,20px)}
+.hpst.big i u b{background:rgba(255,255,255,.12)}
+.hpst.big.crit{animation:hpCrit 1.4s ease-in-out infinite}
+@keyframes hpCrit{50%{box-shadow:0 0 0 4px color-mix(in srgb,var(--hc) 55%,transparent)}}
+.sf-hp{flex-wrap:wrap}
+/* плотная раскладка, чтобы всё влезло без прокрутки */
+.sf-list.c3{grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);grid-auto-flow:column}
+.sf-list.d1{gap:6px}.sf-list.d1 .sf-row{padding:6px 12px;gap:10px}.sf-list.d1 .sf-main{gap:4px}
+.sf-list.d2 .sf-name{font-size:clamp(16px,1.6vw,24px)}.sf-list.d2 .hpst.big{font-size:clamp(14px,1.3vw,20px);padding:0 10px 0 8px}.sf-list.d2 .sf-spd b{font-size:clamp(18px,1.8vw,28px)}.sf-list.d2 .sf-spd small{display:none}
+.sf-list.d3{gap:4px}.sf-list.d3 .sf-row{padding:3px 10px}.sf-list.d3 .sf-ic{width:24px;height:24px}.sf-list.d3 .sf-tok .tok{font-size:12px;padding:1px 6px 1px 4px}.sf-list.d3 .hpst.big i{display:none}
+@media (prefers-reduced-motion:reduce){.hpst.big.crit{animation:none}}
+
+/* печать главаря */
+.boss-mini{display:inline-block;width:22px;height:22px;vertical-align:middle;margin:0 2px 0 6px;transform:rotate(-10deg);flex:none}
+.boss-mini svg{width:100%;height:100%}
+.fr-boss svg{width:20px;height:20px;filter:grayscale(1) opacity(.45)}
+.fr-boss.on{border-color:#8E1B14;background:color-mix(in srgb,#A8281C 10%,var(--card))}
+.fr-boss.on svg{filter:none}
+.fr-boss.on small{color:#A8281C;font-weight:700}
+.boss-chk{border:1.5px dashed var(--hair);padding:8px 10px;gap:10px}
+.boss-chk svg{width:34px;height:34px;flex:none}
+.boss-chk span{display:flex;flex-direction:column}
+.boss-chk small{font-size:12.5px;color:var(--muted)}
+.sf-row{position:relative}
+.sf-row.boss{border-color:#8a6a1e;background:linear-gradient(90deg,#2a1714,#1c1a17 55%);box-shadow:inset 0 0 0 1px rgba(233,190,69,.35)}
+.sf-row.boss.cur{border-color:#E9BE45}
+.sf-row.boss .sf-name{color:#f6dca0;font-size:clamp(22px,2.5vw,40px)}
+.sf-row.boss .sf-side{color:#e9be45}
+.sf-seal{position:absolute;right:clamp(78px,7.5vw,118px);top:50%;width:clamp(48px,4.6vw,78px);height:clamp(48px,4.6vw,78px);transform:translateY(-50%) rotate(-14deg);filter:drop-shadow(0 3px 4px rgba(0,0,0,.55));pointer-events:none}
+.sf-seal svg{width:100%;height:100%}
+.sf-list.d2 .sf-seal,.sf-list.d3 .sf-seal{width:36px;height:36px}
+.sf-row.boss .sf-main{padding-right:clamp(50px,5vw,90px)}
+
+.loc-cards .np-none{grid-column:1/-1;border:1.5px dashed var(--hair);text-align:center;padding:10px}
+
+/* печати: принадлежность и состояния в бою */
+.pstamp,.stamp-tok{position:relative;display:inline-flex;align-items:center;gap:5px;color:var(--sc);border:2px solid var(--sc);outline:1px solid var(--sc);outline-offset:2px;background:transparent;
+ font-weight:800;text-transform:uppercase;letter-spacing:.07em;font-size:11.5px;line-height:1;padding:4px 8px 4px 5px;margin:3px 4px;transform:rotate(-2.5deg);white-space:nowrap;--paperc:var(--card)}
+.pstamp::after,.stamp-tok::after{content:"";position:absolute;inset:-4px;pointer-events:none;
+ background:radial-gradient(circle at 30% 40%,var(--paperc) 0 .6px,transparent 1px) 0 0/9px 8px,radial-gradient(circle at 70% 70%,var(--paperc) 0 .5px,transparent .9px) 2px 1px/7px 10px,linear-gradient(100deg,transparent 42%,color-mix(in srgb,var(--paperc) 30%,transparent) 48%,transparent 54%);opacity:.3}
+.sf-row .pstamp::after,.sf-tok .stamp-tok::after{opacity:.5}
+.pstamp svg,.stamp-tok svg{width:15px;height:15px;color:var(--sc);flex:none}
+.pstamp.st-vrag{--sc:var(--rat)} .pstamp.st-svoi{--sc:var(--good)} .pstamp.st-inoe{--sc:var(--mg-morok)} .pstamp.st-hero{--sc:var(--mg-light)}
+.fr-tok .stamp-tok:nth-child(even),.sf-tok .stamp-tok:nth-child(even){transform:rotate(1.8deg)}
+.fr-tok .stamp-tok:nth-child(3n),.sf-tok .stamp-tok:nth-child(3n){transform:rotate(-1deg)}
+.stamp-tok{--sc:var(--tc);min-height:0;box-shadow:none}
+.stamp-tok b{position:absolute;top:-9px;right:-9px;min-width:19px;height:19px;border-radius:50%;background:var(--sc);color:var(--card);font-size:11px;display:grid;place-items:center;border:2px solid var(--paperc);z-index:1;letter-spacing:0}
+.fr-tok{gap:2px 4px;padding:4px 0}
+.fr.cur .fr-tok .stamp-tok{box-shadow:none}
+.fr-tok .tok.add{margin:3px 4px}
+/* на экране игроков — тёмная бумага */
+.sf-row .pstamp,.sf-tok .stamp-tok{--paperc:#1c1a17;font-size:clamp(11px,1vw,15px);padding:4px 10px 4px 6px}
+.sf-row.boss .pstamp{--paperc:#2a1714}
+.sf-row .pstamp svg,.sf-tok .stamp-tok svg{width:clamp(14px,1.2vw,20px);height:clamp(14px,1.2vw,20px)}
+.sf-row .pstamp.st-vrag{--sc:#e0604f} .sf-row .pstamp.st-svoi{--sc:#7FC08B} .sf-row .pstamp.st-inoe{--sc:#93B2EC} .sf-row .pstamp.st-hero{--sc:#E9BE45}
+.sf-tok .stamp-tok{background:transparent;color:var(--sc)}
+.sf-tok .stamp-tok b{color:#111;border-color:#1c1a17}
+.sf-tok{gap:2px 6px}
+.fr-name .pstamp{font-size:10px;padding:3px 6px 3px 4px;margin:4px 4px}
+.fr-name{flex-wrap:nowrap}
+.fr-name .fr-nm{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:0 1 auto}
+.fr-name .pstamp{flex:none;margin:2px 2px 2px 6px;font-size:9px;letter-spacing:.04em;padding:2px 5px 2px 3px;outline-offset:1.5px;border-width:1.5px;gap:3px}
+.fr-name .pstamp svg{width:11px!important;height:11px!important}
+.fr-name .fr-nm{flex:0 1 auto;min-width:3.5em}
+.fr-name .fr-ico,.fr-name .boss-mini{flex:none}
+.fr-name .turn-mark{position:absolute;left:-8px;top:-11px;z-index:2;flex:none;transform:rotate(-4deg);box-shadow:2px 2px 0 var(--ink)}
+.fr.cur{margin-top:8px}
+.fr-name .pstamp svg{width:13px;height:13px}
+
+/* подписи экрана и QR дара */
+.scr-ttl{display:flex;flex-direction:column;gap:2px;min-width:0}
+.scr-cap{font-family:var(--f-display);font-size:clamp(15px,1.5vw,24px);letter-spacing:.22em;text-transform:uppercase;color:#c9a227;display:flex;align-items:center;gap:10px}
+.scr-cap::before,.scr-cap::after{content:"";width:28px;height:2px;background:linear-gradient(90deg,transparent,#A8281C 30%,#c9a227 50%,#A8281C 70%,transparent)}
+.scr-cap[hidden]{display:none}
+.sq{display:flex;align-items:center;justify-content:center;gap:clamp(24px,4vw,70px);width:100%;height:100%}
+.sq-code{height:min(78vh,760px);aspect-ratio:1;background:#fff;padding:clamp(10px,1.4vw,22px);border:6px solid #c9a227;box-shadow:0 0 0 3px #1c1a17,0 0 0 6px #A8281C}
+.sq-code svg{width:100%;height:100%;display:block}
+.sq-side{max-width:420px;color:#e8dfcf;display:flex;flex-direction:column;gap:14px}
+.sq-side h2{font-family:var(--f-display);font-weight:400;font-size:clamp(26px,3vw,48px);margin:0;color:#f6dca0;line-height:1.1}
+.sq-n{margin:0;font-size:clamp(16px,1.5vw,24px);color:#a49c90}
+.sq-how{margin:0;padding-left:1.4em;font-size:clamp(17px,1.6vw,26px);line-height:1.5}
+.sq-orn{height:12px;width:100%;background:repeating-linear-gradient(90deg,#A8281C 0 8px,transparent 8px 18px,#d9d0c0 18px 21px,transparent 21px 31px);opacity:.7}
+@media (max-aspect-ratio:1/1){.sq{flex-direction:column}.sq-code{height:min(60vh,90vw)}}
+
+/* экран: меньше плашка состояния, штамп хода */
+.hpst.big{font-size:clamp(14px,1.25vw,21px);padding:1px 10px 1px 7px;gap:8px;border-width:1.5px}
+.hpst.big i b{width:clamp(4px,.38vw,6px);height:clamp(9px,.9vw,15px)}
+.sf-turnst{position:absolute;left:-14px;top:-14px;z-index:2;display:inline-flex;align-items:center;gap:4px;padding:5px 10px 5px 7px;color:#E9BE45;border:2.5px solid #E9BE45;outline:1.5px solid #E9BE45;outline-offset:2.5px;background:#2c2620;
+ font-family:var(--f-display);font-size:clamp(14px,1.3vw,22px);letter-spacing:.14em;text-transform:uppercase;line-height:1;transform:rotate(-9deg);box-shadow:0 3px 8px rgba(0,0,0,.6)}
+.sf-turnst svg{width:clamp(14px,1.3vw,22px);height:clamp(14px,1.3vw,22px)}
+.sf-list{padding:16px 0 0 16px;box-sizing:border-box}
+.sf-row{min-width:0}
+.sf-list.d2 .sf-turnst,.sf-list.d3 .sf-turnst{font-size:12px;padding:3px 7px 3px 5px;left:-10px;top:-10px}
+.sf-list.d2 .sf-turnst svg,.sf-list.d3 .sf-turnst svg{width:12px;height:12px}
+.sf-top .pstamp{font-size:clamp(9px,.75vw,12px);padding:2px 7px 2px 4px;border-width:1.5px;outline-offset:1.5px;gap:4px;margin:2px 4px}
+.sf-top .pstamp svg{width:clamp(11px,.9vw,15px);height:clamp(11px,.9vw,15px)}
+.sf-list.d2 .sf-row.boss .sf-name{font-size:clamp(16px,1.6vw,24px)}
+.sf-list.d3 .sf-top{flex-wrap:nowrap;min-width:0}
+.sf-list.d3 .sf-name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:0 1 auto}
+.sf-list.d3 .sf-top .pstamp{flex:none;padding:2px 3px}
+.sf-list.d3 .sf-top .pstamp>span{display:none}
+.sf-list.d3 .sf-row.boss .sf-main{padding-right:34px}
+.sf-list.d3 .sf-row.boss .sf-name{font-size:clamp(15px,1.4vw,22px)}
+.sf-list.d3 .sf-main{gap:2px}
+.sf-list.d4 .sf-tok .stamp-tok>span{display:none}
+.sf-list.d4 .sf-hp{display:inline-flex}
+.sf-list.d4 .sf-main{flex-direction:row;flex-wrap:wrap;align-items:center;column-gap:8px}
+.sf-list.d4 .sf-top{flex:1 1 100%}
+.hpstamp{--paperc:var(--card);font-size:11px;padding:3px 8px 3px 5px;transform:rotate(-1.5deg)}
+.fr-hp .hpstamp.sm{flex:none;margin:6px 4px 2px 0}
+.sf-hp .hpstamp{--paperc:#1c1a17;font-size:clamp(12px,1.05vw,17px);padding:4px 11px 4px 7px;margin:4px 2px;transform:rotate(-2deg)}
+.sf-hp .hpstamp svg{width:clamp(14px,1.2vw,20px);height:clamp(14px,1.2vw,20px)}
+.sf-row.boss .sf-hp .hpstamp{--paperc:#2a1714}
+.sf-row.cur .sf-hp .hpstamp{--paperc:#2c2620}
+.sf-hp .hpstamp::after{opacity:.45}
+.hpstamp.crit{animation:hpCrit2 1.4s ease-in-out infinite}
+@keyframes hpCrit2{50%{box-shadow:0 0 10px 2px color-mix(in srgb,var(--sc) 60%,transparent)}}
+.sf-list.d2 .sf-hp .hpstamp{font-size:clamp(11px,.9vw,14px);padding:2px 8px 2px 5px;margin:2px}
+.sf-list.d2 .sf-hp .hpstamp svg{width:13px;height:13px}
+@media (prefers-reduced-motion:reduce){.hpstamp.crit{animation:none}}
+
+/* страницы списков */
+.pg-off{display:none!important}
+.pg-bar{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:8px 0 4px}
+.pg-bar button{min-width:40px;min-height:40px;border:2px solid var(--ink);background:var(--card);font-weight:700;font-size:15px;padding:0 10px}
+.pg-bar button[aria-current="page"]{background:var(--ink);color:var(--paper)}
+.pg-bar button:disabled{opacity:.35}
+.pg-gap{color:var(--muted);padding:0 2px}
+.pg-info{margin-left:auto;font-size:13px;color:var(--muted)}
+.loc-cards+.pg-bar,.bcards+.pg-bar{grid-column:1/-1}
 </style>
 </head>
 <body>
@@ -1568,7 +1883,7 @@ function load(raw){
   else store.chars=[];
  }catch(e){storageOK=false; store.chars=[]; status='Хранилище недоступно'; statusBad=true;}
  if(store.open && !byId(store.open)) store.open=null;
- if(store.seedTest!==15){
+ if(store.seedTest!==18){
   store.chars=store.chars.filter(function(x){return !(x.info&&x.info.name==='Ярослава'&&/Травниц/i.test(x.info.remeslo||''))});
   if(!store.noExamples){
    var tc=normalize(testChar()), at=-1; store.chars.forEach(function(x,i){if(x.info&&x.info.name==='Гордей Бессонов')at=i});
@@ -1580,7 +1895,7 @@ function load(raw){
    if(store.gm){gmTopUp(store.gm); seedMigr15(store.gm)}
   }
   if(store.open&&!byId(store.open)) store.open=null;
-  store.seedTest=15; needSave=true;
+  store.seedTest=18; needSave=true;
  }
 }
 var saveTimer=null;
@@ -1740,7 +2055,7 @@ function renderHome(){
  h+='<div class="row-btns"><button class="btn pri" data-act="new">'+svg(IC.plus)+'Новый герой</button><button class="btn" data-act="import">'+svg(IC.open)+'Открыть .save</button></div>';
  if(!store.chars.length) h+='<div class="empty">Пока нет ни одного героя. Создайте нового или откройте файл .save.</div>';
  else{
-  h+='<div class="stack" style="gap:12px">';
+  h+='<div class="stack hero-list" style="gap:12px">';
   store.chars.slice().sort(function(a,b){return b.updated-a.updated}).forEach(function(c){
    var nm=c.info.name||'Безымянный герой';
    var sub=[c.info.remeslo,c.info.narod,c.info.age&&(c.info.age+' лет')].filter(Boolean).join(' · ')||'Летопись не заполнена';
@@ -1753,7 +2068,7 @@ function renderHome(){
   if(store.chars.length>1) h+='<button class="btn" data-act="exportAll">'+svg(IC.save)+'Скачать всех героев одним .save</button>';
  }
  if(hasExamples()) h+='<button class="btn ex-del" data-act="askExamples">'+svg('<path d="M4 7 H20 M9 7 V4.5 H15 V7 M6.5 7 L7.5 20 H16.5 L17.5 7 M10 11 V16 M14 11 V16" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>')+'<span>Убрать примеры<small>Героя-пример и примеры со стола мастера</small></span></button>';
- h+='<button class="gm-entry" data-g="enter">'+svg('<path d="M4 20 L15.5 8.5 M13 6 L18 11 M5.5 15.5 L8.5 18.5 M20 20 L8.5 8.5 M11 6 L6 11 M18.5 15.5 L15.5 18.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>')+'<span><b>Стол мастера</b><small>Места, бестиарий, бой, вики, тайные заявки и дары</small></span></button>';
+ h+='<button class="gm-entry" data-g="enter">'+svg('<path d="M4 20 L15.5 8.5 M13 6 L18 11 M5.5 15.5 L8.5 18.5 M20 20 L8.5 8.5 M11 6 L6 11 M18.5 15.5 L15.5 18.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>')+'<span><b>Стол мастера</b><small>История, места, бестиарий, бой, вики, тайные заявки и дары</small></span></button><button class="btn sm gd-help-link" data-gd="open" data-id="osnova" style="align-self:flex-start">Справка мастера</button>';
  h+=themeRow();
  h+='</div></main>';
  return h;
@@ -1883,7 +2198,7 @@ function tabStati(c){
  h+='</div><div class="stitch" aria-hidden="true"></div><div class="fringe" aria-hidden="true"></div></div></div></div>';
  return h;
 }
-var HINTS={"insp": "Вдохновение — перо Жар-птицы. Мастер дарит его за смелый поступок, верность нраву, яркую игру. Сожгите перо, когда герою нужна удача: что оно даёт — переброс или перевес, — решает мастер.", "gm-story": "История — граф сцен. История делится на сюжеты, что идут друг за другом; граф строится внутри сюжета. Игроков можно отметить — видно, кто в какой сцене, если ватага разошлась. «Свой путь» добавляет придуманную на ходу сцену прямо в граф. В режиме графа создавайте узлы, связывайте их переходами и привязывайте знакомцев, супостатов, заготовки даров и боёв, места. «Вести игру» — быстрый режим: текущая сцена, всё нужное под рукой и кнопки «что дальше». Игроки свернули не туда — «К любому узлу».", "gm-packs": "Заготовки боёв — готовые отряды из бестиария. «В бой» ставит весь отряд в очередь; «Из текущего боя» сохраняет нынешних супостатов как заготовку.", "maps": "Карты мест, что показал мастер. Туман — то, что герой ещё не разведал. Когда мастер покажет карту снова, она обновится.", "gm-zag": "Заготовки — дары, собранные заранее: добыча с разбойника, клад, награда. Нажмите на заготовку — она станет текущим даром или добавится к нему. Свой дар сохраняется кнопкой «В заготовки».", "gm-zv": "Тайные заявки — задумки игроков, которые не должны знать остальные. Игрок пишет заявку в меню героя и показывает вам QR-код со словом «Заявка». Сканируйте его здесь, вставьте присланный код или откройте файл.", "gm-dary": "Дар — добыча, что мастер вручает героям: вещи, оружие, одёжа, деньги, чары, сглазы и знания. Соберите дар и передайте QR-кодом, ссылкой или файлом. Игрок принимает дар в своём герое и отмечает, что берёт; от записей с печатью «Обязательно» не отказаться. Сведения о твари кладутся прямо из бестиария — у героя они лягут в «Супостаты».", "gm-locs": "Места — схемы урочищ, изб и подземелий. Кистью рисуйте стены, воду, лес и скалы, ставьте супостатов, своих и метки с номерами. Кисти «Туман» и «Скрыть» прячут от игроков области и предметы; «Показать игрокам» отдаёт карту QR-кодом, ссылкой или файлом.", "gm-best": "Бестиарий — все твари, что могут встретиться героям: род, здоровье, удали, слабости. Атака и защита — сколько и каких костей бросать и какую удаль прибавить; в бою они видны у каждой твари. «В бой» сразу ставит тварь в очередь.", "gm-fight": "Бой ведётся по кругам. Порядок задаёте стрелками, «Следующий ход» передаёт ход дальше, а нажатие на имя делает ход этого участника. Здоровье в бою не меняет лист героя.", "gm-wiki": "Вики устроена по разделам листа героя: оружие, одёжа, вещи, чары, сглазы и благословения, знания. Кнопка «В дар» сразу кладёт запись в дар — у героя она ляжет в свой раздел. Знакомцы — тайная память мастера о людях и нелюдях мира. «В дар» открывает героям лишь отмеченное: имя, кто таков, где найти, расположение — описание мастера по умолчанию скрыто.", "hp": "Своё здоровье — от нуля до предела. Временное идёт сверху: может прибавить или увести в минус. «Исцелить» возвращает своё до предела, временное не трогает.", "hozhd": "Путь героя: откуда пришёл, где бывал и куда держит путь.", "u-terem": "Вера венчает терем, под крышей три опоры души: Знание, Понимание и Сила. Временные прибавки и убавки меняют итог, основу не трогают.", "u-snor": "Телесная ловкость героя: Внимание, Гибкость и Скорость.", "u-nrav": "Склад души и чувства: Спокойствие, Страх, Любовь и Ненависть.", "skills": "Ухватки — выученные умения. Прибавка даёт лишние кости к броску, перевес — бросок с преимуществом. Медальон показывает, к какой удали ухватка относится.", "weapons": "Оружие героя и прибавка к урону: плюс бьёт сильнее, минус слабее.", "gear": "Одёжа и справа, что надета на героя. Какую особину носит вещь — решает мастер: тулуп бережёт от стужи, заговорённый пояс от нечисти, а иное кольцо и силы прибавит. «В исподнем» снимает всё разом и помнит, что было надето.", "purse": "Золотые, серебряные и медные монеты считаются кнопками или вписываются числом. Ниже — долги, расписки и прочее, что шуршит.", "items": "Всё, что герой несёт с собой в котомке и за пазухой.", "hexes": "Что легло на героя от чужого глаза, доброго слова или лихой доли: сглазы, что тянут к беде, благословения, что хранят в пути, и немочи телесные — раны, вывихи, хвори, тяжкое похмелье. Пока не снято или не прошло — действует.", "rites": "Известные герою обряды. Ратные — для боя, мирские — для жизни и дороги. Цвет метки показывает вид чародейства.", "forms": "В кого герой умеет оборачиваться и на каких условиях.", "cares": "Заботы — то, что лежит у героя на сердце и не даёт покоя: дела незавершённые, клятвы, поиски. Свершённое отмечайте — пусть душе станет легче.", "rady": "Рады — уговоры, скреплённые не чернилами, а силою незримой: слово, данное в раде, держит крепче цепи. Здесь записано, с кем урядился, что обещано герою, что должен он сам и к какому сроку. Порушить раду — навлечь на себя беду.", "friends": "Знакомцы героя: кто таков, где найти, как расположен к герою и что с ним ныне.", "zametki": "Заметки о встреченном и услышанном: о чём, где и когда.", "foes": "Супостаты по родам, от безобидной Чуши до Идолища. Красная шкала показывает опасность рода.", "mir-map": "Карта Тверди. Нажмите на землю, чтобы записать, что о ней известно, или отметить, где сейчас герой.", "mir-ref": "Справка по миру: чародейство, роды супостатов, боги-персты и три мира."};
+var HINTS={"insp": "Вдохновение — перо Жар-птицы. Мастер дарит его за смелый поступок, верность нраву, яркую игру. Сожгите перо, когда герою нужна удача: что оно даёт — переброс или перевес, — решает мастер.", "gm-story": "История — граф сцен. История делится на сюжеты, что идут друг за другом; граф строится внутри сюжета. Игроков можно отметить — видно, кто в какой сцене, если ватага разошлась. «Свой путь» добавляет придуманную на ходу сцену прямо в граф. В режиме графа создавайте узлы, связывайте их переходами и привязывайте знакомцев, супостатов, заготовки даров и боёв, места. «Вести игру» — быстрый режим: текущая сцена, всё нужное под рукой и кнопки «что дальше». Игроки свернули не туда — «К любому узлу».", "gm-packs": "Заготовки боёв — готовые отряды из бестиария. «В бой» ставит весь отряд в очередь; «Из текущего боя» сохраняет нынешних супостатов как заготовку.", "maps": "Карты мест, что показал мастер. Туман — то, что герой ещё не разведал. Когда мастер покажет карту снова, она обновится.", "gm-zag": "Заготовки — дары, собранные заранее: добыча с разбойника, клад, награда. Нажмите на заготовку — она станет текущим даром или добавится к нему. Свой дар сохраняется кнопкой «В заготовки».", "gm-zv": "Тайные заявки — задумки игроков, которые не должны знать остальные. Игрок пишет заявку в меню героя и показывает вам QR-код со словом «Заявка». Сканируйте его здесь, вставьте присланный код или откройте файл.", "gm-dary": "Дар — добыча, что мастер вручает героям: вещи, оружие, одёжа, деньги, чары, сглазы и знания. Соберите дар и передайте QR-кодом, ссылкой или файлом. Игрок принимает дар в своём герое и отмечает, что берёт; от записей с печатью «Обязательно» не отказаться. Сведения о твари кладутся прямо из бестиария — у героя они лягут в «Супостаты».", "gm-locs": "Места — схемы урочищ, изб и подземелий. Кистью рисуйте стены, воду, лес и скалы, ставьте супостатов, своих и метки с номерами. Кисти «Туман» и «Скрыть» прячут от игроков области и предметы; «Показать игрокам» отдаёт карту QR-кодом, ссылкой или файлом.", "gm-best": "Бестиарий — все, кто может встретиться героям: супостаты, союзники (подмога, дружина, звери-помощники) и пришлые. Род, здоровье, удали, слабости. Атака и защита — сколько и каких костей бросать и какую удаль прибавить; в бою они видны у каждой твари. «В бой» сразу ставит тварь в очередь.", "gm-fight": "Бой ведётся по кругам. Порядок задаёте стрелками, «Следующий ход» передаёт ход дальше, а нажатие на имя делает ход этого участника. Здоровье в бою не меняет лист героя.", "gm-wiki": "Вики устроена по разделам листа героя: оружие, одёжа, вещи, чары, сглазы и благословения, знания. Кнопка «В дар» сразу кладёт запись в дар — у героя она ляжет в свой раздел. Знакомцы — тайная память мастера о людях и нелюдях мира. «В дар» открывает героям лишь отмеченное: имя, кто таков, где найти, расположение — описание мастера по умолчанию скрыто.", "hp": "Своё здоровье — от нуля до предела. Временное идёт сверху: может прибавить или увести в минус. «Исцелить» возвращает своё до предела, временное не трогает.", "hozhd": "Путь героя: откуда пришёл, где бывал и куда держит путь.", "u-terem": "Вера венчает терем, под крышей три опоры души: Знание, Понимание и Сила. Временные прибавки и убавки меняют итог, основу не трогают.", "u-snor": "Телесная ловкость героя: Внимание, Гибкость и Скорость.", "u-nrav": "Склад души и чувства: Спокойствие, Страх, Любовь и Ненависть.", "skills": "Ухватки — выученные умения. Прибавка даёт лишние кости к броску, перевес — бросок с преимуществом. Медальон показывает, к какой удали ухватка относится.", "weapons": "Оружие героя и прибавка к урону: плюс бьёт сильнее, минус слабее.", "gear": "Одёжа и справа, что надета на героя. Какую особину носит вещь — решает мастер: тулуп бережёт от стужи, заговорённый пояс от нечисти, а иное кольцо и силы прибавит. «В исподнем» снимает всё разом и помнит, что было надето.", "purse": "Золотые, серебряные и медные монеты считаются кнопками или вписываются числом. Ниже — долги, расписки и прочее, что шуршит.", "items": "Всё, что герой несёт с собой в котомке и за пазухой.", "hexes": "Что легло на героя от чужого глаза, доброго слова или лихой доли: сглазы, что тянут к беде, благословения, что хранят в пути, и немочи телесные — раны, вывихи, хвори, тяжкое похмелье. Пока не снято или не прошло — действует.", "rites": "Известные герою обряды. Ратные — для боя, мирские — для жизни и дороги. Цвет метки показывает вид чародейства.", "forms": "В кого герой умеет оборачиваться и на каких условиях.", "cares": "Заботы — то, что лежит у героя на сердце и не даёт покоя: дела незавершённые, клятвы, поиски. Свершённое отмечайте — пусть душе станет легче.", "rady": "Рады — уговоры, скреплённые не чернилами, а силою незримой: слово, данное в раде, держит крепче цепи. Здесь записано, с кем урядился, что обещано герою, что должен он сам и к какому сроку. Порушить раду — навлечь на себя беду.", "friends": "Знакомцы героя: кто таков, где найти, как расположен к герою и что с ним ныне.", "zametki": "Заметки о встреченном и услышанном: о чём, где и когда.", "foes": "Супостаты по родам, от безобидной Чуши до Идолища. Красная шкала показывает опасность рода.", "mir-map": "Карта Тверди. Нажмите на землю, чтобы записать, что о ней известно, или отметить, где сейчас герой.", "mir-ref": "Справка по миру: чародейство, роды супостатов, боги-персты и три мира."};
 var hintOpen={};
 function hintBtn(key){return HINTS[key]?'<button class="hint-btn" data-act="hint" data-k="'+key+'" aria-expanded="'+(!!hintOpen[key])+'" aria-controls="hint-'+key+'" aria-label="Что это за раздел"><span>?</span></button>':''}
 function hintBox(key){return HINTS[key]?'<p class="sec-hint" id="hint-'+key+'"'+(hintOpen[key]?'':' hidden')+'>'+HINTS[key]+'</p>':''}
@@ -2448,7 +2763,7 @@ function rollNorm(r){r=r&&typeof r==='object'?r:{};
  var src=Array.isArray(r.dice)?r.dice:(r.n!=null?[{n:r.n,d:r.d}]:[]);
  var dice=src.map(function(g){return {n:Math.max(0,Math.min(20,Math.round(Number(g&&g.n)||0))),d:DICE.indexOf(Number(g&&g.d))>-1?Number(g.d):6}}).filter(function(g){return g.n>0}).slice(0,6);
  return {dice:dice,st:bstName(r.st)?r.st:''}}
-function rollText(b,r){var t=(r.dice||[]).map(function(g){return (g.n>1?g.n:'')+'d'+g.d}).join(' + ');if(r.st){var v=Number(b[r.st])||0;t+=t?(v<0?' − ':' + ')+Math.abs(v):String(v)}return t||'—'}
+function rollText(b,r){r=r&&Array.isArray(r.dice)?r:rollNorm(r); var t=(r.dice||[]).map(function(g){return (g.n>1?g.n:'')+'d'+g.d}).join(' + ');if(r.st){var v=Number(b[r.st])||0;t+=t?(v<0?' − ':' + ')+Math.abs(v):String(v)}return t||'—'}
 var SHIELD_IC='<path d="M12 2.5 L20 5.5 V11 C20 16 16.5 19.6 12 21.5 C7.5 19.6 4 16 4 11 V5.5 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>';
 var ATK_IC='<path d="M4 20 L15.5 8.5 M13 6 L18 11 M5.5 15.5 L8.5 18.5 M20 20 L8.5 8.5 M11 6 L6 11 M18.5 15.5 L15.5 18.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>';
 function rollRow(b,r,lbl,ic){return '<div class="roll-row"><span class="rr-l">'+svg(ic)+lbl+'</span><b>'+rollText(b,r)+'</b>'+(r.st?'<small>'+statIcon(r.st)+bstName(r.st)+'</small>':'<small>&nbsp;</small>')+'</div>'}
@@ -2467,7 +2782,7 @@ function gmNorm(g){
   var atk=b.atk; if(!atk&&b.dmg){var dm=String(b.dmg).match(/(\d*)\s*[dкД]\s*(\d+)/i); if(dm) atk={n:Number(dm[1])||1,d:Number(dm[2]),st:'sila'}}
   var o2={id:typeof b.id==='string'?b.id:uid(),name:String(b.name||''),cls:foe(b.cls)[0],beast:BEASTS[b.beast]?b.beast:'inoy',
    hp:Math.max(0,Math.round(Number(b.hp)||0)),atk:rollNorm(atk),def:rollNorm(b.def),
-   traits:String(b.traits||''),weak:String(b.weak||''),where:String(b.where||''),example:!!b.example};
+   traits:String(b.traits||''),weak:String(b.weak||''),where:String(b.where||''),side:BSIDE[b.side]?b.side:'vrag',boss:!!b.boss,example:!!b.example};
   BST.forEach(function(k){o2[k[0]]=Math.round(Number(b[k[0]])||0)});
   return o2;
  });
@@ -2475,7 +2790,7 @@ function gmNorm(g){
   o.fight.round=Math.max(1,Math.round(Number(g.fight.round)||1));
   if(Array.isArray(g.fight.list)) o.fight.list=g.fight.list.filter(Boolean).map(function(f){
    return {id:typeof f.id==='string'?f.id:uid(),name:String(f.name||''),side:f.side==='svoi'||f.side==='inoe'?f.side:'vrag',
-    hp:Math.round(Number(f.hp)||0),max:Math.max(0,Math.round(Number(f.max)||0)),note:String(f.note||''),tok:tokNorm(f.tok),spd:f.spd==null||f.spd===''?null:Math.max(-20,Math.min(99,Math.round(Number(f.spd)||0))),beast:BEASTS[f.beast]?f.beast:'',ref:String(f.ref||''),example:!!f.example};
+    hp:Math.round(Number(f.hp)||0),max:Math.max(0,Math.round(Number(f.max)||0)),note:String(f.note||''),tok:tokNorm(f.tok),boss:!!f.boss,spd:f.spd==null||f.spd===''?null:Math.max(-20,Math.min(99,Math.round(Number(f.spd)||0))),ini:f.ini==null||f.ini===''?null:Math.max(-99,Math.min(999,Math.round(Number(f.ini)||0))),beast:BEASTS[f.beast]?f.beast:'',ref:String(f.ref||''),example:!!f.example};
   });
   o.fight.turn=Math.max(0,Math.min(o.fight.list.length-1,Math.round(Number(g.fight.turn)||0)));
  }
@@ -2534,6 +2849,7 @@ function seedTplLocs(){
  return [a,b,c,d,e];
 }
 function seedMigr15(g){
+ g.beasts.forEach(function(b){if(b.example&&['Атаман Кудеяр','Лихо одноглазое','Болотница'].indexOf(b.name)>-1) b.boss=true});
  g.beasts.forEach(function(b){if(b.example&&b.name==='Тать'){b.cls='lud'; b.beast='chelovek'}});
  var T=g.locs.filter(function(l){return l.example&&l.name==='Новгородище'})[0];
  if(T) TOWN_PR.forEach(function(p){var i=p[1]*T.w+p[0]; if(p[0]<T.w&&!T.cells[i]) T.cells[i]=p[2]});
@@ -2567,12 +2883,16 @@ function gmSeedBeasts(){
   I({name:'Анчутка',cls:'melkota',beast:'netopyr',hp:4,sila:1,skor:3,vnim:2,gib:3,ponim:1,atk:{n:1,d:4,st:'skor'},def:{n:1,d:4,st:'gib'},traits:'Нападают стаей по 3–5. Пищат перед атакой.',weak:'Боятся соли и колокольного звона.',where:'Переправы, мельницы, бани'}),
   I({name:'Волколак',cls:'liho',beast:'volk',hp:18,sila:5,skor:4,vnim:4,gib:3,ponim:2,atk:{n:1,d:8,st:'sila'},def:{n:1,d:6,st:'gib'},traits:'Днём человек, ночью зверь. Чует кровь за версту.',weak:'Серебро, осиновый кол.',where:'Леса у Ветхого царства'}),
   I({name:'Упырь',cls:'napast',beast:'inoy',hp:24,sila:6,skor:2,vnim:3,gib:1,ponim:1,atk:{dice:[{n:1,d:10},{n:1,d:4}],st:'sila'},def:{n:1,d:8,st:'sila'},traits:'Встаёт из могилы в полночь. Раны затягиваются, если пьёт кровь.',weak:'Чеснок, осина, рассвет.',where:'Погосты'}),
-  I({name:'Болотница',cls:'sramota',beast:'lyagushka',hp:40,sila:4,skor:3,vnim:6,gib:4,ponim:5,atk:{dice:[{n:2,d:6},{n:1,d:4}],st:'ponim'},def:{n:1,d:10,st:'gib'},traits:'Морочит путников, утягивает в омут. С ней можно урядиться.',weak:'Любит песни; не выносит сухого огня.',where:'Омуты и топи'}),
+  I({name:'Болотница',boss:true,cls:'sramota',beast:'lyagushka',hp:40,sila:4,skor:3,vnim:6,gib:4,ponim:5,atk:{dice:[{n:2,d:6},{n:1,d:4}],st:'ponim'},def:{n:1,d:10,st:'gib'},traits:'Морочит путников, утягивает в омут. С ней можно урядиться.',weak:'Любит песни; не выносит сухого огня.',where:'Омуты и топи'}),
   I({name:'Тать',cls:'lud',beast:'chelovek',hp:8,sila:3,skor:3,vnim:3,gib:3,ponim:2,atk:{dice:[{n:1,d:6}],st:'sila'},def:{dice:[{n:1,d:6}],st:'gib'},traits:'Ночные воры, ходят по трое. Бьют кистенём, бегут при первой крови.',weak:'Боятся огня и громкого крика «Держи вора!»',where:'Новгородище, конюшни и торг'}),
   I({name:'Домовой-шалун',cls:'chush',beast:'kot',hp:3,sila:0,skor:4,vnim:5,gib:5,ponim:3,atk:{n:0,d:6,st:''},def:{n:1,d:6,st:'gib'},traits:'Прячет вещи, путает пряжу. Вреда не делает, если уважить.',weak:'Миска молока у печи.',where:'Избы, корчмы'}),
   I({name:'Разбойник',cls:'lud',beast:'chelovek',hp:8,sila:3,skor:3,vnim:2,gib:3,ponim:2,atk:{dice:[{n:1,d:8}],st:'sila'},def:{dice:[{n:1,d:6}],st:'gib'},traits:'Кистень, топор, у иных самопал. Бьют из засады, в открытом бою держатся плохо.',weak:'Падёт атаман — разбегутся.',where:'Тракт к Ветхому царству, засеки'}),
-  I({name:'Атаман Кудеяр',cls:'lud',beast:'chelovek',hp:22,sila:5,skor:4,vnim:4,gib:4,ponim:4,atk:{dice:[{n:2,d:8},{n:1,d:4}],st:'sila'},def:{dice:[{n:1,d:10}],st:'gib'},traits:'Бывший стрелец. Бьётся бердышом, стреляет из пищали. Своих не бросает.',weak:'Держит слово: с ним можно урядиться. Заговор от пули не спасает от клинка.',where:'Грот за святым ключом'}),
-  I({name:'Лихо одноглазое',cls:'napast',beast:'inoy',hp:34,sila:7,skor:2,vnim:3,gib:1,ponim:3,atk:{dice:[{n:2,d:10}],st:'sila'},def:{dice:[{n:1,d:8}],st:'sila'},traits:'Огромное, тощее, с одним глазом во лбу. Где пройдёт — там пожар и мор. Сожгло Горелый Брод.',weak:'Не видит левым боком. Боится собственного отражения.',where:'Пепелище Горелого Брода'})
+  I({name:'Атаман Кудеяр',boss:true,cls:'lud',beast:'chelovek',hp:22,sila:5,skor:4,vnim:4,gib:4,ponim:4,atk:{dice:[{n:2,d:8},{n:1,d:4}],st:'sila'},def:{dice:[{n:1,d:10}],st:'gib'},traits:'Бывший стрелец. Бьётся бердышом, стреляет из пищали. Своих не бросает.',weak:'Держит слово: с ним можно урядиться. Заговор от пули не спасает от клинка.',where:'Грот за святым ключом'}),
+  I({name:'Дружинник воеводы',side:'svoi',cls:'lud',beast:'chelovek',hp:12,sila:4,skor:3,vnim:3,gib:3,ponim:2,atk:{dice:[{n:1,d:8},{n:1,d:4}],st:'sila'},def:{dice:[{n:1,d:8}],st:'gib'},traits:'Щит, копьё, кольчуга. Держит строй, своих не бросает.',weak:'Без приказа сотника в лес не пойдёт.',where:'Новгородище, детинец'}),
+  I({name:'Сотник Будимир',side:'svoi',cls:'lud',beast:'chelovek',hp:18,sila:5,skor:3,vnim:4,gib:3,ponim:3,atk:{dice:[{n:2,d:8}],st:'sila'},def:{dice:[{n:1,d:10}],st:'gib'},traits:'Ведёт дружинников. Помнит, как Гордей ковал подковы заставе.',weak:'Горяч: бросается вперёд первым.',where:'Застава на тракте'}),
+  I({name:'Волкодав Буян',side:'svoi',cls:'neizv',beast:'pyos',hp:9,sila:3,skor:5,vnim:5,gib:4,ponim:1,atk:{dice:[{n:1,d:6},{n:1,d:4}],st:'skor'},def:{dice:[{n:1,d:6}],st:'gib'},traits:'Пёс корчмаря Фомы. Чует нечисть, рычит на упырей.',weak:'Боится грома и колокольного звона.',where:'Корчма у переправы'}),
+  I({name:'Старый Леший',side:'inoe',cls:'sramota',beast:'inoy',hp:30,sila:5,skor:4,vnim:7,gib:5,ponim:6,atk:{dice:[{n:2,d:10}],st:'ponim'},def:{dice:[{n:1,d:12}],st:'gib'},traits:'Хозяин леса. Сам по себе: поможет тому, кто чтит лес, и закружит обидчика.',weak:'Не выносит топора и огня в своей чаще.',where:'Лес у тракта'}),
+  I({name:'Лихо одноглазое',boss:true,cls:'napast',beast:'inoy',hp:34,sila:7,skor:2,vnim:3,gib:1,ponim:3,atk:{dice:[{n:2,d:10}],st:'sila'},def:{dice:[{n:1,d:8}],st:'sila'},traits:'Огромное, тощее, с одним глазом во лбу. Где пройдёт — там пожар и мор. Сожгло Горелый Брод.',weak:'Не видит левым боком. Боится собственного отражения.',where:'Пепелище Горелого Брода'})
  ];
 }
 function gmSeedWiki(){
@@ -2617,10 +2937,11 @@ function gmTopUp(g){
    if(ix<0) Bo.plots.splice(Math.min(k,Bo.plots.length),0,np);
    else if(Bo.plots[ix].nodes.every(function(n){return n.example})) Bo.plots[ix]=np});
   if(!Bo.players||!Bo.players.length) Bo.players=Bn.players;
+  if(!Array.isArray(Bo.side)) Bo.side=[]; (Bn.side||[]).forEach(function(q){if(!Bo.side.some(function(x){return x.t===q.t})) Bo.side.push(q)});
   if(!Bo.plots.some(function(p){return p.id===Bo.open})) Bo.open=Bo.plots[0].id; g.story=Bo }
  gmSeedExtras(g);
 }
-function hasExamples(){var g=store.gm; return store.chars.some(function(c){return c.demo||c.example})||!!(g&&(['locs','beasts','wiki','gifts','zv','packs'].some(function(k){return (g[k]||[]).some(function(x){return x.example})})||g.fight.list.some(function(x){return x.example})||(g.story&&(g.story.plots||[]).some(function(p){return p.nodes.some(function(x){return x.example})}))))}
+function hasExamples(){var g=store.gm; return store.chars.some(function(c){return c.demo||c.example})||!!(g&&(['locs','beasts','wiki','gifts','zv','packs'].some(function(k){return (g[k]||[]).some(function(x){return x.example})})||g.fight.list.some(function(x){return x.example})||(g.story&&((g.story.plots||[]).some(function(p){return p.nodes.some(function(x){return x.example})})||(g.story.side||[]).some(function(q){return q.example})))))}
 function exampleCounts(){
  var g=store.gm, n=function(k){return g?(g[k]||[]).filter(function(x){return x.example}).length:0};
  return {chars:store.chars.filter(function(c){return c.demo||c.example}),locs:n('locs'),beasts:n('beasts'),wiki:n('wiki'),gifts:n('gifts'),zv:n('zv'),packs:n('packs'),story:g&&g.story?(g.story.plots||[]).reduce(function(s2,p){return s2+p.nodes.filter(function(x){return x.example}).length},0):0,fight:g?g.fight.list.filter(function(x){return x.example}).length:0};
@@ -2639,13 +2960,13 @@ function removeExamples(){
   Bk.plots.forEach(function(St){St.nodes=St.nodes.filter(function(x){if(x.example){gone[x.id]=1; return false} return true}); St.nodes.forEach(function(x){x.att=x.att.filter(function(a){return !gone[a.id]})});
    St.edges=St.edges.filter(function(e){return !gone[e.a]&&!gone[e.b]}); var exP={}; (Bk.players||[]).forEach(function(p){if(p.example) exP[p.id]=1}); Object.keys(St.by||{}).forEach(function(k){if(gone[k]){delete St.by[k]; return} St.by[k]=St.by[k].filter(function(x){return !exP[x]}); if(!St.by[k].length) delete St.by[k]}); if(gone[St.start]) St.start=St.nodes[0]&&St.nodes[0].id||null; if(gone[St.cur]) St.cur=null; St.trail=St.trail.filter(function(x){return !gone[x]})});
   Bk.plots=Bk.plots.filter(function(p){return !(p.example&&!p.nodes.length)}); if(!Bk.plots.length) Bk.plots=[plotBlank('Сюжет 1')];
-  if(!Bk.plots.some(function(p){return p.id===Bk.open})) Bk.open=Bk.plots[0].id; Bk.mode='graph'; Bk.players=(Bk.players||[]).filter(function(p){return !p.example})}
+  if(!Bk.plots.some(function(p){return p.id===Bk.open})) Bk.open=Bk.plots[0].id; Bk.mode='graph'; Bk.side=(Bk.side||[]).filter(function(q){return !q.example}); Bk.players=(Bk.players||[]).filter(function(p){return !p.example})}
  store.noExamples=true; undo={type:'examples',snap:snap};
  persist(false); closeSheet(); render(); toast('Примеры удалены',true);
 }
 function gm(){ if(!store.gm){store.gm=gmSeed(); if(store.noExamples) removeExamplesSilently(store.gm)} return store.gm }
 function removeExamplesSilently(g){['locs','beasts','wiki','gifts','zv','packs'].forEach(function(k){g[k]=g[k].filter(function(x){return !x.example})}); g.fight={round:1,turn:0,list:[]}; g.story=storyBlank()}
-function gmSave(){persist(false)}
+function gmSave(){persist(false); if(typeof scrSchedule==='function') scrSchedule()}
 function gmTabName(){return GM_TABS.some(function(t){return t[0]===store.gmTab})?store.gmTab:'mesta'}
 
 /* ---------- каркас ---------- */
@@ -2654,7 +2975,7 @@ function renderGM(){
  var h='<header class="bar"><div class="gut"><div class="col wide bar-in">'+
   '<button class="ibtn plain" data-g="exit" aria-label="Выйти со стола мастера">'+svg(IC.back)+'</button>'+
   '<div style="flex:1;min-width:0;display:flex;flex-direction:column"><h1>Стол мастера</h1><span id="status" class="status'+(statusBad?' bad':'')+'">'+esc(status||'изменения сохраняются сами')+'</span></div>'+
-  themeIcoBtn()+'<button class="ibtn" data-g="fileMenu" aria-label="Сохранить или загрузить стол мастера">'+svg(IC.save)+'</button>'+
+  '<button class="ibtn plain" data-gd="open" aria-label="Справка мастера">'+svg('<path d="M4 4.5 H10 C11.2 4.5 12 5.3 12 6.5 V20 C12 19 11.2 18.5 10 18.5 H4 Z M20 4.5 H14 C12.8 4.5 12 5.3 12 6.5 V20 C12 19 12.8 18.5 14 18.5 H20 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>')+'</button>'+themeIcoBtn()+'<button class="ibtn" data-g="fileMenu" aria-label="Сохранить или загрузить стол мастера">'+svg(IC.save)+'</button>'+
   '</div></div><div class="herald-wrap" aria-hidden="true"><div class="herald"></div><i class="herald-loz"></i></div></header>';
  h+='<main class="gut" id="main"><div class="col wide stack" id="gmMain">'+gmTabBody(tab)+'</div></main>';
  h+='<nav class="tabs gut" aria-label="Разделы стола мастера"><div class="col wide tabs-in gm-tabs">';
@@ -2672,7 +2993,7 @@ function gmTabBody(tab){
  return gmPlaces();
 }
 function gmRerender(){var m=document.getElementById('gmMain'), w=document.getElementById('sgWrap'), sl=w&&w.scrollLeft, stp=w&&w.scrollTop; if(m){m.innerHTML=gmTabBody(gmTabName()); gmAfter(); var w2=document.getElementById('sgWrap'); if(w&&w2){w2.scrollLeft=sl; w2.scrollTop=stp}} else render()}
-function gmAfter(){gmApplyFilter('beasts'); gmApplyFilter('wiki'); if(gmTabName()==='dary') darMeterUpdate(); var pc=document.querySelector('.plot-chip.on'); if(pc){var pb=pc.parentNode; pb.scrollLeft=pc.offsetLeft-pb.offsetLeft-pb.clientWidth/2+pc.offsetWidth/2} if(gmTabName()==='mesta'&&document.getElementById('mapMeter')) mapMeterUpdate(locById(gm().openLoc))}
+function gmAfter(){if(typeof srchApplyAll==='function') setTimeout(srchApplyAll,0); gmApplyFilter('beasts'); gmApplyFilter('wiki'); if(gmTabName()==='dary') darMeterUpdate(); var pc=document.querySelector('.plot-chip.on'); if(pc){var pb=pc.parentNode; pb.scrollLeft=pc.offsetLeft-pb.offsetLeft-pb.clientWidth/2+pc.offsetWidth/2} if(gmTabName()==='mesta'&&document.getElementById('mapMeter')) mapMeterUpdate(locById(gm().openLoc))}
 function gmHead(key,title,count){return secHead(key,title,count)}
 function gmQ(key,n,ph){
  if(n<2) return '';
@@ -2684,7 +3005,7 @@ function gmApplyFilter(key){
  var box=document.getElementById('gl-'+key); if(!box) return;
  var q=(gmSearch[key]||'').trim().toLowerCase().replace(/ё/g,'е'), shown=0, f=key==='wiki'?gm().wikiFilter:'';
  box.querySelectorAll('[data-row]').forEach(function(r){
-  var ok=(!q||r.textContent.toLowerCase().replace(/ё/g,'е').indexOf(q)>-1)&&(!f||r.dataset.type===f); r.hidden=!ok; if(ok)shown++});
+  var ok=(!q||r.textContent.toLowerCase().replace(/ё/g,'е').indexOf(q)>-1)&&(!f||r.dataset.type===f)&&(key!=='beasts'||!bestSide||r.dataset.side===bestSide); r.hidden=!ok; if(ok)shown++});
  var none=document.getElementById('gqn-'+key); if(none) none.hidden=!(shown===0&&box.querySelectorAll('[data-row]').length>0);
 }
 
@@ -2697,12 +3018,12 @@ function gmPlaces(){
   '<p class="hint">Схемы урочищ, изб и подземелий. Откройте место, выберите кисть и водите по клеткам пальцем или мышью.</p>';
  if(!g.locs.length) h+='<div class="empty">Пока ни одного места. Создайте первое.</div>';
  else{
-  h+='<div class="loc-cards">';
+  h+=srchHtml('#loc-cards','Искать место: название, описание, метки')+'<div class="loc-cards" id="loc-cards">';
   g.locs.forEach(function(l){
-   h+='<button class="loc-card" data-g="openLoc" data-id="'+esc(l.id)+'"><span class="loc-thumb" aria-hidden="true">'+locThumb(l)+'</span>'+
+   h+='<button class="loc-card" data-g="openLoc" data-id="'+esc(l.id)+'" data-q="'+srchQ(l.name,l.desc,(LOC_KINDS.filter(function(k){return k[0]===l.kind})[0]||['',''])[1],Object.keys(l.marks).map(function(k){return l.marks[k]}).join(' '))+'"><span class="loc-thumb" aria-hidden="true">'+locThumb(l)+'</span>'+
     '<span class="loc-meta"><b>'+esc(l.name||'Безымянное место')+(l.example?'<span class="badge">пример</span>':'')+'</b><small>'+l.w+'×'+l.h+' · меток: '+Object.keys(l.marks).length+'</small>'+(l.desc?'<span class="item-note">'+esc(l.desc)+'</span>':'')+'</span></button>';
   });
-  h+='</div>';
+  h+='<p class="np-none hint" hidden>Ничего не нашлось</p></div>';
  }
  h+='<button class="btn add" data-g="newLoc">'+svg(IC.plus)+'Новое место</button></div></section>';
  return h;
@@ -2723,13 +3044,14 @@ function cellHtml(c,i,L){
 function gmLocEditor(L){
  var h='<section class="sec loc-ed">'+
   '<div class="loc-top"><button class="btn sm" data-g="closeLoc">'+svg(IC.back)+'Все места</button><button class="btn sm" data-g="locMenu" aria-label="Ещё действия с местом">'+svg(IC.dots)+'</button></div>'+
-  '<div class="loc-share"><div class="dar-meter" id="mapMeter"><span class="dm-bar"><i></i></span><span class="dm-txt">Считаю объём карты…</span></div><button class="btn pri" data-map="share">'+svg(DAR_IC.gift)+'Показать игрокам</button><button class="btn" data-map="preview" aria-pressed="'+gmPreview+'">'+svg(BRUSHES.filter(function(b){return b[0]==='skryt'})[0][2].replace(/<path d="M4 20 L20 4"[^>]*\/>/,''))+(gmPreview?'Как видит мастер':'Глазами игроков')+'</button></div>'+
+  '<div class="loc-share"><div class="dar-meter" id="mapMeter"><span class="dm-bar"><i></i></span><span class="dm-txt">Считаю объём карты…</span></div><button class="btn pri" data-map="share">'+svg(DAR_IC.gift)+'Показать игрокам</button><button class="btn" data-map="preview" aria-pressed="'+gmPreview+'">'+svg(BRUSHES.filter(function(b){return b[0]==='skryt'})[0][2].replace(/<path d="M4 20 L20 4"[^>]*\/>/,''))+(gmPreview?'Как видит мастер':'Глазами игроков')+'</button>'+scrBtnHtml(L)+'</div>'+
   '<div class="fld"><label for="g-loc-name">Название места</label><input class="inp" id="g-loc-name" data-gf="loc.name" value="'+esc(L.name)+'" autocomplete="off"></div>'+
   '<div class="loc-grid"><div class="brushes" role="toolbar" aria-label="Кисти">'+brushGroupsHtml(L)+'</div>'+
   '<div class="loc-canvas">'+(gmPreview?'<div class="lmap-wrap">'+mapGridHtml(locPlayerView(L,{marks:true}))+'</div><p class="hint">Так место видят игроки. Рисование выключено — нажмите «Как видит мастер».</p></div></div>':'<div class="lmap-wrap'+(gmBrush==='ruka'?' pan':'')+'" id="lmapWrap"><div class="lmap" id="lmap" style="grid-template-columns:repeat('+L.w+',minmax(0,1fr));--cols:'+L.w+'" data-id="'+esc(L.id)+'">');
  locLayers(L);
  if(!gmPreview){ for(var i=0;i<L.cells.length;i++) h+=cellHtml(L.cells[i],i,L);
  h+='</div></div><p class="hint">'+(gmBrush==='ruka'?'Рука: схему можно двигать, рисование выключено.':LAYER_B[gmBrush]?'Туман прячет клетки от игроков, «Рассеять» открывает. «Скрыть» прячет предмет или метку. Кисть тумана бывает 1, 3×3, 5×5 и «Комната» — она открывает всё до стен и дверей. Под туманом: '+fogPct(L)+'%.':'Водите по клеткам, чтобы рисовать. «Рука» — прокрутить схему.')+'</p></div></div>';}
+ h+=hidListHtml(L);
  h+='<div class="fld"><label for="g-loc-desc">Описание</label><textarea class="inp" id="g-loc-desc" data-gf="loc.desc" rows="3" style="min-height:80px">'+esc(L.desc)+'</textarea></div>';
  h+='<div class="sec" id="locMarks">'+locMarksHtml(L)+'</div>';
  return h+'</section>';
@@ -2741,12 +3063,14 @@ function locMarksHtml(L){
  return h+'<div class="list">'+nums.map(function(n){return '<div class="item mark-row"><span class="mark-n" aria-hidden="true">'+n+'</span><label class="sr" for="g-m-'+n+'">Метка '+n+'</label><input class="inp mark-in" id="g-m-'+n+'" data-gf="mark.'+n+'" value="'+esc(L.marks[n])+'" placeholder="Что здесь" autocomplete="off"><button class="xbtn" data-g="delMark" data-n="'+n+'" aria-label="Удалить метку '+n+'">×</button></div>'}).join('')+'</div>';
 }
 function paintCell(L,i,first){
+ scrSchedule();
  if(i<0||i>=L.cells.length) return;
  if(LAYER_B[gmBrush]){
   locLayers(L);
   if(gmBrush==='skryt'){ if(first) gmHideTarget=L.hid[i]?0:1; if(gmHideTarget&&!L.cells[i]) return; L.hid[i]=gmHideTarget }
   else{ fogApply(L,i,gmBrush==='tuman'?1:0).forEach(function(j){var le2=document.querySelector('#lmap .lc[data-i="'+j+'"]'); if(le2) le2.outerHTML=cellHtml(L.cells[j],j,L)}); return }
   var le=document.querySelector('#lmap .lc[data-i="'+i+'"]'); if(le) le.outerHTML=cellHtml(L.cells[i],i,L);
+  var hb=document.querySelector('.hd-box[data-hdloc="'+L.id+'"]'); if(hb) hb.outerHTML=hidListHtml(L);
   return;
  }
  var cur=L.cells[i], nv=gmBrush;
@@ -2779,15 +3103,18 @@ document.addEventListener('pointerup',stopPaint); document.addEventListener('poi
 
 /* ---------- БЕСТИАРИЙ ---------- */
 function beastById(id){var l=gm().beasts;for(var i=0;i<l.length;i++)if(l[i].id===id)return l[i];return null}
+var BSIDE={vrag:['Супостаты','Супостат','vrag'],svoi:['Союзники','Союзник','svoi'],inoe:['Пришлые','Пришлый','inoe']}, bestSide='';
+function bSideName(b){return (BSIDE[b&&b.side]||BSIDE.vrag)[1]}
 function gmBestiary(){
- var g=gm();
- var h='<section class="sec">'+gmHead('gm-best','Бестиарий',g.beasts.length?g.beasts.length+' шт.':'')+gmQ('beasts',g.beasts.length,'Искать супостата');
- if(!g.beasts.length) h+='<div class="empty">Бестиарий пуст. Добавьте первого супостата.</div>';
+ var g=gm(), cnt=function(k){return g.beasts.filter(function(b){return (b.side||'vrag')===k}).length};
+ var h='<section class="sec">'+gmHead('gm-best','Бестиарий',g.beasts.length?g.beasts.length+' шт.':'')+gmQ('beasts',g.beasts.length,'Искать в бестиарии');
+ if(g.beasts.length) h+='<div class="wiki-f bside-f" role="group" aria-label="Кто">'+[['','Все',g.beasts.length]].concat(Object.keys(BSIDE).map(function(k){return [k,BSIDE[k][0],cnt(k)]})).map(function(x){return '<button class="'+(x[0]?'bs-'+x[0]:'')+'" data-g="bestSide" data-s="'+x[0]+'" aria-pressed="'+(bestSide===x[0])+'"'+(x[2]||!x[0]?'':' disabled')+'>'+x[1]+' <small>'+x[2]+'</small></button>'}).join('')+'</div>';
+ if(!g.beasts.length) h+='<div class="empty">Бестиарий пуст. Добавьте супостата или союзника.</div>';
  else{
   h+='<div class="bcards" id="gl-beasts">';
   FOES.forEach(function(f){g.beasts.filter(function(b){return b.cls===f[0]}).forEach(function(b){
-   h+='<article class="bcard" data-row="1"><div class="bc-top"><span class="beast-med" aria-hidden="true">'+beastSvg(b.beast)+'</span>'+
-    '<div class="bc-ttl"><span class="lbl">'+f[1]+dangerPips(b.cls)+'</span><h3>'+esc(b.name||'Безымянная тварь')+(b.example?'<span class="badge">пример</span>':'')+'</h3></div></div>'+
+   h+='<article class="bcard side-'+(b.side||'vrag')+'" data-row="1" data-side="'+(b.side||'vrag')+'"><div class="bc-top"><span class="beast-med" aria-hidden="true">'+beastSvg(b.beast)+'</span>'+
+    '<div class="bc-ttl"><span class="lbl">'+((b.side||'vrag')!=='vrag'?'<span class="chip '+(b.side==='svoi'?'svoi':'inoe')+'">'+bSideName(b)+'</span> ':'')+f[1]+dangerPips(b.cls)+'</span><h3>'+esc(b.name||'Безымянная тварь')+(b.boss?'<span class="boss-mini" title="Главарь">'+svg(SEAL_SVG,'0 0 48 48')+'</span>':'')+(b.example?'<span class="badge">пример</span>':'')+'</h3></div></div>'+
     '<div class="bc-stats"><span><small>Здоровье</small><b>'+b.hp+'</b></span>'+BST.map(function(k){return '<span><small>'+statIcon(k[0])+k[2]+'</small><b>'+b[k[0]]+'</b></span>'}).join('')+'</div>'+
     '<div class="bc-rolls">'+rollRow(b,b.atk,'Атака',ATK_IC)+rollRow(b,b.def,'Защита',SHIELD_IC)+'</div>'+
     (b.traits?'<p class="bc-p">'+esc(b.traits)+'</p>':'')+(b.weak?'<p class="bc-p"><b>Слабость:</b> '+esc(b.weak)+'</p>':'')+(b.where?'<p class="bc-p muted"><b>Где водится:</b> '+esc(b.where)+'</p>':'')+
@@ -2795,7 +3122,7 @@ function gmBestiary(){
   })});
   h+='</div>';
  }
- return h+'<button class="btn add" data-g="newBeast">'+svg(IC.plus)+'Добавить супостата</button></div></section>';
+ return h+'<button class="btn add" data-g="newBeast">'+svg(IC.plus)+'Добавить в бестиарий</button></div></section>';
 }
 function diceRowHtml(key,g){return '<div class="roll-g"><label class="sr">Сколько костей</label><div class="qty"><button type="button" class="tstep" data-roll="n" data-d="-1" aria-label="Меньше костей">−</button><input class="num" name="'+key+'_n" type="number" inputmode="numeric" min="1" max="20" value="'+g.n+'" aria-label="Сколько костей"><button type="button" class="tstep" data-roll="n" data-d="1" aria-label="Больше костей">+</button></div>'+
  '<select class="inp roll-d" name="'+key+'_d" aria-label="Какая кость">'+DICE.map(function(d){return '<option value="'+d+'"'+(g.d===d?' selected':'')+'>d'+d+'</option>'}).join('')+'</select>'+
@@ -2813,19 +3140,21 @@ document.addEventListener('click',function(e){
 });
 document.addEventListener('input',function(e){var fs=e.target.closest&&e.target.closest('.roll-ed'); if(fs) rollRefresh(fs); var f=e.target.closest&&e.target.closest('form[data-gform="beast"]'); if(f&&!fs) f.querySelectorAll('.roll-ed').forEach(rollRefresh)});
 document.addEventListener('change',function(e){var fs=e.target.closest&&e.target.closest('.roll-ed'); if(fs) rollRefresh(fs)});
-function beastSheet(b){
- var isNew=!b; b=b||{name:'',cls:'neizv',beast:'inoy',hp:10,sila:0,skor:0,vnim:0,gib:0,ponim:0,atk:{dice:[{n:1,d:6}],st:'sila'},def:{dice:[{n:1,d:6}],st:'gib'},traits:'',weak:'',where:''};
+function beastSheet(b,side){
+ var isNew=!b; b=b||{side:side||bestSide||'vrag',name:'',cls:'neizv',beast:'inoy',hp:10,sila:0,skor:0,vnim:0,gib:0,ponim:0,atk:{dice:[{n:1,d:6}],st:'sila'},def:{dice:[{n:1,d:6}],st:'gib'},traits:'',weak:'',where:''};
  var red=function(key,lbl,ic){var r=rollNorm(b[key]); return '<fieldset class="fld roll-ed" data-rk="'+key+'"><legend class="lbl">'+svg(ic)+lbl+'</legend><div class="roll-groups">'+
   (r.dice.length?r.dice:[{n:1,d:6}]).map(function(g){return diceRowHtml(key,g)}).join('')+'</div>'+
   '<button type="button" class="btn sm roll-add" data-roll="add" data-k="'+key+'">'+svg(IC.plus)+'Ещё кости</button>'+
   '<div class="fld"><label for="gb-'+key+'s">И прибавить удаль</label><select class="inp" id="gb-'+key+'s" name="'+key+'_st"><option value="">— нет —</option>'+BST.map(function(k){return '<option value="'+k[0]+'"'+(r.st===k[0]?' selected':'')+'>'+k[1]+'</option>'}).join('')+'</select></div><p class="roll-sum" aria-live="polite">'+rollText(b,r)+'</p></fieldset>'};
  var num=function(k,l){return '<div class="fld"><label for="gb-'+k+'">'+l+'</label><input class="inp" id="gb-'+k+'" name="'+k+'" type="number" inputmode="numeric" value="'+b[k]+'"></div>'};
- var h='<h2>'+(isNew?'Новый супостат':'Изменить супостата')+'</h2><form class="stack" style="gap:14px" data-gform="beast" data-id="'+esc(b.id||'')+'">'+
+ var h='<h2>'+(isNew?'Новая запись бестиария':'Изменить: '+esc(b.name||'запись'))+'</h2><form class="stack" style="gap:14px" data-gform="beast" data-id="'+esc(b.id||'')+'">'+
+  '<fieldset class="fld" style="border:0;padding:0;margin:0"><legend class="lbl" style="margin-bottom:6px">Кто это героям</legend><div class="seg three">'+Object.keys(BSIDE).map(function(k){return '<label><input type="radio" name="side" value="'+k+'"'+((b.side||'vrag')===k?' checked':'')+'><span>'+BSIDE[k][1]+'</span></label>'}).join('')+'</div></fieldset>'+
+  '<label class="chk boss-chk"><input type="checkbox" name="boss"'+(b.boss?' checked':'')+'> '+svg(SEAL_SVG,'0 0 48 48')+'<span><b>Главарь</b><small>В бою и на экране игроков будет отмечен печатью</small></span></label>'+
   '<div class="fld"><label for="gb-name">Имя или прозвище</label><input class="inp" id="gb-name" name="name" value="'+esc(b.name)+'" required autocomplete="off"></div>'+
-  '<div class="fld"><label for="gb-cls">Род супостата</label><select class="inp" id="gb-cls" name="cls">'+FOES.map(function(f){return '<option value="'+f[0]+'"'+(b.cls===f[0]?' selected':'')+'>'+f[1]+'</option>'}).join('')+'</select></div>'+
+  '<div class="fld"><label for="gb-cls">Род</label><select class="inp" id="gb-cls" name="cls">'+FOES.map(function(f){return '<option value="'+f[0]+'"'+(b.cls===f[0]?' selected':'')+'>'+f[1]+'</option>'}).join('')+'</select></div>'+
   '<div class="fld"><label for="gb-beast">Знак</label><select class="inp" id="gb-beast" name="beast">'+Object.keys(BEASTS).map(function(k){return '<option value="'+k+'"'+(b.beast===k?' selected':'')+'>'+BEASTS[k][0]+'</option>'}).join('')+'</select></div>'+
   '<div class="fields">'+num('hp','Здоровье')+BST.map(function(k){return num(k[0],k[1])}).join('')+'</div>'+
-  red('atk','Атака',ATK_IC)+red('def','Защита',SHIELD_IC)+'<p class="hint" style="margin-top:-6px">К броску костей прибавляется значение выбранной удали супостата.</p>'+
+  red('atk','Атака',ATK_IC)+red('def','Защита',SHIELD_IC)+'<p class="hint" style="margin-top:-6px">К броску костей прибавляется значение выбранной удали.</p>'+
   '<div class="fld"><label for="gb-traits">Особенности</label><textarea class="inp" id="gb-traits" name="traits" rows="3" style="min-height:80px">'+esc(b.traits)+'</textarea></div>'+
   '<div class="fld"><label for="gb-weak">Слабость</label><input class="inp" id="gb-weak" name="weak" value="'+esc(b.weak)+'" autocomplete="off"></div>'+
   '<div class="fld"><label for="gb-where">Где водится</label><input class="inp" id="gb-where" name="where" value="'+esc(b.where)+'" autocomplete="off"></div>'+
@@ -2835,13 +3164,13 @@ function beastSheet(b){
 }
 
 /* ---------- БОЙ ---------- */
-var SIDES={svoi:['Свои','svoi'],vrag:['Супостаты','vrag'],inoe:['Прочие','inoe']};
+var SIDES={svoi:['Свои','svoi'],vrag:['Супостаты','vrag'],inoe:['Пришлые','inoe']};
 function gmFight(){
  var F=gm().fight, L=F.list;
  var h='<section class="sec">'+gmHead('gm-fight','Бой',L.length?L.length+' уч.':'');
  h+='<div class="fight-bar"><div class="round"><small>Круг</small><b>'+F.round+'</b></div>'+
   '<button class="btn pri" data-g="nextTurn"'+(L.length?'':' disabled')+'>Следующий ход '+svg('<path d="M9 5 L16 12 L9 19" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>')+'</button>'+
-  '<button class="btn sm" data-g="askReset"'+(L.length?'':' disabled')+'>Новый бой</button><button class="btn sm" data-g="spdSort"'+(L.length>1?'':' disabled')+'>'+statIcon('skor')+'По скорости</button></div>';
+  '<button class="btn sm" data-g="askReset"'+(L.length?'':' disabled')+'>Новый бой</button><button class="btn sm" data-g="iniAll"'+(L.length?'':' disabled')+'>'+svg(INI_IC)+'Инициатива</button>'+scrFightBtnHtml()+'</div>';
  if(!L.length) h+='<div class="empty">В бою пока никого. Добавьте героев и супостатов — порядок ходов задаётся стрелками.</div>';
  else{
   h+='<ol class="fight-list">';
@@ -2851,13 +3180,13 @@ function gmFight(){
     '<div class="fr-ord"><button class="ord" data-g="up" data-i="'+i+'" aria-label="Выше: '+esc(p.name)+'"'+(i?'':' disabled')+'>'+svg('<path d="M6 15 L12 9 L18 15" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>')+'</button>'+
     '<span class="fr-n">'+(i+1)+'</span><button class="ord" data-g="down" data-i="'+i+'" aria-label="Ниже: '+esc(p.name)+'"'+(i<L.length-1?'':' disabled')+'>'+svg('<path d="M6 9 L12 15 L18 9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>')+'</button></div>'+
     '<div class="fr-main"><button class="fr-name" data-g="setTurn" data-i="'+i+'" aria-label="Сделать ход: '+esc(p.name)+'">'+(cur?'<span class="turn-mark" aria-hidden="true">Ходит</span>':'')+
-     (p.beast?'<span class="fr-ico" aria-hidden="true">'+beastSvg(p.beast)+'</span>':'')+'<span>'+esc(p.name||'Без имени')+'</span><span class="chip '+p.side+'">'+SIDES[p.side][0]+'</span>'+(down?'<span class="stamp-steal sm">Пал</span>':'')+'</button>'+
+     (p.beast?'<span class="fr-ico" aria-hidden="true">'+beastSvg(p.beast)+'</span>':'')+'<span class="fr-nm">'+esc(p.name||'Без имени')+'</span>'+(p.boss?'<span class="boss-mini" title="Главарь">'+svg(SEAL_SVG,'0 0 48 48')+'</span>':'')+sideStamp(p.side,fIsHero(p))+(down?'<span class="stamp-steal sm">Пал</span>':'')+'</button>'+
     '<div class="fr-hp"><button class="step" data-g="hp" data-i="'+i+'" data-d="-1" aria-label="Урон: '+esc(p.name)+'">−</button>'+
      '<button class="hp-val" data-g="hpEdit" data-i="'+i+'" aria-label="Изменить здоровье: '+esc(p.name)+'"><b>'+p.hp+'</b><small>/ '+p.max+'</small></button>'+
      '<button class="step" data-g="hp" data-i="'+i+'" data-d="1" aria-label="Лечение: '+esc(p.name)+'">+</button>'+
-     '<span class="fr-bar" aria-hidden="true"><i style="width:'+pct+'%"></i></span></div>'+
+     '<span class="fr-bar" aria-hidden="true"><i style="width:'+pct+'%"></i></span>'+hpStHtml(hpBand(p.hp,p.max),'sm')+'</div>'+
     (function(){var bb=p.ref&&beastById(p.ref); return bb?'<div class="fr-rolls"><span title="Атака">'+svg(ATK_IC)+'<b>'+rollText(bb,bb.atk)+'</b>'+(bb.atk.st?'<small>'+bstName(bb.atk.st)+'</small>':'')+'</span><span title="Защита">'+svg(SHIELD_IC)+'<b>'+rollText(bb,bb.def)+'</b>'+(bb.def.st?'<small>'+bstName(bb.def.st)+'</small>':'')+'</span></div>':''})()+
-    '<div class="fr-meta"><button class="fr-spd" data-tk="spd" data-f="'+esc(p.id)+'" aria-label="Скорость: '+esc(p.name)+'">'+statIcon('skor')+'<small>Скорость</small><b>'+(fSpd(p)==null?'—':fSpd(p))+'</b></button></div>'+
+    '<div class="fr-meta"><button class="fr-spd fr-boss'+(p.boss?' on':'')+'" data-tk="boss" data-f="'+esc(p.id)+'" aria-pressed="'+!!p.boss+'" aria-label="Главарь: '+esc(p.name)+'">'+svg(SEAL_SVG,'0 0 48 48')+'<small>Главарь</small></button><button class="fr-spd" data-tk="spd" data-f="'+esc(p.id)+'" aria-label="Скорость: '+esc(p.name)+'">'+statIcon('skor')+'<small>Скорость</small><b>'+(fSpd(p)==null?'—':fSpd(p))+'</b></button><button class="fr-spd fr-ini'+(p.ini==null?' empty':'')+'" data-tk="ini" data-f="'+esc(p.id)+'" aria-label="Инициатива: '+esc(p.name)+'">'+svg(INI_IC)+'<small>Инициатива</small><b>'+(p.ini==null?'—':p.ini)+'</b></button></div>'+
     tokRowHtml(p)+
     '<input class="inp fr-note" data-gf="fnote.'+i+'" value="'+esc(p.note)+'" placeholder="Заметка" aria-label="Заметка: '+esc(p.name)+'" autocomplete="off"></div>'+
     '<button class="xbtn fr-x" data-g="rmFighter" data-i="'+i+'" aria-label="Убрать из боя: '+esc(p.name)+'">×</button></li>';
@@ -2869,8 +3198,9 @@ function gmFight(){
 }
 function addFighter(o){
  var F=gm().fight, same=F.list.filter(function(x){return x.ref&&x.ref===o.ref}).length;
- if(o.ref&&o.side==='vrag'&&same>0){ if(same===1){var first=F.list.filter(function(x){return x.ref===o.ref})[0]; if(!/ \d+$/.test(first.name)) first.name+=' 1'} o.name=o.name+' '+(same+1) }
- F.list.push({id:uid(),name:o.name,side:o.side||'vrag',hp:o.hp,max:o.max,note:'',tok:[],spd:o.spd==null?null:o.spd,beast:o.beast||'',ref:o.ref||''});
+ if(o.ref&&same>0){ if(same===1){var first=F.list.filter(function(x){return x.ref===o.ref})[0]; if(!/ \d+$/.test(first.name)) first.name+=' 1'} o.name=o.name+' '+(same+1) }
+ var ob=o.ref&&beastById(o.ref);
+ F.list.push({id:uid(),name:o.name,side:o.side||'vrag',hp:o.hp,max:o.max,note:'',tok:[],boss:o.boss!=null?!!o.boss:!!(ob&&ob.boss),spd:o.spd==null?null:o.spd,ini:o.ini==null?null:o.ini,beast:o.beast||'',ref:o.ref||''});
 }
 
 /* ---------- ВИКИ ---------- */
@@ -2974,10 +3304,11 @@ document.addEventListener('click',function(e){
   case 'newBeast': beastSheet(null); break;
   case 'editBeast': beastSheet(beastById(el.dataset.id)); break;
   case 'delBeast': var b=beastById(el.dataset.id); if(b){var bi=g.beasts.indexOf(b); g.beasts.splice(bi,1); closeSheet(); gmUndoable('beasts',bi,b,'Супостат удалён')} break;
-  case 'toFight': var bb=beastById(el.dataset.id); if(bb){addFighter({name:bb.name,side:'vrag',hp:bb.hp,max:bb.hp,beast:bb.beast,ref:bb.id}); gmSave(); toast('«'+bb.name+'» в бою. Всего: '+F.list.length)} break;
+  case 'toFight': var bb=beastById(el.dataset.id); if(bb){addFighter({name:bb.name,side:bb.side||'vrag',hp:bb.hp,max:bb.hp,beast:bb.beast,ref:bb.id}); gmSave(); toast('«'+bb.name+'» в бою. Всего: '+F.list.length)} break;
   /* бой */
   case 'nextTurn': if(F.list.length){F.turn++; var msg=''; if(F.turn>=F.list.length){F.turn=0; F.round++; msg='Круг '+F.round} var tm=tokTick(F.list[F.turn]); if(tm) msg=(msg?msg+'. ':'')+tm; if(msg) toast(msg); gmSave(); gmRerender()} break;
   case 'setTurn': F.turn=i; gmSave(); gmRerender(); break;
+  case 'iniAll': iniAllSheet(); break;
   case 'spdSort': var curF=F.list[F.turn]; F.list=F.list.map(function(x,k){return [x,k]}).sort(function(a2,b2){var va=fSpd(a2[0]), vb=fSpd(b2[0]); va=va==null?-999:va; vb=vb==null?-999:vb; return vb-va||a2[1]-b2[1]}).map(function(x){return x[0]}); F.turn=0; gmSave(); gmRerender(); toast('Очередь выстроена по скорости'); break;
   case 'up': case 'down':
    var j=a==='up'?i-1:i+1; if(j<0||j>=F.list.length) break;
@@ -3001,13 +3332,14 @@ document.addEventListener('click',function(e){
     '</div><div class="row-btns"><button class="btn pri" type="submit">Добавить</button><button class="btn" type="button" data-act="closeSheet">Отмена</button></div></form>'); break;
   case 'addFromBest':
    if(!g.beasts.length){toast('Бестиарий пуст'); break}
-   openSheet('<h2>Из бестиария</h2><p class="hint">Нажмите на супостата — он встанет в конец очереди. Можно нажать несколько раз.</p><div class="list">'+
-    g.beasts.map(function(b){return '<div class="item"><span class="beast-med" aria-hidden="true">'+beastSvg(b.beast)+'</span><button class="item-main" data-g="toFightStay" data-id="'+esc(b.id)+'"><span class="item-name">'+esc(b.name)+'</span><span class="item-note">'+foe(b.cls)[1]+' · здоровье '+b.hp+'</span></button></div>'}).join('')+
+   openSheet('<h2>Из бестиария</h2><p class="hint">Нажмите на запись — она встанет в конец очереди на своей стороне: супостаты к врагам, союзники к своим. Можно нажать несколько раз.</p><div class="list">'+
+    g.beasts.map(function(b){return '<div class="item"><span class="beast-med" aria-hidden="true">'+beastSvg(b.beast)+'</span><button class="item-main" data-g="toFightStay" data-id="'+esc(b.id)+'"><span class="item-name">'+esc(b.name)+'</span><span class="item-note">'+((b.side||'vrag')!=='vrag'?bSideName(b)+' · ':'')+foe(b.cls)[1]+' · здоровье '+b.hp+'</span></button></div>'}).join('')+
     '</div><button class="btn" data-act="closeSheet">Готово</button>'); break;
-  case 'toFightStay': var b2=beastById(el.dataset.id); if(b2){addFighter({name:b2.name,side:'vrag',hp:b2.hp,max:b2.hp,beast:b2.beast,ref:b2.id}); gmSave(); toast('«'+b2.name+'» в бою'); gmRerender()} break;
+  case 'bestSide': bestSide=el.dataset.s||''; document.querySelectorAll('[data-g="bestSide"]').forEach(function(x){x.setAttribute('aria-pressed',String((x.dataset.s||'')===bestSide))}); gmApplyFilter('beasts'); break;
+  case 'toFightStay': var b2=beastById(el.dataset.id); if(b2){addFighter({name:b2.name,side:b2.side||'vrag',hp:b2.hp,max:b2.hp,beast:b2.beast,ref:b2.id}); gmSave(); toast('«'+b2.name+'» в бою'); gmRerender()} break;
   case 'addQuick':
    openSheet('<h2>Быстро в бой</h2><form class="stack" style="gap:14px" data-gform="quick"><div class="fld"><label for="gq-name">Имя</label><input class="inp" id="gq-name" name="name" required autocomplete="off" autofocus></div>'+
-    '<div class="fields"><div class="fld"><label for="gq-hp">Здоровье</label><input class="inp" id="gq-hp" name="hp" type="number" inputmode="numeric" value="10"></div><div class="fld"><label for="gq-spd">Скорость</label><input class="inp" id="gq-spd" name="spd" type="number" inputmode="numeric" placeholder="—"></div></div>'+
+    '<div class="fields"><div class="fld"><label for="gq-hp">Здоровье</label><input class="inp" id="gq-hp" name="hp" type="number" inputmode="numeric" value="10"></div><div class="fld"><label for="gq-spd">Скорость</label><input class="inp" id="gq-spd" name="spd" type="number" inputmode="numeric" placeholder="—"></div><div class="fld"><label for="gq-ini">Инициатива</label><input class="inp" id="gq-ini" name="ini" type="number" inputmode="numeric" placeholder="—"></div></div>'+
     '<fieldset style="border:0;padding:0;margin:0" class="fld"><legend class="lbl" style="margin-bottom:6px">Сторона</legend><div class="seg three">'+Object.keys(SIDES).map(function(k){return '<label><input type="radio" name="side" value="'+k+'"'+(k==='vrag'?' checked':'')+'><span>'+SIDES[k][0]+'</span></label>'}).join('')+'</div></fieldset>'+
     '<div class="row-btns"><button class="btn pri" type="submit">Добавить</button><button class="btn" type="button" data-act="closeSheet">Отмена</button></div></form>'); break;
   /* вики */
@@ -3039,13 +3371,13 @@ document.addEventListener('submit',function(e){
   var tp=LOC_TPL.filter(function(t){return t.id===S('tpl')})[0];
   var L=tp?locFromTpl(tp,S('name')):locLayers({id:uid(),name:S('name')||'Новое место',desc:'',w:w,h:h,cells:cells,marks:{},kind:locKind(S('kind'))}); g.locs.unshift(L); g.openLoc=L.id; gmBrush=kindBrush(L.kind); brOpen=null; gmSave(); closeSheet(); gmRerender(); window.scrollTo(0,0); return}
  if(kind==='beast'){var b=form.dataset.id?beastById(form.dataset.id):null, isNew=!b; b=b||{id:uid()};
-  b.name=S('name'); b.cls=foe(S('cls'))[0]; b.beast=BEASTS[S('beast')]?S('beast'):'inoy'; b.hp=Math.max(0,N('hp')); BST.forEach(function(k){b[k[0]]=N(k[0])});
+  b.side=BSIDE[S('side')]?S('side'):'vrag'; b.boss=!!fd.get('boss'); b.name=S('name'); b.cls=foe(S('cls'))[0]; b.beast=BEASTS[S('beast')]?S('beast'):'inoy'; b.hp=Math.max(0,N('hp')); BST.forEach(function(k){b[k[0]]=N(k[0])});
   var RD=function(k){var ns=fd.getAll(k+'_n'), ds=fd.getAll(k+'_d'); return rollNorm({dice:ns.map(function(n,i){return {n:n,d:ds[i]}}),st:S(k+'_st')})}; b.atk=RD('atk'); b.def=RD('def'); delete b.dmg; delete b.armor;
   b.traits=S('traits'); b.weak=S('weak'); b.where=S('where'); delete b.example; if(isNew) g.beasts.push(b); gmSave(); closeSheet(); gmRerender(); toast(isNew?'Добавлено':'Сохранено'); return}
  if(kind==='wiki'){var w=form.dataset.id?wikiById(form.dataset.id):null, isN=!w; w=w||{id:uid()};
   w.type=WIKI_T[S('type')]?S('type'):'know'; w.name=S('name'); w.grade=w.type==='rite'?S('grade'):''; w.kind=w.type==='rite'?S('kind'):''; w.dmg=w.type==='weapon'?N('dmg'):0; w.ward=w.type==='gear'?S('ward'):''; w.hk=HEXK[S('hk')]?S('hk'):'blago'; w.who=w.type==='npc'?S('who'):''; w.where=w.type==='npc'?S('where'):''; w.mood=MOODS[S('mood')]?S('mood'):'roven'; w.fate=FATES[S('fate')]?S('fate'):'zdrav'; w.tags=S('tags'); w.text=S('text'); delete w.example;
   if(isN) g.wiki.push(w); gmSave(); closeSheet(); gmRerender(); toast(isN?'Добавлено':'Сохранено'); return}
- if(kind==='quick'){addFighter({name:S('name'),side:SIDES[S('side')]?S('side'):'vrag',hp:Math.max(0,N('hp')),max:Math.max(0,N('hp')),spd:S('spd')===''?null:N('spd')}); gmSave(); closeSheet(); gmRerender(); return}
+ if(kind==='quick'){addFighter({name:S('name'),side:SIDES[S('side')]?S('side'):'vrag',hp:Math.max(0,N('hp')),max:Math.max(0,N('hp')),spd:S('spd')===''?null:N('spd'),ini:S('ini')===''?null:N('ini')}); gmSave(); closeSheet(); gmRerender(); return}
  if(kind==='heroes'){fd.getAll('h').forEach(function(id){var c=byId(id); if(c) g.fight.list.push({id:uid(),name:c.info.name||'Безымянный герой',side:'svoi',hp:hpEff(c),max:Number(c.health.max)||0,note:'',beast:'',ref:c.id})}); gmSave(); closeSheet(); gmRerender(); return}
  if(kind==='hp'){var p=g.fight.list[Number(form.dataset.i)]; if(!p) return; var how=e.submitter&&e.submitter.value||'set', n=Math.abs(N('n'));
   if(how==='dmg') p.hp-=n; else if(how==='heal') p.hp=Math.min(p.max||Infinity,p.hp+n); else {p.hp=N('hp'); p.max=Math.max(0,N('max'))}
@@ -4484,10 +4816,10 @@ function gmDary(){
  var T=gm().gifts;
  h+='<section class="sec">'+gmHead('gm-zag','Заготовки даров',T.length?T.length+' шт.':'');
  if(!T.length) h+='<div class="empty">Заготовок нет. Соберите дар и нажмите «В заготовки».</div>';
- else h+='<div class="list">'+T.map(function(t){
+ else h+=srchHtml('#tpl-list','Искать дар: название, вещи, монеты')+'<div class="list" id="tpl-list">'+T.map(function(t){
    var ob=t.list.some(function(x){return x.ob});
-   return '<div class="item"><span class="dar-ico" aria-hidden="true">'+svg(DAR_IC.gift)+'</span><button class="item-main" data-dar="tplUse" data-id="'+esc(t.id)+'"><span class="item-name">'+esc(t.title||'Дар без подписи')+(ob?'<span class="chip ob">Есть обязательное</span>':'')+(t.example?'<span class="badge">пример</span>':'')+'</span>'+
-    '<span class="item-note">'+t.list.map(function(x){return esc(darNameText(x))}).join(' · ')+'</span></button><button class="xbtn" data-dar="tplDel" data-id="'+esc(t.id)+'" aria-label="Удалить заготовку: '+esc(t.title)+'">×</button></div>'}).join('')+'</div>';
+   return '<div class="item" data-q="'+srchQ(t.title,t.list.map(function(x){return darNameText(x)+' '+(x.d||'')}).join(' '))+'"><span class="dar-ico" aria-hidden="true">'+svg(DAR_IC.gift)+'</span><button class="item-main" data-dar="tplUse" data-id="'+esc(t.id)+'"><span class="item-name">'+esc(t.title||'Дар без подписи')+(ob?'<span class="chip ob">Есть обязательное</span>':'')+(t.example?'<span class="badge">пример</span>':'')+'</span>'+
+    '<span class="item-note">'+t.list.map(function(x){return esc(darNameText(x))}).join(' · ')+'</span></button><button class="xbtn" data-dar="tplDel" data-id="'+esc(t.id)+'" aria-label="Удалить заготовку: '+esc(t.title)+'">×</button></div>'}).join('')+'<p class="np-none hint" hidden style="padding:10px 12px;margin:0">Ничего не нашлось</p></div>';
  return h+'</section>';
 }
 function obTog(on){return '<label class="steal-tog ob-tog"><input type="checkbox" name="ob" value="1"'+(on?' checked':'')+'><span class="steal-box" aria-hidden="true"></span><span class="steal-txt"><b>Обязательно</b><small>Игрок не сможет отказаться от этой записи.</small></span><span class="stamp-steal" aria-hidden="true">Обязательно</span></label>'}
@@ -4503,6 +4835,8 @@ function darSeedGifts(){
   I('Грамота Разбойного приказа',[{k:'item',n:'Грамота на сыск',q:1,d:'Велено ловить Кудеяра и всякого лихого человека'},{k:'money',s:1},{k:'know',n:'Награда за Кудеяра',wh:'Разбойный приказ',d:'5 серебряных за голову атамана'}]),
   I('Вода святого ключа',[{k:'item',n:'Фляга святой воды',q:2,d:'Возвращает 3 здоровья или снимает сглаз'},{k:'hex',n:'Благословение ключа',hk:'blago',d:'Ночь без кошмаров и морока'}]),
   I('Казна Кудеяра',[{k:'money',z:2,s:6,m:40},{k:'weapon',n:'Пищаль',dm:3,d:'Перезарядка — полный ход'},{k:'item',n:'Мешок с печатью Казённого двора',q:1,d:'Кто-то в приказах в доле'},{k:'insp',q:1}]),
+  I('Пирог и благодарность',[{k:'money',m:8},{k:'item',n:'Пирог с вязигой',q:1,d:'Возвращает 2 здоровья'},{k:'insp',q:1}]),
+  I('Находка в колодце',[{k:'item',n:'Серебряное колечко',q:1,d:'С русалочьей чешуйкой внутри'},{k:'know',n:'Колечко невесты мытаря',d:'Мытарь заплатит за него — или убьёт'}]),
   I('Отцовский оберег',[{k:'item',n:'Оберег сотника Ратибора',q:1,ob:1,d:'Железный конёк на цепочке'},{k:'know',n:'Отец лёг в склеп сам',ob:1,d:'Лихо не убило его — заморочило'},{k:'insp',q:1}])
  ];
 }
@@ -4516,6 +4850,15 @@ function npcGiftSheet(w){
   '</div><div class="fld"><label for="ng-x">От себя</label><textarea class="inp" id="ng-x" name="x" rows="2" placeholder="Что герои о нём слышали"></textarea></div>'+obTog(false)+
   '<div class="row-btns"><button class="btn pri" type="submit">Положить в дар</button><button class="btn" type="button" data-act="closeSheet">Отмена</button></div></form>';
  openSheet(h);
+}
+function allyGiftSheet(b){
+ var opt=function(name,lbl,sub,on){return '<label><input type="checkbox" name="p" value="'+name+'"'+(on?' checked':'')+'><span><b>'+lbl+'</b><small>'+esc(sub)+'</small></span></label>'};
+ openSheet('<h2>'+bSideName(b)+' в дар</h2><p class="hint">Ляжет герою в раздел «Знакомцы». Отметьте, что ему открыть.</p><form class="stack" style="gap:14px" data-dform="bally" data-id="'+esc(b.id)+'">'+
+  '<div class="fld"><label for="ba-n">Имя</label><input class="inp" id="ba-n" name="n" value="'+esc(b.name)+'" required autocomplete="off"></div>'+
+  '<div class="fld"><label for="ba-w">Кто таков</label><input class="inp" id="ba-w" name="who" value="'+esc(b.side==='svoi'?'Союзник':'')+'" autocomplete="off" placeholder="Например: дружинник воеводы"></div><div class="opts">'+
+  (b.where?opt('where','Где найти',b.where,true):'')+(b.traits?opt('traits','Особенности',b.traits,true):'')+opt('rolls','Атака и защита','Атака '+rollText(b,b.atk)+', защита '+rollText(b,b.def),b.side==='svoi')+(b.weak?opt('weak','Слабость',b.weak,false):'')+
+  '</div><div class="fld"><label for="ba-x">От себя</label><textarea class="inp" id="ba-x" name="x" rows="2" placeholder="Как его позвать, чем отблагодарить…"></textarea></div>'+obTog(false)+
+  '<div class="row-btns"><button class="btn pri" type="submit">Положить в дар</button><button class="btn" type="button" data-act="closeSheet">Отмена</button></div></form>');
 }
 function beastKnowSheet(b){
  var opt=function(name,lbl,sub,on){return '<label><input type="checkbox" name="p" value="'+name+'"'+(on?' checked':'')+'><span><b>'+lbl+'</b><small>'+esc(sub)+'</small></span></label>'};
@@ -4568,7 +4911,8 @@ function darShowQR(){
   if(!q||q.typeNumber>30){
    h+='<p class="hint">Дар слишком велик для QR-кода ('+text.length+' знаков). Передайте его ссылкой или файлом — или разделите на два дара.</p>';
   }else{
-   h+='<div class="qr-box">'+qrSvg(q)+'</div><p class="hint" style="text-align:center">'+(darLinkable()?'Наведите камеру телефона: откроется летопись с даром.':'Игрок сканирует код в летописи: «Принять дар» → «Сканировать QR».')+
+   darQrLast={title:G.title||'Дар героям',text:text,n:G.list.length};
+   h+='<div class="qr-box">'+qrSvg(q)+'</div><div class="row-btns" style="margin:4px 0 8px">'+scrQrBtnHtml()+'</div><p class="hint" style="text-align:center">'+(darLinkable()?'Наведите камеру телефона: откроется летопись с даром.':'Игрок сканирует код в летописи: «Принять дар» → «Сканировать QR».')+
     (q.typeNumber>20?' Код плотный — держите телефон ближе и прибавьте яркость экрана.':'')+'</p>';
   }
   h+='<p class="hint" style="text-align:center">'+G.list.length+' '+plural(G.list.length,'запись','записи','записей')+' · '+text.length+' знаков</p>';
@@ -4716,7 +5060,7 @@ document.addEventListener('click',function(e){
   case 'scan': darScan(el.dataset.m); break;
   case 'scanStop': stopDarScan(); if(el.dataset.m==='zv') closeSheet(); else darOpenSheet(); break;
   case 'npcGift': var nw=wikiById(el.dataset.id); if(nw) npcGiftSheet(nw); break;
-  case 'beastKnow': var bk=beastById(el.dataset.id); if(bk) beastKnowSheet(bk); break;
+  case 'beastKnow': var bk=beastById(el.dataset.id); if(bk){ if((bk.side||'vrag')==='vrag') beastKnowSheet(bk); else allyGiftSheet(bk)} break;
   case 'tplSave': var G4=gift(); gm().gifts.unshift({id:uid(),title:G4.title||'Дар без подписи',list:JSON.parse(JSON.stringify(G4.list))}); gmSave(); gmRerender(); toast('Дар сохранён в заготовки'); break;
   case 'tplUse': var tu=tplById(el.dataset.id); if(!tu) break;
    if(!gift().list.length){darLoadTpl(tu,'replace'); break}
@@ -4770,6 +5114,15 @@ document.addEventListener('submit',function(e){
   if(has('text')&&nw2.text) D.push(nw2.text); if(S('x')) D.push(S('x'));
   var fo=darEntry({k:'friend',n:S('n')||nw2.name,kt:has('who')?nw2.who:'',gd:has('where')?nw2.where:'',mo:has('mood')?nw2.mood:'',fa:has('fate')?nw2.fate:'',d:D.join('\n'),ob:fd.get('ob')}); if(!fo) return;
   gift().list.push(fo); gmSave(); darMeterUpdate(); closeSheet(); toast('Знакомец «'+fo.n+'» в даре · всего '+gift().list.length); return;
+ }
+ if(kind==='bally'){
+  var ab=beastById(form.dataset.id); if(!ab) return; var ap=fd.getAll('p'), AL=[];
+  if(ap.indexOf('traits')>-1&&ab.traits) AL.push(ab.traits);
+  if(ap.indexOf('rolls')>-1) AL.push('Здоровье '+ab.hp+'. Атака '+rollText(ab,ab.atk)+', защита '+rollText(ab,ab.def));
+  if(ap.indexOf('weak')>-1&&ab.weak) AL.push('Слабость: '+ab.weak);
+  if(S('x')) AL.push(S('x'));
+  var ao=darEntry({k:'friend',n:S('n')||ab.name,kt:S('who'),gd:ap.indexOf('where')>-1?ab.where:'',mo:ab.side==='svoi'?'dobr':'roven',fa:'zdrav',d:AL.join('\n'),ob:fd.get('ob')}); if(!ao) return;
+  gift().list.push(ao); gmSave(); darMeterUpdate(); closeSheet(); toast('«'+ao.n+'» в даре · всего '+gift().list.length); return;
  }
  if(kind==='bknow'){
   var bb=beastById(form.dataset.id); if(!bb) return; var parts=fd.getAll('p'), L=[];
@@ -5128,6 +5481,7 @@ function seedPacks(beasts){
   I('Ночь на погосте','Упыри встают в полночь, волколак кружит у ограды.',[{ref:id('Упырь'),n:2},{ref:id('Волколак'),n:1}]),
   I('Засада Кудеяра','Четверо в кустах по обе стороны тракта. Бревно перегородило дорогу.',[{ref:id('Разбойник'),n:4}]),
   I('Логово Кудеяра','Атаман с ближними в гроте. Будут биться до первой крови атамана.',[{ref:id('Атаман Кудеяр'),n:1},{ref:id('Разбойник'),n:3}]),
+  I('Подмога воеводы','Сотник с дружиной приходят на помощь героям. Встают на сторону своих.',[{ref:id('Сотник Будимир'),n:1},{ref:id('Дружинник воеводы'),n:3}]),
   I('Лихо на пепелище','Лихо выходит из дыма. С ним — упырь из склепа.',[{ref:id('Лихо одноглазое'),n:1},{ref:id('Упырь'),n:1}])
  ];
 }
@@ -5135,9 +5489,9 @@ function gmPacks(){
  var P=gm().packs;
  var h='<section class="sec">'+gmHead('gm-packs','Заготовки боёв',P.length?P.length+' шт.':'');
  if(!P.length) h+='<div class="empty">Заготовок нет. Соберите отряд супостатов из бестиария.</div>';
- else h+='<div class="list">'+P.map(function(p){
-  return '<div class="item"><span class="dar-ico k-foe" aria-hidden="true">'+svg(tabIc('boy'))+'</span><button class="item-main" data-pk="edit" data-id="'+esc(p.id)+'"><span class="item-name">'+esc(p.title)+(p.example?'<span class="badge">пример</span>':'')+'</span><span class="item-note">'+esc(packText(p))+(p.note?' · '+esc(p.note):'')+'</span></button>'+
-   '<button class="btn sm pri pk-go" data-pk="use" data-id="'+esc(p.id)+'">В бой</button><button class="xbtn" data-pk="del" data-id="'+esc(p.id)+'" aria-label="Удалить заготовку: '+esc(p.title)+'">×</button></div>'}).join('')+'</div>';
+ else h+=srchHtml('#pk-list','Искать бой: название, супостаты, заметка')+'<div class="list" id="pk-list">'+P.map(function(p){
+  return '<div class="item" data-q="'+srchQ(p.title,p.note,packText(p))+'"><span class="dar-ico k-foe" aria-hidden="true">'+svg(tabIc('boy'))+'</span><button class="item-main" data-pk="edit" data-id="'+esc(p.id)+'"><span class="item-name">'+esc(p.title)+(p.example?'<span class="badge">пример</span>':'')+'</span><span class="item-note">'+esc(packText(p))+(p.note?' · '+esc(p.note):'')+'</span></button>'+
+   '<button class="btn sm pri pk-go" data-pk="use" data-id="'+esc(p.id)+'">В бой</button><button class="xbtn" data-pk="del" data-id="'+esc(p.id)+'" aria-label="Удалить заготовку: '+esc(p.title)+'">×</button></div>'}).join('')+'<p class="np-none hint" hidden style="padding:10px 12px;margin:0">Ничего не нашлось</p></div>';
  h+='<div class="row-btns"><button class="btn" data-pk="new">'+svg(IC.plus)+'Новая заготовка</button><button class="btn" data-pk="fromFight"'+(gm().fight.list.some(function(x){return x.side!=='svoi'&&x.ref&&beastById(x.ref)})?'':' disabled')+'>Из текущего боя</button></div>';
  return h+'</section>';
 }
@@ -5158,13 +5512,13 @@ function packSheet(p){
 function packUse(p,how){
  var F=gm().fight;
  if(how==='replace'){F.list=F.list.filter(function(x){return x.side==='svoi'}); F.turn=0; F.round=1}
- p.list.forEach(function(x){var b=beastById(x.ref); if(!b) return; for(var i=0;i<x.n;i++) addFighter({name:b.name,side:'vrag',hp:b.hp,max:b.hp,beast:b.beast,ref:b.id})});
+ p.list.forEach(function(x){var b=beastById(x.ref); if(!b) return; for(var i=0;i<x.n;i++) addFighter({name:b.name,side:b.side||'vrag',hp:b.hp,max:b.hp,beast:b.beast,ref:b.id})});
  store.gmTab='boy'; gmSave(); closeSheet(); render(); window.scrollTo(0,0);
  toast('«'+p.title+'» в бою · всего '+F.list.length);
 }
 function packAsk(p){
  var F=gm().fight;
- if(!F.list.some(function(x){return x.side!=='svoi'})){packUse(p,'add'); return}
+ if(!F.list.some(function(x){return x.side!=='svoi'})||p.list.every(function(x){var b=beastById(x.ref); return !b||b.side==='svoi'})){packUse(p,'add'); return}
  openSheet('<h2>'+esc(p.title)+'</h2><p class="hint">В бою уже есть супостаты. Заменить их этим отрядом (свои останутся) или добавить к ним?</p><div class="stack" style="gap:12px"><button class="btn pri" data-pk="replace" data-id="'+esc(p.id)+'">Заменить супостатов</button><button class="btn" data-pk="add" data-id="'+esc(p.id)+'">Добавить к бою</button><button class="btn" data-act="closeSheet">Отмена</button></div>');
 }
 document.addEventListener('click',function(e){
@@ -5196,14 +5550,14 @@ document.addEventListener('submit',function(e){
 var ST_K={npc:['Знакомец',NPC_IC],beast:['Супостат',tabIc('bestiary')],gift:['Дар',DAR_IC.gift],pack:['Бой',tabIc('boy')],loc:['Место',tabIc('mesta')]};
 var SG_W=200, SG_H=100, storySel=null, sgDrag=null;
 function plotBlank(t){return {id:uid(),t:t||'Новый сюжет',nodes:[],edges:[],start:null,cur:null,trail:[],seen:{},by:{}}}
-function storyBlank(){var p=plotBlank('Сюжет 1'); return {plots:[p],open:p.id,mode:'graph',players:[],z:1}}
+function storyBlank(){var p=plotBlank('Сюжет 1'); return {plots:[p],open:p.id,mode:'graph',players:[],z:1,side:[]}}
 var PCOL=['#A8281C','#2E6FA3','#3B7D3A','#B07A00','#7B3FA0','#1F8A8A','#C2551F','#5A6B7A'], spMovers=null;
 function plotNorm(s){
  var o=plotBlank(s&&s.t); if(!s||typeof s!=='object') return o;
  if(typeof s.id==='string') o.id=s.id; o.t=String(s.t||'Сюжет').slice(0,120); if(s.example) o.example=true;
  o.nodes=(Array.isArray(s.nodes)?s.nodes:[]).filter(Boolean).map(function(n){return {id:typeof n.id==='string'?n.id:uid(),t:String(n.t||'').slice(0,160),d:String(n.d||'').slice(0,6000),
   x:Math.max(0,Math.round(Number(n.x)||0)),y:Math.max(0,Math.round(Number(n.y)||0)),own:!!n.own,
-  att:(Array.isArray(n.att)?n.att:[]).filter(function(a){return a&&ST_K[a.k]&&a.id}).map(function(a){return {k:a.k,id:String(a.id)}}),example:!!n.example}});
+  att:(Array.isArray(n.att)?n.att:[]).filter(function(a){return a&&ST_K[a.k]&&a.id}).map(function(a){return {k:a.k,id:String(a.id)}}),example:!!n.example,mq:typeof n.mq==='string'?n.mq.slice(0,40):'',mqT:String(n.mqT||'').slice(0,120)}});
  var ids={}; o.nodes.forEach(function(n){ids[n.id]=1});
  o.edges=(Array.isArray(s.edges)?s.edges:[]).filter(function(e){return e&&ids[e.a]&&ids[e.b]&&e.a!==e.b}).map(function(e){return {id:typeof e.id==='string'?e.id:uid(),a:e.a,b:e.b,l:String(e.l||'').slice(0,160),example:!!e.example}});
  o.start=ids[s.start]?s.start:(o.nodes[0]&&o.nodes[0].id)||null;
@@ -5223,9 +5577,10 @@ function storyNorm(s){
  B.open=B.plots.some(function(p){return p.id===s.open})?s.open:B.plots[0].id;
  B.mode=s.mode==='play'?'play':'graph'; B.players=normPlayers(s.players);
  B.z=[0.5,0.7,1,1.3].indexOf(Number(s.z))>-1?Number(s.z):1;
+ B.side=(Array.isArray(s.side)?s.side:[]).filter(Boolean).map(mqNorm);
  return B;
 }
-function book(){var g=gm(); if(!g.story||!Array.isArray(g.story.plots)) g.story=storyNorm(g.story); return g.story}
+function book(){var g=gm(); if(!g.story||!Array.isArray(g.story.plots)) g.story=storyNorm(g.story); if(!Array.isArray(g.story.side)) g.story.side=[]; return g.story}
 function plotIdx(){var B=book(); for(var i=0;i<B.plots.length;i++) if(B.plots[i].id===B.open) return i; B.open=B.plots[0].id; return 0}
 function linkPlot(P,B){['players','mode','z'].forEach(function(k){var d=Object.getOwnPropertyDescriptor(P,k); if(d&&d.get) return; Object.defineProperty(P,k,{get:function(){return B[k]},set:function(v){B[k]=v},enumerable:false,configurable:true})}); return P}
 function story(){var B=book(); if(!B.plots.length) B.plots.push(plotBlank('Сюжет 1')); return linkPlot(B.plots[plotIdx()],B)}
@@ -5262,7 +5617,7 @@ function storyEdgesSvg(){
 }
 function storyNodeHtml(n){
  var S=story(), dim=sgHero&&!hasPassed(n.id,sgHero);
- return '<div class="sg-node'+(dim?' dim':'')+(storySel===n.id?' sel':'')+(S.cur===n.id?' cur':'')+(S.start===n.id?' start':'')+(S.seen[n.id]?' seen':'')+(n.own?' own':'')+'" data-sid="'+esc(n.id)+'" style="left:'+n.x+'px;top:'+n.y+'px">'+
+ return '<div class="sg-node'+(dim?' dim':'')+(storySel===n.id?' sel':'')+(S.cur===n.id?' cur':'')+(S.start===n.id?' start':'')+(S.seen[n.id]?' seen':'')+(n.own?' own':'')+(n.mq?' mq':'')+'" data-sid="'+esc(n.id)+'" style="left:'+n.x+'px;top:'+n.y+'px">'+(n.mq?'<i class="sg-mq" title="Мини-квест: '+esc(n.mqT)+'">'+svg(MQ_IC)+'</i>':'')+
   '<b>'+(S.start===n.id?'<i class="sg-flag">Начало</i>':'')+esc(n.t||'Без названия')+'</b>'+(n.d?'<small>'+esc(n.d.slice(0,70))+'</small>':'')+
   (n.att.length?'<span class="sg-att">'+n.att.map(function(a){return '<span title="'+esc(ST_K[a.k][0]+': '+attName(a))+'">'+svg(ST_K[a.k][1])+'</span>'}).join('')+'</span>':'')+
   (function(){var ps=passedBy(n.id); return ps.length?'<span class="sg-pl" title="Прошли: '+esc(ps.map(function(p){return p.n}).join(', '))+'">'+ps.map(function(p){return '<i style="--pc:'+PCOL[p.c]+'">'+esc(p.n.charAt(0).toUpperCase())+'</i>'}).join('')+'</span>':''})()+'</div>';
@@ -5273,6 +5628,8 @@ function gmStory(){
  var W=600,H=400; S.nodes.forEach(function(n){W=Math.max(W,n.x+SG_W+80); H=Math.max(H,n.y+SG_H+80)});
  var B=book(), pi=plotIdx();
  var h='<section class="sec">'+gmHead('gm-story','История',B.plots.length+' '+plural(B.plots.length,'сюжет','сюжета','сюжетов'));
+ h+=stViewHtml();
+ if(stView==='mq') return h+mqListHtml()+'</section>';
  h+='<div class="plot-bar" role="tablist" aria-label="Сюжеты">'+B.plots.map(function(p,i){return '<button class="plot-chip'+(i===pi?' on':'')+'" data-st="plot" data-id="'+esc(p.id)+'" role="tab" aria-selected="'+(i===pi)+'"><i>'+(i+1)+'</i>'+esc(p.t)+'</button>'}).join('<span class="plot-arr" aria-hidden="true">›</span>')+'<button class="plot-chip add" data-st="plotNew">'+svg(IC.plus)+'Сюжет</button></div>'+
   '<div class="plot-cur"><b>'+esc(S.t)+'</b><span>'+S.nodes.length+' '+plural(S.nodes.length,'сцена','сцены','сцен')+'</span><button class="btn sm" data-st="plotMenu">Сюжет…</button></div>';
  h+='<div class="sg-bar"><button class="btn pri" data-st="play"'+(S.nodes.length?'':' disabled')+'>'+svg('<path d="M7 4 L19 12 L7 20 Z" fill="currentColor"/>')+'Вести игру</button><button class="btn" data-st="newNode">'+svg(IC.plus)+'Узел</button>'+
@@ -5281,7 +5638,7 @@ function gmStory(){
  if(sgHero&&!pById(sgHero)) sgHero=null;
  if(S.players.length&&S.nodes.length) h+='<div class="sg-heroes" role="group" aria-label="Путь героя"><b>Путь героя</b>'+S.players.map(function(p){var on=sgHero===p.id, k=S.nodes.filter(function(x){return hasPassed(x.id,p.id)}).length; return '<button class="pbtn sm'+(on?' on':'')+'" data-st="hero" data-id="'+esc(p.id)+'" aria-pressed="'+on+'" style="--pc:'+PCOL[p.c]+'"><i>'+esc(p.n.charAt(0).toUpperCase())+'</i>'+esc(p.n)+'<small>'+k+'</small></button>'}).join('')+'</div>';
  var sel=storySel&&sNode(storySel);
- if(sel) h+='<div class="sg-selbar"><b>'+esc(sel.t||'Без названия')+'</b><div class="sg-acts"><button class="btn sm pri" data-st="edit">Изменить</button><button class="btn sm" data-st="child">'+svg(IC.plus)+'Следом</button><button class="btn sm" data-st="link">Связать</button><button class="btn sm" data-st="playHere">Играть отсюда</button>'+(S.start!==sel.id?'<button class="btn sm" data-st="setStart">Сделать началом</button>':'')+'<button class="btn sm danger" data-st="askDel">Удалить узел</button></div></div>';
+ if(sel) h+='<div class="sg-selbar"><b>'+esc(sel.t||'Без названия')+'</b><div class="sg-acts"><button class="btn sm pri" data-st="edit">Изменить</button><button class="btn sm" data-st="child">'+svg(IC.plus)+'Следом</button><button class="btn sm" data-st="link">Связать</button><button class="btn sm" data-st="playHere">Играть отсюда</button><button class="btn sm" data-mq="attach" data-id="'+esc(sel.id)+'">'+svg(MQ_IC)+'Мини-квест</button>'+(S.start!==sel.id?'<button class="btn sm" data-st="setStart">Сделать началом</button>':'')+'<button class="btn sm danger" data-st="askDel">Удалить узел</button></div></div>';
  if(!S.nodes.length) h+='<div class="empty">Граф пуст. Нажмите «Узел» — это первая сцена истории. Потом добавляйте сцены «Следом» и связывайте их переходами.</div>';
  else h+='<div class="sg-wrap" id="sgWrap"><div class="sg-plane" style="width:'+(W*S.z)+'px;height:'+(H*S.z)+'px"><div class="sg-scale" id="sgScale" style="width:'+W+'px;height:'+H+'px;transform:scale('+S.z+')">'+
   '<svg class="sg-svg" width="'+W+'" height="'+H+'"><defs><marker id="sgArr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" class="sg-arrow"/></marker><marker id="sgArrH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" class="sg-arrow hot"/></marker></defs><g id="sgEdges">'+storyEdgesSvg()+'</g></svg>'+
@@ -5295,7 +5652,7 @@ function storyPlay(){
  var B=book(), pi=plotIdx();
  h+='<p class="sp-plot">Сюжет '+(pi+1)+' из '+B.plots.length+' · <b>'+esc(story().t)+'</b></p>';
  h+=storyPartyHtml(n);
- h+='<article class="sp-card'+(n.own?' own':'')+'"><div class="sp-head"><h2>'+esc(n.t||'Без названия')+'</h2><button class="btn sm" data-st="edit" data-id="'+esc(n.id)+'">Править</button></div>'+(n.d?'<p class="sp-text">'+esc(n.d)+'</p>':'');
+ h+='<article class="sp-card'+(n.own?' own':'')+(n.mq?' mq':'')+'">'+(n.mq?'<p class="sp-mqtag">'+svg(MQ_IC)+'Мини-квест · '+esc(n.mqT)+'</p>':'')+'<div class="sp-head"><h2>'+esc(n.t||'Без названия')+'</h2><button class="btn sm" data-st="edit" data-id="'+esc(n.id)+'">Править</button></div>'+(n.d?'<p class="sp-text">'+esc(n.d)+'</p>':'');
  if(n.att.length) h+='<div class="sp-atts">'+n.att.map(function(a){return storyAttCard(a)}).join('')+'</div>';
  h+='</article>';
  var out=sOut(n.id);
@@ -5304,7 +5661,8 @@ function storyPlay(){
  if(!out.length&&!nxt) h+='<div class="empty">Здесь ветка кончается. Перейдите к любому узлу или допишите граф.</div>';
  if(!out.length&&nxt) h+='<button class="sp-go sp-plotnext" data-st="nextPlot"><span>Следующий сюжет</span><b>'+esc(nxt.t)+'</b>'+svg('<path d="M9 5 L16 12 L9 19" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>')+'</button>';
  else h+='<div class="sp-next">'+out.map(function(e){var b=sNode(e.b); var ws=edgeWalkers(e); return '<button class="sp-go'+(S.seen[e.b]?' seen':'')+'" data-st="move" data-id="'+esc(e.b)+'" data-l="'+esc(e.l||'')+'"><span>'+esc(e.l||'Дальше')+'</span><b>'+esc(b.t||'Без названия')+'</b>'+(ws.length?'<em class="sp-took">'+ws.map(function(p){return pChip(p)}).join('')+'</em>':'')+svg('<path d="M9 5 L16 12 L9 19" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>')+'</button>'}).join('')+'</div>';
- h+='<button class="btn sp-own" data-st="own">'+svg('<path d="M4 20 C8 18 9 13 12 12 S17 8 20 4 M15 4 H20 V9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>')+'<span>Свой путь<small>Игроки придумали своё — опишите сцену, она встанет в граф</small></span></button>';
+ h+='<button class="btn sp-own" data-st="own">'+svg('<path d="M4 20 C8 18 9 13 12 12 S17 8 20 4 M15 4 H20 V9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>')+'<span>Свой путь<small>Игроки придумали своё — опишите сцену, она встанет в граф</small></span></button>'+
+  '<button class="btn sp-own sp-mq" data-mq="attach" data-id="'+esc(n.id)+'">'+svg(MQ_IC)+'<span>Мини-квест<small>Герои любопытны — вплести готовое маленькое задание</small></span></button>';
  return h+'</section>';
 }
 function storyPartyHtml(n){
@@ -5349,7 +5707,7 @@ function storyOwnSheet(){
   '<div class="fld"><label for="ow-l">Что сделали</label><input class="inp" id="ow-l" name="l" required autocomplete="off" placeholder="Например: полез на мельничное колесо" autofocus></div>'+
   '<div class="fld"><label for="ow-t">Название сцены</label><input class="inp" id="ow-t" name="t" autocomplete="off" placeholder="Если пусто — возьмём «что сделали»"></div>'+
   '<div class="fld"><label for="ow-d">Что происходит</label><textarea class="inp" id="ow-d" name="d" rows="3" placeholder="Коротко, чтобы не забыть"></textarea></div>'+
-  '<div class="fld"><label for="ow-to">Потом ведёт к сюжету</label><select class="inp" id="ow-to" name="to"><option value="">— пока никуда —</option>'+S.nodes.filter(function(x){return x.id!==n.id}).map(function(x){return '<option value="'+esc(x.id)+'">'+esc(x.t||'Без названия')+'</option>'}).join('')+'</select></div>'+
+  '<div class="fld"><span class="lbl">Потом ведёт к сюжету</span>'+nodePickHtml('to',S.nodes.filter(function(x){return x.id!==n.id}),'',[['','— пока никуда —']],'ow-to')+'</div>'+
   '<div class="fld"><label for="ow-tl">Подпись этого перехода</label><input class="inp" id="ow-tl" name="tl" autocomplete="off" placeholder="Например: попали в засаду по неосторожности"></div>'+
   '<div class="row-btns"><button class="btn pri" type="submit">Сыграть сцену</button><button class="btn" type="button" data-act="closeSheet">Отмена</button></div></form>');
 }
@@ -5364,13 +5722,13 @@ document.addEventListener('submit',function(e){
   storyMove(nn.id,l,true); toast('Свой путь записан в граф')}
 });
 function storyAttCard(a){
- var o=attObj(a), k=a.k, h='<div class="sp-att k-'+k+'"><div class="sp-att-h">'+svg(ST_K[k][1])+'<small>'+ST_K[k][0]+'</small><b>'+esc(attName(a))+'</b></div>';
+ var o=attObj(a), k=a.k, h='<div class="sp-att k-'+k+(k==='beast'&&o&&o.side&&o.side!=='vrag'?' ally':'')+'"><div class="sp-att-h">'+svg(ST_K[k][1])+'<small>'+(k==='beast'&&o?bSideName(o):ST_K[k][0])+'</small><b>'+esc(attName(a))+'</b></div>';
  if(!o) return h+'<p class="hint">Запись удалена.</p></div>';
  if(k==='npc'){var fa=FATES[o.fate]||FATES.zdrav, mo=MOODS[o.mood]||MOODS.roven; h+='<p><span class="chip '+fa[1]+'">'+fa[0]+'</span> <span class="chip '+mo[1]+'">'+mo[0]+'</span> '+esc([o.who,o.where&&('Где: '+o.where)].filter(Boolean).join(' · '))+'</p>'+(o.text?'<p class="sp-secret">'+esc(o.text)+'</p>':'')+'<div class="sp-acts"><button class="btn sm" data-dar="npcGift" data-id="'+esc(o.id)+'">'+svg(DAR_IC.gift)+'В дар</button></div>'}
  if(k==='beast') h+='<p>'+foe(o.cls)[1]+' · здоровье '+o.hp+' · атака '+rollText(o,o.atk)+' · защита '+rollText(o,o.def)+'</p>'+(o.weak?'<p class="sp-secret">Слабость: '+esc(o.weak)+'</p>':'')+'<div class="sp-acts"><button class="btn sm pri" data-st="toFight" data-id="'+esc(o.id)+'">'+svg(tabIc('boy'))+'В бой</button><button class="btn sm" data-dar="beastKnow" data-id="'+esc(o.id)+'">'+svg(DAR_IC.gift)+'В дар</button></div>';
  if(k==='gift') h+='<p>'+o.list.map(function(x){return esc(darNameText(x))}).join(' · ')+'</p><div class="sp-acts"><button class="btn sm pri" data-dar="tplUse" data-id="'+esc(o.id)+'">'+svg(DAR_IC.gift)+'Взять в дар</button><button class="btn sm" data-st="toTab" data-t="dary">Открыть Дары</button></div>';
  if(k==='pack') h+='<p>'+esc(packText(o))+(o.note?' · '+esc(o.note):'')+'</p><div class="sp-acts"><button class="btn sm pri" data-pk="use" data-id="'+esc(o.id)+'">'+svg(tabIc('boy'))+'Начать бой</button></div>';
- if(k==='loc') h+=fogQuickHtml(o)+'<div class="sp-acts"><button class="btn sm" data-st="openLoc" data-id="'+esc(o.id)+'">Открыть место</button><button class="btn sm pri" data-st="shareLoc" data-id="'+esc(o.id)+'">Показать игрокам</button></div>';
+ if(k==='loc') h+=fogQuickHtml(o)+'<div class="sp-acts"><button class="btn sm" data-st="openLoc" data-id="'+esc(o.id)+'">Открыть место</button><button class="btn sm pri" data-st="shareLoc" data-id="'+esc(o.id)+'">Показать игрокам</button>'+scrBtnHtml(o,true)+'</div>';
  return h+'</div>';
 }
 function pById(id){var l=story().players;for(var i=0;i<l.length;i++)if(l[i].id===id)return l[i];return null}
@@ -5409,11 +5767,12 @@ function storyNodeSheet(n){
   '<div><p class="lbl" style="margin:0 0 6px">Переходы отсюда</p>'+(out.length?'<div class="list">'+out.map(function(e){var b=sNode(e.b); return '<div class="item sn-edge"><span class="sn-to">→ '+esc(b.t||'Без названия')+'</span><input class="inp" data-se="'+esc(e.id)+'" value="'+esc(e.l)+'" placeholder="Подпись: что сделали герои" aria-label="Подпись перехода к '+esc(b.t)+'"><button class="xbtn" data-st="edgeRm" data-id="'+esc(e.id)+'" aria-label="Убрать переход">×</button></div>'}).join('')+'</div>':'<p class="hint" style="margin:0">Переходов нет.</p>')+
   '<div class="row-btns" style="margin-top:8px"><button class="btn sm" data-st="link">Связать с узлом</button><button class="btn sm" data-st="child">'+svg(IC.plus)+'Новый узел следом</button></div></div>'+
   (inc.length?'<div><p class="lbl" style="margin:0 0 6px">Переходы сюда</p><div class="list">'+inc.map(function(e){var a=sNode(e.a); return '<div class="item sn-edge"><span class="sn-to">'+esc(a&&a.t||'Без названия')+' →</span><input class="inp" data-se="'+esc(e.id)+'" value="'+esc(e.l)+'" placeholder="Подпись: что сделали герои" aria-label="Подпись перехода из '+esc(a&&a.t||'')+'"><button class="xbtn" data-st="edgeRm" data-id="'+esc(e.id)+'" aria-label="Убрать переход">×</button></div>'}).join('')+'</div></div>':'')+
+  (n.mq?'<div class="mq-note">'+svg(MQ_IC)+'<span>Шаг мини-квеста «'+esc(n.mqT)+'»</span><button class="btn sm" data-mq="unhook" data-id="'+esc(n.mq)+'">Убрать весь мини-квест</button></div>':'')+
   '<div class="row-btns"><button class="btn pri" data-st="sheetDone">Готово</button><button class="btn danger" data-st="askDel">Удалить узел</button></div></div>';
  storySel=n.id; openSheet(h);
 }
 function storyAttPicker(){
- var g=gm(), groups=[['npc','Знакомцы',g.wiki.filter(function(w){return w.type==='npc'})],['beast','Супостаты',g.beasts],['gift','Заготовки даров',g.gifts],['pack','Заготовки боёв',g.packs],['loc','Места',g.locs]];
+ var g=gm(), groups=[['npc','Знакомцы',g.wiki.filter(function(w){return w.type==='npc'})],['beast','Бестиарий',g.beasts],['gift','Заготовки даров',g.gifts],['pack','Заготовки боёв',g.packs],['loc','Места',g.locs]];
  var h='<h2>Привязать к узлу</h2><div class="srch"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5 L21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg><input type="search" id="sa-q" placeholder="Искать" aria-label="Искать" autocomplete="off"></div><div class="stack" style="gap:12px" id="sa-list">';
  groups.forEach(function(gr){ if(!gr[2].length) return;
   h+='<div class="sa-grp"><p class="lbl" style="margin:0 0 6px">'+gr[1]+'</p><div class="list">'+gr[2].map(function(o){return '<button class="item sa-it" data-st="attPick" data-k="'+gr[0]+'" data-id="'+esc(o.id)+'" data-q="'+esc(String(o.name||o.title||'').toLowerCase())+'"><span class="dar-ico" aria-hidden="true">'+svg(ST_K[gr[0]][1])+'</span><span class="item-name">'+esc(o.name||o.title||'Без названия')+'</span></button>'}).join('')+'</div></div>'});
@@ -5424,8 +5783,8 @@ function storyLinkPicker(){
  var S=story(), n=sNode(storySel); if(!n) return;
  var others=S.nodes.filter(function(x){return x.id!==n.id});
  if(!others.length){toast('Других узлов пока нет — добавьте «Следом»'); return}
- openSheet('<h2>Переход из «'+esc(n.t||'узла')+'»</h2><div class="fld"><label for="sl-l">Подпись перехода</label><input class="inp" id="sl-l" placeholder="Что сделали герои, например: «пошли к омуту»" autocomplete="off"></div><p class="lbl" style="margin:0">Куда ведёт</p><div class="list">'+
-  others.map(function(x){var has=S.edges.some(function(e){return e.a===n.id&&e.b===x.id}); return '<button class="item sa-it" data-st="linkTo" data-id="'+esc(x.id)+'"'+(has?' disabled':'')+'><span class="item-name">'+esc(x.t||'Без названия')+(has?' <span class="chip neu">уже связан</span>':'')+'</span></button>'}).join('')+'</div><button class="btn" data-st="back2node">Назад</button>');
+ openSheet('<h2>Переход из «'+esc(n.t||'узла')+'»</h2><div class="fld"><label for="sl-l">Подпись перехода</label><input class="inp" id="sl-l" placeholder="Что сделали герои, например: «пошли к омуту»" autocomplete="off"></div><p class="lbl" style="margin:0">Куда ведёт</p>'+srchHtml('#sl-list','Искать сцену')+'<div class="list" id="sl-list">'+
+  others.map(function(x){var has=S.edges.some(function(e){return e.a===n.id&&e.b===x.id}); return '<button class="item sa-it" data-st="linkTo" data-id="'+esc(x.id)+'" data-q="'+nodeQ(x)+'"'+(has?' disabled':'')+'><span class="item-main" style="cursor:pointer"><span class="item-name">'+esc(x.t||'Без названия')+(has?' <span class="chip neu">уже связан</span>':'')+(x.mq?' <span class="chip ok">мини-квест</span>':'')+'</span>'+(x.d?'<span class="item-note">'+esc(x.d.slice(0,80))+'</span>':'')+'</span></button>'}).join('')+'<p class="np-none hint" hidden style="padding:10px 12px;margin:0">Ничего не нашлось</p></div><button class="btn" data-st="back2node">Назад</button>');
 }
 function storyJump(){
  var S=story();
@@ -5461,7 +5820,7 @@ function storySeed(g){
   [8,'Клад под мельницей','Под жерновом — тайник прежнего мельника.',A('gift',t('Клад под мельницей'))]
  ],[[1,2,'Расспросить ведунью'],[1,3,'Сразу к мельнице'],[2,3,'Идти к мельнице'],[3,4,'Обыскать двор'],[3,5,'Спуститься к омуту'],[4,5,'Дальше к воде'],[5,6,'Напасть'],[5,7,'Урядиться'],[6,8,'Победа'],[7,8,'Болотница укажет клад']]);
  var P2=mk('Дорога в Новгородище',[
-  [1,'Ночлег в корчме','Корчма у переправы. Фома ворчит о долгах Гордея и радуется Милаве. У печи греется странник в синем кафтане.',A('npc',w('Корчмарь Фома'))],
+  [1,'Ночлег в корчме','Корчма у переправы. Фома ворчит о долгах Гордея и радуется Милаве. У печи греется странник в синем кафтане, под столом рычит волкодав Буян.',A('npc',w('Корчмарь Фома'),'beast',b('Волкодав Буян'))],
   [2,'Странник в синем','Странник предлагает провести короткой тропой через край Ветхого царства. Тени у него нет.',[]],
   [3,'Гиблая тропа','Тропа выводит к старому погосту. В полночь земля шевелится.',A('pack',p('Ночь на погосте'))],
   [4,'Застава на тракте','Сотник Будимир не пустит без грамоты. Гордей ковал подковы для заставы — может, вспомнят.',A('gift',t('Грамота на проход'))],
@@ -5479,12 +5838,12 @@ function storySeed(g){
  var P4=mk('Ватага Кудеяра',[
   [1,'Разбойный приказ','Дьяк Ферапонт велит изловить атамана Кудеяра, что грабит обозы на тракте. Тихон узнаёт на столе дьяка свою пропавшую опись.',A('npc',w('Дьяк Ферапонт'),'loc',l('Новгородище'),'gift',t('Грамота Разбойного приказа'))],
   [2,'Сгоревший обоз','На тракте — разбитые телеги, мёртвые лошади. Следы уходят в лес, а колея — к мытне.',[]],
-  [3,'Засека на тракте','Поваленное бревно поперёк дороги. В кустах шорох.',A('loc',l('Засека Кудеяра'),'pack',p('Засада Кудеяра'))],
+  [3,'Засека на тракте','Поваленное бревно поперёк дороги. В кустах шорох. Если герои чтили лес — Старый Леший закружит разбойников.',A('loc',l('Засека Кудеяра'),'pack',p('Засада Кудеяра'),'beast',b('Старый Леший'))],
   [4,'Святой ключ','Старица Евпраксия лечит раненых и знает тропу к гроту — если идолу оставят дар.',A('loc',l('Святой ключ'),'npc',w('Старица Евпраксия'),'gift',t('Вода святого ключа'))],
   [5,'Пленный разбойник','Молодой разбойник, бывший пахарь. Скажет всё — если пообещать ему жизнь.',A('beast',b('Разбойник'))],
   [6,'Грот Кудеяра','Сырой грот у подземного озера. Атаман ждёт с пищалью.',A('loc',l('Грот Кудеяра'),'npc',w('Атаман Кудеяр'))],
   [7,'Ряд с Кудеяром','Кудеяр готов уйти из Нового царства и выдать дьяка, что берёт с него долю.',A('npc',w('Атаман Кудеяр'))],
-  [8,'Бой в гроте','Ватага бьётся до первой крови атамана.',A('pack',p('Логово Кудеяра'))],
+  [8,'Бой в гроте','Ватага бьётся до первой крови атамана. Если герои послали весть воеводе — к третьему кругу подоспеет дружина.',A('pack',p('Логово Кудеяра'),'pack',p('Подмога воеводы'))],
   [9,'Казна атамана','В нише — казна и мешки с печатью Казённого двора.',A('gift',t('Казна Кудеяра'))],
   [10,'Суд над дьяком','С уликами — к воеводе. Ферапонт клянётся, что оклеветан.',A('npc',w('Воевода Остромир'),'npc',w('Дьяк Ферапонт'))]
  ],[[1,2,'Выехать на тракт'],[2,3,'Идти дорогой'],[2,4,'Свернуть в лес по следам'],[3,5,'Взять пленного'],[3,4,'Унести раненых к ключу'],[4,6,'Старица укажет тропу'],[5,6,'Пленный выдаст логово'],[6,7,'Говорить'],[6,8,'Напасть'],[7,9,'Кудеяр отдаёт казну'],[8,9,'Победа'],[9,10,'Вернуться в Новгородище']]);
@@ -5498,9 +5857,18 @@ function storySeed(g){
   [7,'Проводы','Отца упокоили, Лихо прогнано. Гордей может отпустить прошлое — или поклясться на пепле.',[]]
  ],[[1,2,'Войти в село'],[2,3,'Разгрести пепел'],[2,4,'Идти на погост'],[3,4,'С оберегом — на погост'],[4,5,'Открыть склеп'],[4,6,'Ждать полночи'],[5,7,'Упокоить отца'],[6,7,'Одолеть Лихо']]);
  pass(P1,{1:'gm',2:'m',3:'gm',4:'g',5:'gm',7:'gm'}); pass(P2,{1:'gm',2:'m',3:'m',4:'g',5:'gm'}); pass(P3,{1:'gm',2:'m',7:'mt',3:'gmt',4:'gmt',5:'gmt',6:'gmt'}); pass(P4,{1:'gmt',2:'gmt',3:'gm',4:'t',5:'gm'}); pass(P5,{});
- var B={plots:[P1,P2,P3,P4,P5],open:P1.id,mode:'graph',players:[{id:'ex-gordey',n:'Гордей',c:0,example:true},{id:'ex-milava',n:'Милава',c:1,example:true},{id:'ex-tihon',n:'Тихон',c:2,example:true}],z:1};
+ var Q=function(t,hk,steps){return mqNorm({example:true,t:t,h:hk,steps:steps.map(function(x){return {t:x[0],d:x[1],att:x[2]||[]}})})};
+ var SIDE=[
+  Q('Домовой обиделся','Герои ночуют в избе или корчме, хозяева жалуются на беспорядок.',[['Всё валится из рук','Посуда бьётся, квашня убегает, конь в стойле заплетён в косички.'],['Миска молока','Расспросить хозяйку: кто в доме сквернословил? Задобрить — молоко и краюха у печи.'],['Домовой-шалун','Ночью он выходит сам. Можно поймать за бороду — или урядиться.',A('beast',b('Домовой-шалун'))],['Лад в доме','Хозяйка благодарит.',A('gift',t('Пирог и благодарность'))]]),
+  Q('Голос в колодце','Кто-то из героев задержался у колодца или пьёт воду.',[['Шёпот из сруба','Из колодца зовут по имени того, кто наклонился.'],['Спуск на верёвке','Внизу — сухой ход и писк. Гнездо анчуток.',A('pack',p('Стая анчуток'))],['Утопленное колечко','В иле блестит серебро. Голос стихает.',A('gift',t('Находка в колодце'))]]),
+  Q('Должок мытаря','Герои проходят через мытню или ворота с поклажей.',[['Мытарь у ворот','Мытарь требует вдвое — или услугу: отыскать его обоз соли.',A('loc',l('Новгородище'))],['След обоза','Колея уходит с тракта в лес. Телеги брошены, соль цела.'],['Засада у телег','Разбойники вернулись за солью.',A('pack',p('Засада Кудеяра'))],['Мытарь платит','Пропускает без пошлины и платит серебром.',A('gift',t('Кошель разбойника'))]]),
+  Q('Свеча на погосте','Ночью герои видят огонёк меж могил.',[['Огонёк меж могил','Свеча горит сама, воск не тает.',A('loc',l('Погост у Горелого Брода'))],['Ночной сторож','Могильщик Пантелей просит не тушить: это поминальная свеча.',A('npc',w('Могильщик Пантелей'))],['Кто погасит — тот разбудит','Если свеча погасла — из могилы встаёт упырь.',A('beast',b('Упырь'))]]),
+  Q('Плачущая берёза','Герои идут лесом или отдыхают на поляне.',[['Берёза плачет','Сок течёт красный, как кровь. В коре — вырезанное имя.'],['Имя в коре','Это имя дочери старицы: её заперли в дереве за порушенный ряд.',A('npc',w('Старица Евпраксия'))],['Вода ключа','Полить корни святой водой — дерево отпустит.',A('loc',l('Святой ключ'),'gift',t('Вода святого ключа'))]])
+ ];
+ var B={plots:[P1,P2,P3,P4,P5],side:SIDE,open:P1.id,mode:'graph',players:[{id:'ex-gordey',n:'Гордей',c:0,example:true},{id:'ex-milava',n:'Милава',c:1,example:true},{id:'ex-tihon',n:'Тихон',c:2,example:true}],z:1};
  var keepS=g.story, keepG=store.gm; g.story=B; store.gm=g;
  B.plots.forEach(function(P){B.open=P.id; storyLayout()}); B.open=P1.id;
+ mqInsert(P2,SIDE[0],P2.nodes[0].id,P2.nodes[0].id,'Ночью в корчме неладно',true);
  store.gm=keepG;
  return B;
 }
@@ -5551,7 +5919,7 @@ document.addEventListener('click',function(e){
   case 'own': storyOwnSheet(); break;
   case 'back': if(S.trail.length){S.cur=S.trail.pop(); gmSave(); gmRerender(); window.scrollTo(0,0)} break;
   case 'jump': storyJump(); break;
-  case 'toFight': var bb=beastById(el.dataset.id); if(bb){addFighter({name:bb.name,side:'vrag',hp:bb.hp,max:bb.hp,beast:bb.beast,ref:bb.id}); gmSave(); toast('«'+bb.name+'» в бою · всего '+gm().fight.list.length)} break;
+  case 'toFight': var bb=beastById(el.dataset.id); if(bb){addFighter({name:bb.name,side:bb.side||'vrag',hp:bb.hp,max:bb.hp,beast:bb.beast,ref:bb.id}); gmSave(); toast('«'+bb.name+'» в бою · всего '+gm().fight.list.length)} break;
   case 'toTab': store.gmTab=el.dataset.t; gmSave(); render(); window.scrollTo(0,0); break;
   case 'openLoc': gm().openLoc=el.dataset.id; store.gmTab='mesta'; gmPreview=false; gmSave(); render(); window.scrollTo(0,0); break;
   case 'shareLoc': var L=locById(el.dataset.id); if(L) mapShareSheet(L); break;
@@ -5665,15 +6033,15 @@ document.addEventListener('click',function(e){var b=e.target.closest('[data-fz]'
 });
 function fogQuickHtml(L){
  locLayers(L);
- var h='<div class="fogq" data-loc="'+esc(L.id)+'"><div class="fogq-bar"><div class="fogq-tool" role="group" aria-label="Что делать"><button type="button" data-fq="tool" data-v="0" aria-pressed="'+(fogTool===0)+'">'+svg('<circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>')+'Рассеять</button><button type="button" data-fq="tool" data-v="1" aria-pressed="'+(fogTool===1)+'">'+svg('<path d="M6.5 18.5 H17.5 A4.2 4.2 0 0 0 18 10.2 A6 6 0 0 0 6.6 9.2 A4.7 4.7 0 0 0 6.5 18.5 Z" fill="currentColor"/>')+'Туман</button></div>'+fogSizeHtml()+'</div>'+
+ var h='<div class="fogq" data-loc="'+esc(L.id)+'"><div class="fogq-bar"><div class="fogq-tool" role="group" aria-label="Что делать"><button type="button" data-fq="tool" data-v="0" aria-pressed="'+(fogTool===0)+'">'+svg('<circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>')+'Рассеять</button><button type="button" data-fq="tool" data-v="1" aria-pressed="'+(fogTool===1)+'">'+svg('<path d="M6.5 18.5 H17.5 A4.2 4.2 0 0 0 18 10.2 A6 6 0 0 0 6.6 9.2 A4.7 4.7 0 0 0 6.5 18.5 Z" fill="currentColor"/>')+'Туман</button>'+(L.hid.some(Boolean)||fogTool===2?'<button type="button" data-fq="tool" data-v="2" aria-pressed="'+(fogTool===2)+'">'+svg('<path d="M2.5 12 C6 6.5 18 6.5 21.5 12 C18 17.5 6 17.5 2.5 12 Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2.8" fill="currentColor"/>')+'Открыть скрытое</button>':'')+'</div>'+fogSizeHtml()+'</div>'+
   '<div class="fogq-map"><div class="lmap fogmap" style="grid-template-columns:repeat('+L.w+',minmax(0,1fr));--cols:'+L.w+'" data-id="'+esc(L.id)+'">';
  for(var i=0;i<L.cells.length;i++) h+=cellHtml(L.cells[i],i,L);
- h+='</div></div><div class="fogq-foot"><span class="fogq-pct">Под туманом: '+fogPct(L)+'%</span><button class="btn sm" data-fq="all">Рассеять всё</button></div></div>';
+ h+='</div></div><div class="fogq-foot"><span class="fogq-pct">Под туманом: '+fogPct(L)+'%</span><button class="btn sm" data-fq="all">Рассеять всё</button></div>'+hidListHtml(L)+'</div>';
  return h;
 }
 var fqPaint=null;
 function fqCell(x,y){var el=document.elementFromPoint(x,y); el=el&&el.closest&&el.closest('.fogmap .lc'); return el?Number(el.dataset.i):-1}
-function fqDo(map,i){var L=locById(map.dataset.id); if(!L||i<0) return; fogApply(L,i,fogTool).forEach(function(j){var c=map.querySelector('.lc[data-i="'+j+'"]'); if(c) c.outerHTML=cellHtml(L.cells[j],j,L)}); var p=map.closest('.fogq').querySelector('.fogq-pct'); if(p) p.textContent='Под туманом: '+fogPct(L)+'%'}
+function fqDo(map,i){var L=locById(map.dataset.id); if(!L||i<0) return; scrSchedule(); if(fogTool===2){locLayers(L); if(hdOpen(L,i)){hdRefresh(L); toast('«'+hidName(L.cells[i])+'» открыто игрокам')} return} fogApply(L,i,fogTool).forEach(function(j){var c=map.querySelector('.lc[data-i="'+j+'"]'); if(c) c.outerHTML=cellHtml(L.cells[j],j,L)}); var p=map.closest('.fogq').querySelector('.fogq-pct'); if(p) p.textContent='Под туманом: '+fogPct(L)+'%'}
 document.addEventListener('pointerdown',function(e){var map=e.target.closest&&e.target.closest('.fogmap'); if(!map) return; e.preventDefault(); fqPaint={map:map,last:-1}; try{map.setPointerCapture(e.pointerId)}catch(_){} var i=fqCell(e.clientX,e.clientY); fqPaint.last=i; fqDo(map,i)});
 document.addEventListener('pointermove',function(e){if(!fqPaint) return; var i=fqCell(e.clientX,e.clientY); if(i>-1&&i!==fqPaint.last){fqPaint.last=i; fqDo(fqPaint.map,i)}});
 function fqUp(){if(fqPaint){fqPaint=null; gmSave()}}
@@ -5714,7 +6082,7 @@ function tokIc(t){return t.k==='c'?TOK_CUSTOM:tokDef(t.k)[3]}
 function fById(id){var l=gm().fight.list; for(var i=0;i<l.length;i++) if(l[i].id===id) return l[i]; return null}
 function tokRowHtml(p){
  var T=p.tok||[];
- return '<div class="fr-tok">'+T.map(function(t,j){return '<button class="tok tone-'+tokTone(t)+'" data-tk="edit" data-f="'+esc(p.id)+'" data-j="'+j+'" aria-label="'+esc(tokName(t))+(t.n?', ещё '+t.n+' '+plural(t.n,'ход','хода','ходов'):'')+': изменить">'+svg(tokIc(t))+'<span>'+esc(tokName(t))+'</span>'+(t.n?'<b>'+t.n+'</b>':'')+'</button>'}).join('')+
+ return '<div class="fr-tok">'+T.map(function(t,j){return '<button class="tok stamp-tok tone-'+tokTone(t)+'" data-tk="edit" data-f="'+esc(p.id)+'" data-j="'+j+'" aria-label="'+esc(tokName(t))+(t.n?', ещё '+t.n+' '+plural(t.n,'ход','хода','ходов'):'')+': изменить">'+svg(tokIc(t))+'<span>'+esc(tokName(t))+'</span>'+(t.n?'<b>'+t.n+'</b>':'')+'</button>'}).join('')+
   '<button class="tok add" data-tk="pick" data-f="'+esc(p.id)+'" aria-label="Состояние для '+esc(p.name)+'">'+svg(IC.plus)+'<span>'+(T.length?'':'Состояние')+'</span></button></div>';
 }
 function tokPickSheet(p){
@@ -5731,6 +6099,30 @@ function tokEditSheet(p,j){
   '<div class="fld"><span class="lbl">Сколько ходов ещё</span><div class="tok-n"><button class="btn tk-st" data-tk="n" data-f="'+esc(p.id)+'" data-j="'+j+'" data-d="-1" aria-label="Меньше"'+(t.n?'':' disabled')+'>−</button><b>'+(t.n?t.n:'∞')+'</b><button class="btn tk-st" data-tk="n" data-f="'+esc(p.id)+'" data-j="'+j+'" data-d="1" aria-label="Больше">+</button></div><small class="hint" style="margin:4px 0 0">'+(t.n?'Убывает в начале хода участника, на нуле спадает.':'∞ — пока не снимете сами.')+'</small></div>'+
   '<div class="row-btns"><button class="btn danger" data-tk="rm" data-f="'+esc(p.id)+'" data-j="'+j+'">Снять</button><button class="btn pri" data-act="closeSheet">Готово</button></div>');
 }
+var SEAL_SVG='<path d="M24.0 1.0 Q27.6 3.7 31.9 2.4 Q34.3 6.2 38.8 6.4 Q39.8 10.8 43.9 12.5 Q43.4 17.0 46.7 20.0 Q44.6 24.0 46.7 28.0 Q43.4 31.0 43.9 35.5 Q39.8 37.2 38.8 41.6 Q34.3 41.8 31.9 45.6 Q27.6 44.3 24.0 47.0 Q20.4 44.3 16.1 45.6 Q13.7 41.8 9.2 41.6 Q8.2 37.2 4.1 35.5 Q4.6 31.0 1.3 28.0 Q3.4 24.0 1.3 20.0 Q4.6 17.0 4.1 12.5 Q8.2 10.8 9.2 6.4 Q13.7 6.2 16.1 2.4 Q20.4 3.7 24.0 1.0Z" fill="#8E1B14"/><circle cx="24" cy="24" r="16.5" fill="none" stroke="rgba(255,236,200,.45)" stroke-width="1.2"/><circle cx="24" cy="24" r="14.3" fill="#A8281C"/><path d="M14.5 29.5 L13 18.5 L18.5 23 L24 15 L29.5 23 L35 18.5 L33.5 29.5 Z" fill="#E9BE45" stroke="#6b1610" stroke-width=".8" stroke-linejoin="round"/><path d="M15 32 H33" stroke="#E9BE45" stroke-width="2.2" stroke-linecap="round"/><circle cx="24" cy="12.6" r="1.6" fill="#E9BE45"/><circle cx="13" cy="17.2" r="1.3" fill="#E9BE45"/><circle cx="35" cy="17.2" r="1.3" fill="#E9BE45"/><path d="M10 38 Q9 43 11.5 45 Q13.5 43 12.5 38.5Z M36 39 Q36.5 44 39 44.5 Q40 42 38.2 38.6Z" fill="#8E1B14"/>';
+var SIDE_IC={vrag:'<path d="M4 20 L15.5 8.5 M13 6 L18 11 M5.5 15.5 L8.5 18.5 M20 20 L8.5 8.5 M11 6 L6 11 M18.5 15.5 L15.5 18.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>',
+ svoi:'<path d="M12 2.5 L20 5.5 V11 C20 16 16.5 19.6 12 21.5 C7.5 19.6 4 16 4 11 V5.5 Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M8.5 12 L11 14.5 L15.5 9.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>',
+ inoe:'<path d="M12 4 V20 M6 20 H18 M4 8 H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4 8 L1.8 14 H6.2 Z M20 8 L17.8 14 H22.2 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>',
+ hero:'<path d="M12 2.5 L14.6 8.6 L21 9.2 L16.2 13.4 L17.6 19.8 L12 16.4 L6.4 19.8 L7.8 13.4 L3 9.2 L9.4 8.6 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>'};
+function sideStamp(side,hero){var k=hero?'hero':(SIDE_IC[side]?side:'vrag'); var t=hero?'Герой':{vrag:'Супостат',svoi:'Свой',inoe:'Пришлый'}[k]; return '<span class="pstamp st-'+k+'">'+svg(SIDE_IC[k])+'<span>'+t+'</span></span>'}
+var INI_IC='<path d="M13 2.5 L5 13.5 H11 L10 21.5 L19 9.5 H13 Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>';
+function iniSort(){
+ var F=gm().fight; F.list=F.list.map(function(x,k){return [x,k]}).sort(function(a,b){var va=a[0].ini, vb=b[0].ini; va=va==null?-1e9:va; vb=vb==null?-1e9:vb; return vb-va||a[1]-b[1]}).map(function(x){return x[0]}); F.turn=0;
+}
+function iniAllSheet(){
+ var L=gm().fight.list;
+ openSheet('<h2 class="tok-h">'+svg(INI_IC)+'Инициатива</h2><p class="hint">Впишите каждому выпавшее значение — кто выше, тот ходит раньше. Пустое — в конец очереди. Скорость — это сколько действий за ход, на порядок она не влияет.</p>'+
+  '<div class="ini-list">'+L.map(function(p){return '<label class="ini-row side-'+p.side+'"><span>'+esc(p.name||'Без имени')+'<small>'+SIDES[p.side][0]+(fSpd(p)!=null?' · скорость '+fSpd(p):'')+'</small></span><input class="inp num" type="number" inputmode="numeric" data-ini="'+esc(p.id)+'" value="'+(p.ini==null?'':p.ini)+'" placeholder="—" aria-label="Инициатива: '+esc(p.name)+'"></label>'}).join('')+'</div>'+
+  '<div class="row-btns" style="margin-top:12px"><button class="btn pri" data-tk="iniSort" data-f="*">Выстроить по инициативе</button><button class="btn" data-act="closeSheet">Готово</button></div>'+
+  '<button class="btn sm" data-tk="iniClear" data-f="*" style="margin-top:8px">Очистить инициативу</button>');
+ var f=document.querySelector('.sheet [data-ini]'); if(f) f.focus();
+}
+function iniSheet(p){
+ openSheet('<h2 class="tok-h">'+svg(INI_IC)+'Инициатива</h2><p class="hint">'+esc(p.name)+'</p><div class="tok-n"><button class="btn tk-st" data-tk="iniN" data-f="'+esc(p.id)+'" data-d="-1" aria-label="Меньше">−</button><input class="inp num ini-one" type="number" inputmode="numeric" data-ini="'+esc(p.id)+'" value="'+(p.ini==null?'':p.ini)+'" placeholder="—" aria-label="Инициатива"><button class="btn tk-st" data-tk="iniN" data-f="'+esc(p.id)+'" data-d="1" aria-label="Больше">+</button></div>'+
+  '<div class="row-btns" style="margin-top:14px"><button class="btn" data-tk="iniSort" data-f="*">Выстроить по инициативе</button><button class="btn pri" data-act="closeSheet">Готово</button></div>');
+}
+document.addEventListener('input',function(e){var t=e.target; if(!t.dataset||!t.dataset.ini) return; var p=fById(t.dataset.ini); if(!p) return; var v=t.value.trim(); p.ini=v===''||isNaN(Number(v))?null:Math.max(-99,Math.min(999,Math.round(Number(v)))); gmSave(); var b=document.querySelector('.fr-ini[data-f="'+p.id+'"] b'); if(b){b.textContent=p.ini==null?'—':p.ini; b.parentNode.classList.toggle('empty',p.ini==null)}});
+document.addEventListener('keydown',function(e){var t=e.target; if(e.key!=='Enter'||!t.dataset||!t.dataset.ini) return; e.preventDefault(); var all=[].slice.call(document.querySelectorAll('.sheet [data-ini]')), i=all.indexOf(t); if(all[i+1]) all[i+1].focus(); else t.blur()});
 function fSpd(p){
  if(p.spd!=null) return p.spd;
  if(p.ref){var b=beastById(p.ref); if(b) return Number(b.skor)||0; var c=byId(p.ref); if(c) return (Number(c.stats.skor)||0)+(Number(c.tstats.skor)||0)}
@@ -5738,7 +6130,7 @@ function fSpd(p){
 }
 function spdSheet(p){
  var v=fSpd(p), src=p.ref&&(beastById(p.ref)||byId(p.ref));
- openSheet('<h2 class="tok-h">'+statIcon('skor')+'Скорость</h2><p class="hint">'+esc(p.name)+(p.spd==null&&src?' · взята из '+(beastById(p.ref)?'бестиария':'листа героя'):'')+'</p>'+
+ openSheet('<h2 class="tok-h">'+statIcon('skor')+'Скорость</h2><p class="hint">Сколько действий за ход. '+esc(p.name)+(p.spd==null&&src?' · взята из '+(beastById(p.ref)?'бестиария':'листа героя'):'')+'</p>'+
   '<div class="tok-n"><button class="btn tk-st" data-tk="spdN" data-f="'+esc(p.id)+'" data-d="-1" aria-label="Меньше">−</button><b>'+(v==null?'—':v)+'</b><button class="btn tk-st" data-tk="spdN" data-f="'+esc(p.id)+'" data-d="1" aria-label="Больше">+</button></div>'+
   '<div class="row-btns" style="margin-top:14px">'+(p.spd!=null&&src?'<button class="btn" data-tk="spdReset" data-f="'+esc(p.id)+'">Как в '+(beastById(p.ref)?'бестиарии':'листе')+'</button>':'')+'<button class="btn pri" data-act="closeSheet">Готово</button></div>');
 }
@@ -5753,11 +6145,19 @@ function tokTick(p){
 }
 document.addEventListener('click',function(e){
  var el=e.target.closest('[data-tk]'); if(!el||el.disabled) return;
+ if(el.dataset.f==='*'){
+  if(el.dataset.tk==='iniSort'){var F0=gm().fight; if(!F0.list.some(function(x){return x.ini!=null})){toast('Сначала впишите инициативу'); return} iniSort(); gmSave(); closeSheet(); gmRerender(); toast('Очередь выстроена по инициативе')}
+  if(el.dataset.tk==='iniClear'){gm().fight.list.forEach(function(x){x.ini=null}); gmSave(); gmRerender(); iniAllSheet()}
+  return;
+ }
  var p=fById(el.dataset.f); if(!p) return; if(!p.tok) p.tok=[];
  var a=el.dataset.tk, j=Number(el.dataset.j);
  switch(a){
   case 'pick': tokPickSheet(p); break;
   case 'spd': spdSheet(p); break;
+  case 'boss': p.boss=!p.boss; gmSave(); gmRerender(); toast(p.boss?'«'+p.name+'» отмечен печатью главаря':'Печать снята'); break;
+  case 'ini': iniSheet(p); break;
+  case 'iniN': p.ini=Math.max(-99,Math.min(999,(p.ini==null?0:p.ini)+Number(el.dataset.d))); gmSave(); gmRerender(); iniSheet(p); break;
   case 'spdN': var sv=fSpd(p); p.spd=Math.max(-20,Math.min(99,(sv==null?0:sv)+Number(el.dataset.d))); gmSave(); gmRerender(); spdSheet(p); break;
   case 'spdReset': p.spd=null; gmSave(); gmRerender(); spdSheet(p); break;
   case 'edit': tokEditSheet(p,j); break;
@@ -5772,8 +6172,430 @@ document.addEventListener('submit',function(e){
  var p=fById(f.dataset.tkform), v=String(new FormData(f).get('t')||'').trim(); if(!p||!v) return;
  if(!p.tok) p.tok=[]; p.tok.push({k:'c',t:v.slice(0,40),n:0}); gmSave(); gmRerender(); tokPickSheet(p);
 });
+
+/* ---------- МИНИ-КВЕСТЫ ---------- */
+var MQ_IC='<path d="M12 2.5 C8 2.5 5.5 5.2 5.5 8.5 C5.5 11 7 12.4 8.5 13.6 V16 H15.5 V13.6 C17 12.4 18.5 11 18.5 8.5 C18.5 5.2 16 2.5 12 2.5Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 19 H15 M10 21.5 H14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 6 V10 M12 12 V12.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>';
+var stView='plots', mqEdit=null;
+function mqNorm(q){
+ var o={id:typeof q.id==='string'?q.id:uid(),t:String(q.t||'Мини-квест').slice(0,120),h:String(q.h||'').slice(0,1000),
+  steps:(Array.isArray(q.steps)?q.steps:[]).filter(Boolean).slice(0,20).map(function(st){return {id:typeof st.id==='string'?st.id:uid(),t:String(st.t||'').slice(0,160),d:String(st.d||'').slice(0,4000),att:(Array.isArray(st.att)?st.att:[]).filter(function(a){return a&&ST_K[a.k]&&a.id}).map(function(a){return {k:a.k,id:String(a.id)}})}})};
+ if(q.example) o.example=true; return o;
+}
+function mqById(id){var l=book().side; for(var i=0;i<l.length;i++) if(l[i].id===id) return l[i]; return null}
+function mqUses(q){var n=0, where=[]; book().plots.forEach(function(P){var seen={}; P.nodes.forEach(function(x){if(x.mq&&x.mqT===q.t&&!seen[x.mq]){seen[x.mq]=1; n++; if(where.indexOf(P.t)<0) where.push(P.t)}})}); return {n:n,where:where}}
+function stViewHtml(){var n=book().side.length;
+ return '<div class="seg st-view" role="tablist" aria-label="Раздел истории"><label><input type="radio" name="stv" data-mq="view" value="plots"'+(stView==='plots'?' checked':'')+'><span>Сюжеты</span></label><label><input type="radio" name="stv" data-mq="view" value="mq"'+(stView==='mq'?' checked':'')+'><span>'+svg(MQ_IC)+'Мини-квесты'+(n?' · '+n:'')+'</span></label></div>'}
+function mqQ(q){return esc((q.t+' '+q.h+' '+q.steps.map(function(st){return st.t+' '+st.d+' '+st.att.map(attName).join(' ')}).join(' ')).toLowerCase())}
+function mqListHtml(){
+ var L=book().side, h='<p class="hint">Маленькие задания про запас — на случай, если герои заглянут туда, куда сюжет не вёл. В игре: карточка сцены → «Мини-квест». Цепочка шагов встанет в граф: вход из текущей сцены, выход — в любую сцену сюжета.</p>';
+ if(!L.length) h+='<div class="empty">Мини-квестов пока нет.</div>';
+ else h+=srchHtml('#mq-list','Искать: название, зацепка, шаги, привязки')+'<div class="mq-list" id="mq-list">'+L.map(function(q){var u=mqUses(q);
+  return '<article class="mq-card" data-q="'+mqQ(q)+'"><div class="mq-top"><span class="mq-ic" aria-hidden="true">'+svg(MQ_IC)+'</span><div class="mq-ttl"><b>'+esc(q.t)+'</b>'+(q.example?' <span class="chip neu">пример</span>':'')+'<small>'+q.steps.length+' '+plural(q.steps.length,'шаг','шага','шагов')+(u.n?' · вплетён: '+esc(u.where.join(', ')):'')+'</small></div></div>'+
+   (q.h?'<p class="mq-hook"><b>Зацепка:</b> '+esc(q.h)+'</p>':'')+
+   (q.steps.length?'<ol class="mq-steps">'+q.steps.map(function(st){return '<li><b>'+esc(st.t||'Без названия')+'</b>'+(st.att.length?'<span class="sg-att">'+st.att.map(function(a){return '<span title="'+esc(ST_K[a.k][0]+': '+attName(a))+'">'+svg(ST_K[a.k][1])+'</span>'}).join('')+'</span>':'')+'</li>'}).join('')+'</ol>':'')+
+   '<div class="row-btns"><button class="btn sm pri" data-mq="edit" data-id="'+esc(q.id)+'">Изменить</button><button class="btn sm" data-mq="dup" data-id="'+esc(q.id)+'">Копия</button><button class="btn sm danger" data-mq="askDel" data-id="'+esc(q.id)+'">Удалить</button></div></article>'}).join('')+'<p class="np-none hint" hidden>Ничего не нашлось</p></div>';
+ return h+'<button class="btn add" data-mq="new">'+svg(IC.plus)+'Новый мини-квест</button>';
+}
+function mqEditSheet(q){
+ mqEdit=q.id;
+ var h='<h2>'+svg(MQ_IC)+' Мини-квест</h2><div class="stack" style="gap:14px">'+
+  '<div class="fld"><label for="mq-t">Название</label><input class="inp" id="mq-t" data-mqf="t" value="'+esc(q.t)+'" autocomplete="off" placeholder="Например: Голос в колодце"></div>'+
+  '<div class="fld"><label for="mq-h">Зацепка: когда предложить</label><textarea class="inp" id="mq-h" data-mqf="h" rows="2" placeholder="Герои задержались у колодца, расспрашивают горожан…">'+esc(q.h)+'</textarea></div>'+
+  '<div><p class="lbl" style="margin:0 0 6px">Шаги цепочки</p><ol class="mq-ed">'+q.steps.map(function(st,i){
+   return '<li class="mq-st"><div class="mq-st-h"><i>'+(i+1)+'</i><input class="inp" data-mqs="'+i+'.t" value="'+esc(st.t)+'" placeholder="Название шага" aria-label="Шаг '+(i+1)+': название" autocomplete="off">'+
+    '<button class="ibtn plain" data-mq="stUp" data-i="'+i+'" aria-label="Выше"'+(i?'':' disabled')+'>'+svg('<path d="M6 15 L12 9 L18 15" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>')+'</button>'+
+    '<button class="xbtn" data-mq="stRm" data-i="'+i+'" aria-label="Убрать шаг '+(i+1)+'">×</button></div>'+
+    '<textarea class="inp" data-mqs="'+i+'.d" rows="2" placeholder="Что происходит, что нужно сделать" aria-label="Шаг '+(i+1)+': описание">'+esc(st.d)+'</textarea>'+
+    '<div class="mq-att">'+st.att.map(function(a,j){return '<span class="mq-chip">'+svg(ST_K[a.k][1])+esc(attName(a))+'<button data-mq="attRm" data-i="'+i+'" data-j="'+j+'" aria-label="Отвязать">×</button></span>'}).join('')+'<button class="btn sm" data-mq="attAdd" data-i="'+i+'">'+svg(IC.plus)+'Привязать</button></div></li>'}).join('')+'</ol>'+
+  '<button class="btn sm" data-mq="stAdd">'+svg(IC.plus)+'Шаг</button></div>'+
+  '<div class="row-btns"><button class="btn pri" data-mq="done">Готово</button></div></div>';
+ openSheet(h);
+}
+function mqAttPicker(q,i){
+ var g=gm(), groups=[['npc','Знакомцы',g.wiki.filter(function(w){return w.type==='npc'})],['beast','Бестиарий',g.beasts],['gift','Заготовки даров',g.gifts],['pack','Заготовки боёв',g.packs],['loc','Места',g.locs]];
+ var h='<h2>Привязать к шагу '+(i+1)+'</h2><div class="srch"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5 L21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg><input type="search" id="sa-q" placeholder="Искать" aria-label="Искать" autocomplete="off"></div><div class="stack" style="gap:12px" id="sa-list">';
+ groups.forEach(function(gr){ if(!gr[2].length) return;
+  h+='<div class="sa-grp"><p class="lbl" style="margin:0 0 6px">'+gr[1]+'</p><div class="list">'+gr[2].map(function(o){return '<button class="item sa-it" data-mq="attPick" data-i="'+i+'" data-k="'+gr[0]+'" data-id="'+esc(o.id)+'" data-q="'+esc(String(o.name||o.title||'').toLowerCase())+'"><span class="dar-ico" aria-hidden="true">'+svg(ST_K[gr[0]][1])+'</span><span class="item-name">'+esc(o.name||o.title||'Без названия')+'</span></button>'}).join('')+'</div></div>'});
+ openSheet(h+'</div><button class="btn" data-mq="back">Назад к мини-квесту</button>');
+}
+function mqAttachSheet(fromId){
+ var S=story(), from=sNode(fromId), L=book().side; if(!from) return;
+ if(!L.length){openSheet('<h2>Мини-квест</h2><p class="hint">Мини-квестов пока нет. Заготовьте их в «История» → «Мини-квесты».</p><div class="row-btns"><button class="btn pri" data-mq="goList">К мини-квестам</button><button class="btn" data-act="closeSheet">Закрыть</button></div>'); return}
+ var play=S.mode==='play';
+ var h='<h2>'+svg(MQ_IC)+' Вплести мини-квест</h2><form class="stack" style="gap:14px" data-mqform="'+esc(fromId)+'"><p class="hint">Вход — из «'+esc(from.t||'сцены')+'».</p>'+
+  '<fieldset class="fld" style="border:0;padding:0;margin:0"><legend class="lbl" style="margin-bottom:6px">Какой</legend>'+srchHtml('#mq-pick','Искать мини-квест')+'<div class="opts npick" id="mq-pick">'+L.map(function(q,k){var u=mqUses(q); return '<label data-q="'+mqQ(q)+'"><input type="radio" name="q" value="'+esc(q.id)+'"'+(k?'':' checked')+'><span><b>'+esc(q.t)+'</b><small>'+(q.h?esc(q.h.slice(0,110)):'')+' · '+q.steps.length+' '+plural(q.steps.length,'шаг','шага','шагов')+(u.n?' · уже вплетён':'')+'</small></span></label>'}).join('')+'<p class="np-none hint" hidden>Ничего не нашлось</p></div></fieldset>'+
+  '<div class="fld"><span class="lbl">Выход — куда вернуть героев</span>'+nodePickHtml('to',S.nodes.filter(function(x){return x.id!==fromId&&!x.mq}),fromId,[[fromId,'Сюда же — в «'+(from.t||'эту сцену')+'»'],['','Никуда — цепочка оборвётся']],'mq-to')+'</div>'+
+  '<div class="fld"><label for="mq-l">Подпись входа</label><input class="inp" id="mq-l" name="l" autocomplete="off" placeholder="Если пусто — «Любопытство: название»"></div>'+
+  (play?'<label class="chk"><input type="checkbox" name="go" checked> <span>Сразу перейти к первому шагу</span></label>':'')+
+  '<div class="row-btns"><button class="btn pri" type="submit">Вплести</button><button class="btn" type="button" data-act="closeSheet">Отмена</button></div></form>';
+ openSheet(h);
+}
+/* вставка цепочки в сюжет P: копии шагов, вход из fromId, выход в toId */
+function mqInsert(P,q,fromId,toId,label,example){
+ var byId=function(id){for(var i=0;i<P.nodes.length;i++) if(P.nodes[i].id===id) return P.nodes[i]; return null};
+ var from=byId(fromId); if(!from||!q.steps.length) return null;
+ var inst=uid(), maxY=0; P.nodes.forEach(function(n){maxY=Math.max(maxY,n.y)});
+ var y=maxY+SG_H+70, x=Math.max(40,from.x), prev=from, first=null;
+ q.steps.forEach(function(st,i){
+  var n={id:uid(),t:st.t||('Шаг '+(i+1)),d:st.d,x:x+i*(SG_W+90),y:y,att:JSON.parse(JSON.stringify(st.att)),mq:inst,mqT:q.t};
+  if(example) n.example=true;
+  P.nodes.push(n); var e={id:uid(),a:prev.id,b:n.id,l:i?'':(label||('Любопытство: '+q.t))}; if(example) e.example=true; P.edges.push(e); prev=n; if(!first) first=n;
+ });
+ if(toId&&byId(toId)){var e2={id:uid(),a:prev.id,b:toId,l:'Назад к истории'}; if(example) e2.example=true; P.edges.push(e2)}
+ return first;
+}
+document.addEventListener('click',function(e){
+ var el=e.target.closest('[data-mq]'); if(!el||el.disabled) return;
+ var a=el.dataset.mq, B=book(), q=mqEdit&&mqById(mqEdit), i=Number(el.dataset.i);
+ switch(a){
+  case 'view': stView=el.value==='mq'?'mq':'plots'; gmRerender(); break;
+  case 'goList': stView='mq'; var S0=story(); S0.mode='graph'; closeSheet(); gmSave(); gmRerender(); window.scrollTo(0,0); break;
+  case 'new': var nq=mqNorm({t:'Новый мини-квест',steps:[{t:'Зацепка'},{t:'Испытание'},{t:'Награда'}]}); B.side.push(nq); gmSave(); gmRerender(); mqEditSheet(nq); break;
+  case 'edit': var eq=mqById(el.dataset.id); if(eq) mqEditSheet(eq); break;
+  case 'dup': var dq=mqById(el.dataset.id); if(dq){var c=mqNorm(JSON.parse(JSON.stringify(dq))); c.id=uid(); delete c.example; c.steps.forEach(function(st){st.id=uid()}); c.t=dq.t+' (копия)'; B.side.splice(B.side.indexOf(dq)+1,0,c); gmSave(); gmRerender(); toast('Копия готова')} break;
+  case 'askDel': var xq=mqById(el.dataset.id); if(xq) openSheet('<h2>Удалить мини-квест?</h2><p class="hint">«'+esc(xq.t)+'» исчезнет из запаса. Уже вплетённые в сюжеты шаги останутся.</p><div class="row-btns"><button class="btn pri" data-mq="del" data-id="'+esc(xq.id)+'">Удалить</button><button class="btn" data-act="closeSheet">Отмена</button></div>'); break;
+  case 'del': var snap=JSON.stringify(B); B.side=B.side.filter(function(x){return x.id!==el.dataset.id}); undo={type:'story',snap:snap}; gmSave(); closeSheet(); gmRerender(); toast('Мини-квест удалён',true); break;
+  case 'done': mqEdit=null; closeSheet(); gmRerender(); break;
+  case 'back': if(q) mqEditSheet(q); else closeSheet(); break;
+  case 'stAdd': if(q){q.steps.push({id:uid(),t:'',d:'',att:[]}); delete q.example; gmSave(); mqEditSheet(q); var ins=document.querySelectorAll('.sheet [data-mqs$=".t"]'); if(ins.length) ins[ins.length-1].focus()} break;
+  case 'stRm': if(q){q.steps.splice(i,1); delete q.example; gmSave(); mqEditSheet(q)} break;
+  case 'stUp': if(q&&i>0){var tmp=q.steps[i-1]; q.steps[i-1]=q.steps[i]; q.steps[i]=tmp; gmSave(); mqEditSheet(q)} break;
+  case 'attAdd': if(q) mqAttPicker(q,i); break;
+  case 'attPick': if(q&&q.steps[i]){var A=q.steps[i].att; if(!A.some(function(x){return x.k===el.dataset.k&&x.id===el.dataset.id})) A.push({k:el.dataset.k,id:el.dataset.id}); delete q.example; gmSave(); mqEditSheet(q)} break;
+  case 'attRm': if(q&&q.steps[i]){q.steps[i].att.splice(Number(el.dataset.j),1); gmSave(); mqEditSheet(q)} break;
+  case 'attach': mqAttachSheet(el.dataset.id); break;
+  case 'unhook': var S=story(), inst=el.dataset.id, snap2=JSON.stringify(book()), gone={};
+   S.nodes=S.nodes.filter(function(x){if(x.mq===inst){gone[x.id]=1; return false} return true}); S.edges=S.edges.filter(function(x){return !gone[x.a]&&!gone[x.b]});
+   Object.keys(gone).forEach(function(k){delete S.by[k]; delete S.seen[k]}); if(gone[S.cur]) S.cur=S.trail.filter(function(x){return !gone[x]}).pop()||S.start; S.trail=S.trail.filter(function(x){return !gone[x]}); storySel=null;
+   undo={type:'story',snap:snap2}; gmSave(); closeSheet(); gmRerender(); toast('Мини-квест убран из сюжета',true); break;
+ }
+});
+document.addEventListener('change',function(e){var t=e.target; if(t.dataset&&t.dataset.mq==='view'){stView=t.value==='mq'?'mq':'plots'; gmRerender()}});
+document.addEventListener('input',function(e){
+ var t=e.target, q=mqEdit&&mqById(mqEdit); if(!q||!t.dataset) return;
+ if(t.dataset.mqf){q[t.dataset.mqf]=t.value; delete q.example; gmSave(); return}
+ if(t.dataset.mqs){var p=t.dataset.mqs.split('.'), st=q.steps[Number(p[0])]; if(st){st[p[1]]=t.value; delete q.example; gmSave()}}
+});
+document.addEventListener('submit',function(e){
+ var f=e.target; if(!f.dataset||!f.dataset.mqform) return; e.preventDefault();
+ var fd=new FormData(f), q=mqById(String(fd.get('q')||'')), S=story(); if(!q) return;
+ if(!q.steps.length){toast('В мини-квесте нет шагов'); return}
+ var first=mqInsert(S,q,f.dataset.mqform,String(fd.get('to')||''),String(fd.get('l')||'').trim());
+ if(!first) return;
+ storySel=first.id; gmSave();
+ if(fd.get('go')) storyMove(first.id,''); else{closeSheet(); gmRerender()}
+ toast('«'+q.t+'» вплетён: '+q.steps.length+' '+plural(q.steps.length,'шаг','шага','шагов'));
+});
+
+/* ---------- ПОИСК В СПИСКАХ ---------- */
+var srchMem={}, SRCH_KEEP={'#loc-cards':1,'#pk-list':1,'#tpl-list':1,'#mq-list':1};
+function srchQ(){var a=[].slice.call(arguments).join(' '); return esc(String(a).toLowerCase().replace(/ё/g,'е'))}
+function srchApply(inp){var box=document.querySelector(inp.dataset.filter); if(!box) return; var q=inp.value.trim().toLowerCase().replace(/ё/g,'е'), any=false;
+ box.querySelectorAll('[data-q]').forEach(function(x){var hit=!q||x.dataset.q.replace(/ё/g,'е').indexOf(q)>-1; x.hidden=!hit; if(hit) any=true});
+ var none=box.querySelector('.np-none'); if(none) none.hidden=any}
+function srchApplyAll(){document.querySelectorAll('input[data-filter]').forEach(function(i){if(i.value) srchApply(i)})}
+function srchHtml(target,ph){return '<div class="srch"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5 L21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg><input type="search" data-filter="'+target+'" placeholder="'+esc(ph)+'" aria-label="'+esc(ph)+'" autocomplete="off" value="'+esc(SRCH_KEEP[target]?srchMem[target]||'':'')+'"></div>'}
+function nodeQ(x){return esc(((x.t||'')+' '+(x.d||'')+' '+(x.mqT||'')).toLowerCase())}
+/* список сцен с поиском вместо длинного select */
+function nodePickHtml(name,nodes,sel,extra,id){
+ return srchHtml('#'+id,'Искать сцену')+'<div class="opts npick" id="'+id+'">'+(extra||[]).map(function(o){return '<label data-q="'+esc(o[1].toLowerCase())+'" class="np-x"><input type="radio" name="'+name+'" value="'+esc(o[0])+'"'+(sel===o[0]?' checked':'')+'><span><b>'+esc(o[1])+'</b></span></label>'}).join('')+
+  nodes.map(function(x){return '<label data-q="'+nodeQ(x)+'"><input type="radio" name="'+name+'" value="'+esc(x.id)+'"'+(sel===x.id?' checked':'')+'><span><b>'+esc(x.t||'Без названия')+'</b>'+(x.d?'<small>'+esc(x.d.slice(0,80))+'</small>':'')+'</span></label>'}).join('')+'<p class="np-none hint" hidden>Ничего не нашлось</p></div>';
+}
+document.addEventListener('input',function(e){
+ var t=e.target; if(!t.dataset||!t.dataset.filter) return;
+ srchMem[t.dataset.filter]=t.value; srchApply(t);
+});
+
+/* ---------- СКРЫТОЕ ОТ ИГРОКОВ: открыть по одному ---------- */
+var hdOpened={};
+function hidName(k){if(/^m\d+$/.test(k)) return 'Метка '+k.slice(1); var b=brushDef(k); return b?b[1]:(k||'Клетка')}
+function hidIcon(k){if(/^m\d+$/.test(k)) return '<b class="hd-mk">'+k.slice(1)+'</b>'; var ic=TILE_IC[k]||((brushDef(k)||[])[2])||''; return ic?svg(ic):''}
+function hidCellRef(L,i){var x=i%L.w, y=Math.floor(i/L.w); return 'ряд '+(y+1)+' · ст. '+(x+1)}
+function hidListHtml(L){
+ locLayers(L);
+ var rows=[]; for(var i=0;i<L.cells.length;i++) if(L.hid[i]) rows.push(i);
+ var op=(hdOpened[L.id]||[]).filter(function(i){return !L.hid[i]&&L.cells[i]});
+ if(!rows.length&&!op.length) return '<div class="hd-box empty-hd" data-hdloc="'+esc(L.id)+'"><p class="hint" style="margin:0">Скрытого нет. Кисть «Скрыть» прячет предмет или метку от игроков.</p></div>';
+ var h='<div class="hd-box" data-hdloc="'+esc(L.id)+'"><div class="hd-h"><b>'+svg('<path d="M2.5 12 C6 6.5 18 6.5 21.5 12 C18 17.5 6 17.5 2.5 12 Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2.8" fill="currentColor"/><path d="M4 20 L20 4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>')+'Скрыто от игроков: '+rows.length+'</b>'+(rows.length>1?'<button class="btn sm" data-hd="all">Открыть всё</button>':'')+'</div><div class="hd-list">';
+ h+=rows.map(function(i){var k=L.cells[i], mk=/^m\d+$/.test(k)?L.marks[k.slice(1)]:'';
+  return '<div class="hd-row"><span class="hd-ic t-'+esc(cellCls(k))+'" aria-hidden="true">'+hidIcon(k)+'</span><span class="hd-t"><b>'+esc(hidName(k))+'</b><small>'+hidCellRef(L,i)+(L.fog[i]?' · под туманом':'')+(mk?' · '+esc(mk.slice(0,60)):'')+'</small></span><button class="btn sm pri" data-hd="open" data-i="'+i+'">Открыть</button></div>'}).join('');
+ h+=op.map(function(i){var k=L.cells[i]; return '<div class="hd-row done"><span class="hd-ic t-'+esc(cellCls(k))+'" aria-hidden="true">'+hidIcon(k)+'</span><span class="hd-t"><b>'+esc(hidName(k))+'</b><small>Открыто игрокам · '+hidCellRef(L,i)+'</small></span><button class="btn sm" data-hd="hide" data-i="'+i+'">Спрятать</button></div>'}).join('');
+ return h+'</div>'+(op.length?'<p class="hint" style="margin:6px 0 0">Игроки увидят открытое, когда вы снова покажете им карту.</p>':'')+'</div>';
+}
+function hdRefresh(L){
+ document.querySelectorAll('.hd-box[data-hdloc="'+L.id+'"]').forEach(function(b){b.outerHTML=hidListHtml(L)});
+ document.querySelectorAll('.fogmap[data-id="'+L.id+'"], #lmap').forEach(function(map){ if(map.id==='lmap'&&gm().openLoc!==L.id) return;
+  for(var i=0;i<L.cells.length;i++){var c=map.querySelector('.lc[data-i="'+i+'"]'); if(c){var nh=cellHtml(L.cells[i],i,L); if(c.outerHTML!==nh) c.outerHTML=nh}}});
+ var p=document.querySelector('.fogq[data-loc="'+L.id+'"] .fogq-pct'); if(p) p.textContent='Под туманом: '+fogPct(L)+'%';
+}
+function hdOpen(L,i){
+ if(!L.hid[i]) return false; L.hid[i]=0; if(L.fog[i]) L.fog[i]=0;
+ (hdOpened[L.id]=hdOpened[L.id]||[]).push(i); return true;
+}
+document.addEventListener('click',function(e){
+ var el=e.target.closest('[data-hd]'); if(!el) return; var box=el.closest('[data-hdloc]'); if(!box) return;
+ var L=locById(box.dataset.hdloc); if(!L) return; locLayers(L); var i=Number(el.dataset.i), a=el.dataset.hd;
+ if(a==='open'){hdOpen(L,i); toast('«'+hidName(L.cells[i])+'» открыто игрокам')}
+ if(a==='all'){var n=0; for(var j=0;j<L.cells.length;j++) if(hdOpen(L,j)) n++; toast('Открыто игрокам: '+n)}
+ if(a==='hide'){L.hid[i]=1; hdOpened[L.id]=(hdOpened[L.id]||[]).filter(function(x){return x!==i}); toast('Снова скрыто')}
+ gmSave(); hdRefresh(L);
+});
+
+/* ---------- ЭКРАН ИГРОКОВ: второе окно с живой картой ---------- */
+var SCREEN=/^#ekran/.test(location.hash);
+var SCR_IC='<rect x="2.5" y="4" width="19" height="12.5" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 20.5 H16 M12 16.5 V20.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6.5 13 L10 9.5 L12.5 12 L17.5 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>';
+var darQrLast=null;
+var scr={win:null,mode:null,qr:null,loc:null,marks:false,hpAll:false,last:'',timer:null};
+function scrAlive(){try{return !!(scr.win&&!scr.win.closed)}catch(e){return false}}
+var HPST=[['Повержен','#5b5550'],['При смерти','#8E1B14'],['Едва стоит','#B8301F'],['Обессилен','#CC4B23'],['Тяжело ранен','#D96A22'],['Изранен','#D98A24'],['Потрёпан','#C9A227'],['Ранен','#A7A42E'],['Задет','#7FA235'],['Крепок','#5A9A3E'],['Бодр','#3E8E4E']];
+function hpBand(hp,max){if(!(max>0)) return -1; if(hp<=0) return 0; return Math.max(1,Math.min(10,Math.ceil(hp/max*10)))}
+function hpStHtml(k,cls){if(k<0) return ''; var t=HPST[k]; var ic=k===0?'<path d="M12 3 C7 3 4 6.3 4 10.5 C4 13 5.2 14.8 7 15.8 V19.5 H17 V15.8 C18.8 14.8 20 13 20 10.5 C20 6.3 17 3 12 3 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="9" cy="11" r="1.8" fill="currentColor"/><circle cx="15" cy="11" r="1.8" fill="currentColor"/><path d="M10 19.5 V17 M14 19.5 V17" stroke="currentColor" stroke-width="1.6"/>':'<path d="M12 20.5 C5 15.5 2.5 12.2 2.5 8.6 C2.5 5.8 4.7 3.7 7.3 3.7 C9.3 3.7 10.9 4.9 12 6.6 C13.1 4.9 14.7 3.7 16.7 3.7 C19.3 3.7 21.5 5.8 21.5 8.6 C21.5 12.2 19 15.5 12 20.5 Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>'+(k<=5?'<path d="M12 6.6 L10.5 10 L13 12 L11 15.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>':''); return '<span class="pstamp hpstamp'+(cls?' '+cls:'')+(k<=1?' crit':'')+(k===0?' dead':'')+'" style="--sc:'+t[1]+'" title="'+t[0]+'">'+svg(ic)+'<span>'+t[0]+'</span></span>'}
+function fIsHero(p){return p.side==='svoi'&&!(p.ref&&beastById(p.ref))}
+function scrFightPayload(){
+ var F=gm().fight;
+ return {letopis:'scr',t:'fight',round:F.round,turn:F.turn,list:F.list.map(function(p){
+  var hero=fIsHero(p);
+  return {n:p.name||'Без имени',side:p.side,hero:hero,boss:!!p.boss,b:p.beast||'',st:hpBand(p.hp,p.max),down:p.hp<=0,spd:fSpd(p),
+   tok:(p.tok||[]).map(function(t){return {n:tokName(t),tone:tokTone(t),ic:tokIc(t),c:t.n||0}})}})};
+}
+function scrPayload(){
+ if(scr.mode==='fight'&&store.gm) return scrFightPayload();
+ if(scr.mode==='qr'&&scr.qr) return {letopis:'scr',t:'qr',title:scr.qr.title,text:scr.qr.text,n:scr.qr.n,link:darLinkable()};
+ var L=scr.mode==='map'&&scr.loc&&store.gm&&locById(scr.loc);
+ if(!L) return {letopis:'scr',t:'idle'};
+ return {letopis:'scr',t:'map',m:mapNorm(locPlayerView(L,{marks:scr.marks,desc:false})),marks:scr.marks};
+}
+function scrPush(force){
+ scr.timer=null; if(!scrAlive()) return;
+ var p=scrPayload(), j=JSON.stringify(p); if(!force&&j===scr.last) return; scr.last=j;
+ try{scr.win.postMessage(p,'*')}catch(e){}
+}
+function scrSchedule(){if(scr.mode&&!scr.timer) scr.timer=setTimeout(scrPush,90)}
+function scrOpen(){
+ if(scrAlive()){try{scr.win.focus()}catch(e){} return true}
+ var url=location.href.split('#')[0]+'#ekran';
+ var w=null; try{w=window.open(url,'letopis-ekran','popup=yes,width=1280,height=760')}catch(e){w=null}
+ if(!w){toast('Браузер не дал открыть окно. Разрешите всплывающие окна для этой страницы'); return false}
+ scr.win=w; scr.last=''; return true;
+}
+function scrShow(id){if(!scrOpen()) return; scr.mode='map'; scr.loc=id; scr.last=''; scrPush(true); gmRerender(); var L=locById(id); toast('На экране игроков: «'+(L&&L.name||'место')+'»')}
+function scrShowFight(){if(!scrOpen()) return; scr.mode='fight'; scr.last=''; scrPush(true); gmRerender(); toast('Бой на экране игроков')}
+function scrHide(){var qb=document.querySelector('.sheet [data-scr="hide"]'); scr.mode=null; scr.loc=null; scr.qr=null; if(qb&&qb.closest('.row-btns')) setTimeout(function(){var b2=document.querySelector('.sheet .scr-on'); if(b2) b2.outerHTML=scrQrBtnHtml()},0); scr.last=''; scrPush(true); gmRerender(); toast('Экран игроков очищен')}
+function scrQrBtnHtml(){
+ if(scr.mode==='qr'&&scrAlive()&&scr.qr&&darQrLast&&scr.qr.text===darQrLast.text) return '<span class="scr-on"><span class="scr-dot" aria-hidden="true"></span>Дар на экране<button class="btn sm" data-scr="hide">Убрать</button></span>';
+ return '<button class="btn" data-scr="qr">'+svg(SCR_IC)+'На экран игроков</button>';
+}
+function scrFightBtnHtml(){
+ if(scr.mode==='fight'&&scrAlive()) return '<span class="scr-on"><span class="scr-dot" aria-hidden="true"></span>Бой на экране<button class="btn sm" data-scr="hide">Убрать</button></span>';
+ return '<button class="btn sm" data-scr="fight">'+svg(SCR_IC)+'Экран игроков</button>';
+}
+function scrBtnHtml(L,small){
+ var on=scr.mode==='map'&&scr.loc===L.id&&scrAlive();
+ if(on) return '<span class="scr-on'+(small?' sm':'')+'"><span class="scr-dot" aria-hidden="true"></span>На экране<button class="btn sm" data-scr="marks" aria-pressed="'+scr.marks+'">'+(scr.marks?'Метки: да':'Метки: нет')+'</button><button class="btn sm" data-scr="hide">Убрать</button></span>';
+ return '<button class="btn'+(small?' sm':'')+'" data-scr="show" data-id="'+esc(L.id)+'">'+svg(SCR_IC)+'Экран игроков</button>';
+}
+window.addEventListener('message',function(e){
+ var d=e.data; if(!d||d.letopis!=='scr') return;
+ if(SCREEN){if(e.source===window.opener) scrRecv(d); return}
+ if(d.t==='hello'){ if(!scrAlive()||scr.win!==e.source){scr.win=e.source; scr.last=''; scrPush(true)} else if(d.fresh){scr.last=''; scrPush(true)} }
+ if(d.t==='bye'&&e.source===scr.win){scr.win=null; if(store.mode==='gm') gmRerender()}
+});
+document.addEventListener('click',function(e){
+ var el=e.target.closest('[data-scr]'); if(!el) return; var a=el.dataset.scr;
+ if(a==='show') scrShow(el.dataset.id);
+ if(a==='hide') scrHide();
+ if(a==='marks'){scr.marks=!scr.marks; scrPush(); gmRerender()}
+ if(a==='fight') scrShowFight();
+ if(a==='qr'&&darQrLast){if(!scrOpen()) return; scr.mode='qr'; scr.qr=darQrLast; scr.last=''; scrPush(true); var bx=el.closest('.row-btns'); if(bx) bx.innerHTML=scrQrBtnHtml(); toast('QR-код дара на экране игроков')}
+ if(a==='hpAll'){scr.hpAll=!scr.hpAll; scrPush(); gmRerender()}
+ if(a==='fs') scrFull();
+});
+
+/* --- сторона экрана --- */
+var scrPrev=null, scrIdleT=null;
+function scrBoot(){
+ document.title='Экран игроков · Летопись героя';
+ document.body.classList.add('scr-body');
+ app.innerHTML='<div class="scr" id="scrRoot"><div class="scr-top"><div class="scr-ttl"><span class="scr-cap" id="scrCap"></span><b id="scrName"></b></div><button class="scr-fs" data-scr="fs">'+svg('<path d="M4 9 V4 H9 M15 4 H20 V9 M20 15 V20 H15 M9 20 H4 V15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>')+'Во весь экран</button></div><div class="scr-stage" id="scrStage"></div></div>';
+ scrIdle();
+ var hi=function(fr){try{if(window.opener) window.opener.postMessage({letopis:'scr',t:'hello',fresh:!!fr},'*')}catch(e){}};
+ hi(true); setInterval(function(){hi(scrLastJ==='')},3000);
+ window.addEventListener('pagehide',function(){try{if(window.opener) window.opener.postMessage({letopis:'scr',t:'bye'},'*')}catch(e){}});
+ document.addEventListener('mousemove',scrWake); document.addEventListener('pointerdown',scrWake); scrWake();
+ document.addEventListener('dblclick',scrFull);
+}
+function scrWake(){var r=document.getElementById('scrRoot'); if(!r) return; r.classList.remove('calm'); clearTimeout(scrIdleT); scrIdleT=setTimeout(function(){r.classList.add('calm')},2500)}
+function scrFull(){var r=document.documentElement; if(document.fullscreenElement) document.exitFullscreen().catch(function(){}); else if(r.requestFullscreen) r.requestFullscreen().catch(function(){})}
+function scrCap(t){var c=document.getElementById('scrCap'); if(c){c.textContent=t||''; c.hidden=!t}}
+function scrIdle(){
+ scrPrev=null; document.getElementById('scrName').textContent=''; scrCap('');
+ document.getElementById('scrStage').innerHTML='<div class="scr-idle"><div class="scr-orn" aria-hidden="true"></div><h1>Летопись героя</h1><p>Экран игроков. Мастер покажет здесь карту или бой.</p><div class="scr-orn" aria-hidden="true"></div></div>';
+}
+var scrLastJ='', scrLastTurn=-1;
+function scrFight(d){
+ var j=JSON.stringify(d); if(j===scrLastJ) return; scrLastJ=j;
+ var st=document.getElementById('scrStage'); scrPrev=null; var old=st.querySelector('.sf-list'), keep=old?old.scrollTop:0;
+ document.getElementById('scrName').textContent='Круг '+(Number(d.round)||1); scrCap('Летопись Брани');
+ var L=Array.isArray(d.list)?d.list.slice(0,40):[], turn=Number(d.turn)||0, TONES={bad:1,warn:1,magic:1,good:1,neu:1}, SID={svoi:'Свои',vrag:'Супостаты',inoe:'Пришлые'};
+ st.style.removeProperty('--ar');
+ st.innerHTML='<ol class="sf-list'+(L.length>6?' two':'')+'"'+(L.length>6?' style="grid-template-rows:repeat('+Math.ceil(L.length/2)+',auto)"':'')+'>'+L.map(function(p,i){
+  var side=SID[p.side]?p.side:'vrag', pct=Math.max(0,Math.min(100,Number(p.pct)||0)), cur=i===turn;
+  var tk=(Array.isArray(p.tok)?p.tok:[]).slice(0,10).map(function(t){var tone=TONES[t.tone]?t.tone:'neu'; return '<span class="tok stamp-tok tone-'+tone+'">'+svg(String(t.ic||''))+'<span>'+esc(t.n)+'</span>'+(Number(t.c)?'<b>'+Number(t.c)+'</b>':'')+'</span>'}).join('');
+  return '<li class="sf-row side-'+side+(cur?' cur':'')+(p.down?' down':'')+(p.hero?' hero':'')+(p.boss?' boss':'')+'">'+(cur?'<span class="sf-turnst" aria-label="Ходит"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12 H17 M12 6.5 L18 12 L12 17.5" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Ход</span></span>':'')+(p.boss?'<span class="sf-seal" aria-label="Главарь">'+svg(SEAL_SVG,'0 0 48 48')+'</span>':'')+'<span class="sf-n">'+(i+1)+'</span>'+
+   '<span class="sf-ic">'+(p.b?beastSvg(p.b):'')+'</span><div class="sf-main"><div class="sf-top"><b class="sf-name">'+esc(p.n)+'</b>'+sideStamp(side,p.hero)+'</div>'+
+   '<div class="sf-hp">'+hpStHtml(Math.max(-1,Math.min(10,Math.round(Number(p.st)))),'big')+'</div>'+(tk?'<div class="sf-tok">'+tk+'</div>':'')+'</div>'+
+   '<span class="sf-spd">'+statIcon('skor')+'<small>Скорость</small><b>'+(p.spd==null?'—':Number(p.spd))+'</b></span></li>'}).join('')+'</ol>';
+ var ol=st.querySelector('.sf-list'); sfFit(ol); ol.scrollTop=keep;
+ if(turn!==scrLastTurn){scrLastTurn=turn; var c=st.querySelector('.sf-row.cur'); if(c&&ol.scrollHeight>ol.clientHeight){var top=c.offsetTop-ol.offsetTop; if(top<ol.scrollTop||top+c.offsetHeight>ol.scrollTop+ol.clientHeight) ol.scrollTop=Math.max(0,top-12)}}
+}
+function sfFit(ol){
+ if(!ol) return; ol.classList.remove('d1','d2','d3','d4','c3');
+ var n=ol.children.length; if(n>14){ol.classList.add('c3'); ol.style.gridTemplateRows='repeat('+Math.ceil(n/3)+',auto)'}
+ var lv=['d1','d2','d3','d4'];
+ for(var i=0;i<lv.length&&ol.scrollHeight>ol.clientHeight+2;i++) ol.classList.add(lv[i]);
+}
+window.addEventListener('resize',function(){if(SCREEN){var ol=document.querySelector('.sf-list'); if(ol) sfFit(ol)}});
+function scrQr(d){
+ scrPrev=null; var st=document.getElementById('scrStage'), q=null; st.style.removeProperty('--ar');
+ document.getElementById('scrName').textContent=String(d.title||'Дар героям').slice(0,120); scrCap('Летопись Даров');
+ try{q=qrMake(String(d.text||''))}catch(e){q=null}
+ st.innerHTML=q?'<div class="sq"><div class="sq-code">'+qrSvg(q)+'</div><div class="sq-side"><div class="sq-orn" aria-hidden="true"></div><h2>Мастер дарит героям</h2><p class="sq-n">'+(Number(d.n)||0)+' '+plural(Number(d.n)||0,'запись','записи','записей')+'</p><ol class="sq-how">'+
+  (d.link?'<li>Наведите камеру телефона на код</li><li>Откроется летопись с даром</li>':'<li>Откройте своего героя</li><li>Значок подарка → «Сканировать QR»</li>')+'<li>Отметьте, что берёте</li></ol><div class="sq-orn" aria-hidden="true"></div></div></div>':'<div class="scr-idle"><p>QR-код не собрался</p></div>';
+}
+function scrRecv(d){
+ if(d.t!=='fight'){scrLastJ=''; scrLastTurn=-1}
+ if(d.t==='idle'){scrIdle(); return}
+ if(d.t==='qr'){scrQr(d); return}
+ if(d.t==='fight'){scrFight(d); return}
+ if(d.t!=='map') return;
+ var m=mapNorm(d.m); if(!m) return;
+ var st=document.getElementById('scrStage'), same=scrPrev&&scrPrev.id===m.id&&scrPrev.w===m.w&&scrPrev.h===m.h;
+ document.getElementById('scrName').textContent=m.n; scrCap('Летопись Похода');
+ var legend=m.mk.filter(function(r){return r[2]}).sort(function(a,b){return a[1]-b[1]});
+ st.style.setProperty('--ar',m.w/m.h);
+ st.innerHTML='<div class="scr-map'+(legend.length?' with-leg':'')+'">'+mapGridHtml(m)+'</div>'+(legend.length?'<ol class="scr-leg">'+legend.map(function(r){return '<li><b>'+r[1]+'</b>'+esc(r[2])+'</li>'}).join('')+'</ol>':'');
+ if(same){var cells=st.querySelectorAll('.pmap > .lc'); for(var i=0;i<m.c.length&&i<cells.length;i++){ if(scrPrev.c[i]!==m.c[i]) cells[i].classList.add(scrPrev.c[i]==='#'?'scr-rev':'scr-chg') }}
+ else{var g=st.querySelector('.pmap'); if(g) g.classList.add('scr-in')}
+ scrPrev=m;
+}
+/* ---------- СПРАВКА МАСТЕРА ---------- */
+var GUIDE=[
+ {id:'osnova',t:'Как устроена летопись',tab:'',b:
+  '<p>Летопись работает без сервера и без учётных записей. Всё — герои, стол мастера, карты, история — хранится <b>в браузере этого устройства</b>. Между устройствами данные ходят только тем путём, который вы выберете: QR-кодом, ссылкой, кодом или файлом.</p>'+
+  '<h4>Сохранение</h4><ul><li>Изменения записываются сами через долю секунды — кнопки «Сохранить» нет.</li><li>Резервная копия стола: значок <b>стрелки вниз</b> в шапке стола → «Скачать стол мастера .save». Там же «Открыть .save» — <b>заменит</b> текущий стол целиком.</li><li>Героя игрок сохраняет сам: ⋮ в шапке героя → «Файл героя».</li><li>На главном экране памятка «Где живут ваши герои» показывает, сколько места занято и когда вы в последний раз скачивали .save.</li></ul>'+
+  '<h4>Примеры</h4><ul><li>Три героя, пять сюжетов, места, бестиарий, дары и бои заполнены для пробы. Кнопка «Убрать примеры» на главном экране убирает их разом, можно отменить.</li><li>Ваши собственные записи при этом не трогаются.</li></ul>'+
+  '<div class="gd-if"><b>Когда данные могут пропасть</b><ul><li>Приватное (инкогнито) окно стирает всё при закрытии.</li><li>Очистка данных сайта в настройках браузера.</li><li>Другой браузер или другое устройство — это другая, пустая летопись.</li><li>Айфон: Safari может очистить хранилище сайта, который не открывали несколько недель. Поставьте летопись на экран «Домой» и открывайте только с иконки.</li><li>Поэтому перед игрой и после неё скачивайте .save.</li></ul></div>'},
+
+ {id:'istoria',t:'История: сюжеты и граф',tab:'istoria',b:
+  '<p>История делится на <b>сюжеты</b>, идущие друг за другом. У каждого сюжета свой граф: сцены (узлы) и переходы (стрелки с подписью — что сделали герои).</p>'+
+  '<h4>Построить граф</h4><ul><li>«Узел» — новая сцена. Первая сцена становится началом.</li><li>Нажмите на узел, чтобы выбрать его. Появится панель: <b>Изменить</b>, <b>Следом</b> (новая сцена сразу со связью), <b>Связать</b> (переход к существующей сцене, с поиском по названию и описанию), <b>Играть отсюда</b>, <b>Мини-квест</b>, <b>Сделать началом</b>, <b>Удалить узел</b>.</li><li>Узлы перетаскиваются пальцем или мышью. «Разложить» расставит их по шагам автоматически. Масштаб — кнопками − / +.</li><li>В карточке узла: название, что происходит, подписи переходов, <b>привязки</b> — знакомцы и супостаты, заготовки даров и боёв, места. В игре они станут кнопками «В бой», «В дар», «Показать игрокам».</li></ul>'+
+  '<h4>Сюжеты</h4><ul><li>Полоса сюжетов вверху: номер и название. «+ Сюжет» — новый после текущего.</li><li>«Сюжет…» — переименовать, передвинуть раньше или позже, удалить (можно отменить).</li></ul>'},
+
+ {id:'igra',t:'Вести игру и отмечать выборы героев',tab:'istoria',b:
+  '<p>«Вести игру» — быстрый режим: одна карточка текущей сцены и кнопки дальнейших путей.</p>'+
+  '<h4>Навигация</h4><ul><li>«Что дальше» — переходы из графа. На кнопке видно, кто из героев уже выбирал эту дорогу.</li><li>«Свой путь» — герои придумали своё: опишите сцену, она встанет в граф. Можно сразу указать, к какой сцене сюжета она ведёт потом (список с поиском).</li><li>«К любому узлу» — перейти в любую сцену или другой сюжет. Отметки героев при этом не ставятся.</li><li>«Назад» — вернуться к графу.</li><li>Когда ветка кончается, появляется кнопка «Следующий сюжет».</li></ul>'+
+  '<h4>Кто какие сцены прошёл</h4><ul><li>Значок людей на карточке → «Герои за столом»: добавьте игроков вручную или «Из героев на этом устройстве».</li><li>На карточке строка <b>«Прошли сцену»</b>: касание ставит или снимает отметку, «Все» — отметить всех.</li><li>Выбор пути переносит отметки на следующую сцену. Разошлись — снимите лишних там. Вернувшись и выбрав другую дорогу, приложение отметит только тех, кто ещё никуда не ушёл.</li><li>На графе у сцен кружки с буквами героев, пройденные переходы окрашены цветом героя (полосами, если шли несколько). «Путь героя» оставляет яркими только его сцены.</li><li>«Начать поход заново» (в окне героев) очищает отметки текущего сюжета.</li></ul>'+
+  '<div class="gd-if"><b>Учтите</b><ul><li>Порядок прохождения не хранится: переход считается пройденным героем, если он прошёл обе его сцены.</li></ul></div>'},
+
+ {id:'mq',t:'Мини-квесты',tab:'istoria',b:
+  '<p>Запас маленьких заданий на случай, когда герои проявят любопытство там, куда сюжет не вёл.</p>'+
+  '<h4>Заготовить</h4><ul><li>«История» → переключатель <b>Мини-квесты</b> → «Новый мини-квест».</li><li>Название, зацепка (когда предложить), шаги цепочки. У шага — название, описание и привязки, как у сцены. Шаги поднимаются стрелкой, убираются крестиком.</li><li>«Копия» — сделать вариант. Поиск над списком ищет по названию, зацепке, шагам и привязкам.</li></ul>'+
+  '<h4>Вплести в сюжет</h4><ul><li>В игре: кнопка <b>«Мини-квест»</b> под «Свой путь». На графе: в панели выбранного узла.</li><li>Выберите мини-квест (есть поиск), выход — куда вернуть героев: в эту же сцену, в любую сцену сюжета или никуда, и подпись входа.</li><li>«Сразу перейти к первому шагу» — отмеченные герои переходят на шаг.</li><li>Шаги <b>копируются</b> в сюжет: правка копии не меняет запас, а мини-квест можно вплести снова.</li><li>На графе шаги в пунктирной зелёной рамке. Убрать целиком: любой шаг → «Изменить» → «Убрать весь мини-квест».</li></ul>'},
+
+ {id:'mesta',t:'Места и карты',tab:'mesta',b:
+  '<h4>Новое место</h4><ul><li>Вид: малая карта, большая карта, лес, подземье, погост и пожарище. От вида зависит, какие кисти открыты сразу.</li><li>Размер от 12×9 до 32×24 — или <b>заготовка</b> 16×12: засада у бревна, святой источник, грот, старые ходы, погост, пожарище. В заготовках супостаты и ловушки уже скрыты.</li></ul>'+
+  '<h4>Кисти</h4><ul><li>Инструменты: рука (двигать схему), стёрка.</li><li>Для мастера: метка с номером (описание — в списке «Метки» под картой), супостат, свои, туман, рассеять, скрыть.</li><li>Местность, малая и большая карта, приказы и управа, лес, пещеры и подземелья, погост и пожарище.</li></ul>'+
+  '<h4>Туман и скрытое</h4><ul><li><b>Туман</b> закрывает клетки целиком. Размер кисти: 1, 3×3, 5×5 или <b>«Комната»</b> — заливка до стен, дверей, скал, ограды, решётки.</li><li>⋮ места → «Всё под туман» / «Рассеять весь туман».</li><li><b>Скрыть</b> прячет предмет, супостата или метку: игроки видят на этом месте обычную землю вокруг.</li><li>Под картой блок <b>«Скрыто от игроков»</b>: открыть по одной вещи или всё сразу. Над открытой вещью рассеивается и туман. Только что открытое можно «Спрятать» обратно.</li><li>«Глазами игроков» — посмотреть, что увидит стол.</li></ul>'+
+  '<h4>Во время игры</h4><ul><li>На карточке сцены с привязанным местом — маленькая карта: «Рассеять», «Туман» и «Открыть скрытое» (касание по клетке), тот же размер кисти и список скрытого.</li></ul>'},
+
+ {id:'pokaz',t:'Показать карту игрокам',tab:'mesta',b:
+  '<p>Три способа — от «отдать карту в руки» до «живого экрана на столе».</p>'+
+  '<h4>1. Карта героям на телефоны</h4><ul><li>«Показать игрокам» → QR-код, ссылка, код или файл. Можно добавить номера и описания меток.</li><li>Игрок принимает её значком подарка в шапке своего героя, карта ложится во вкладку «Мир».</li><li>Туман и скрытое игроки не видят.</li></ul>'+
+  '<div class="gd-if"><b>Условия</b><ul><li>Это <b>снимок</b>: после рассеивания тумана или открытия скрытого покажите карту ещё раз.</li><li>Большая карта может не влезть в QR — полоска объёма предупредит. Тогда передайте код или файл.</li><li>Обычной камерой телефона QR открывается, только если летопись выложена на сайт (GitHub Pages). На айфоне ссылка откроется в Safari, а не в приложении с иконки — нажмите «Скопировать» и вставьте код в приложении.</li></ul></div>'+
+  '<h4>2. Картинка и «На весь экран»</h4><ul><li>В окне показа: PNG-картинка (сохранить, переслать) или «На весь экран» на этом же устройстве.</li></ul>'+
+  '<h4>3. Экран игроков — живая карта</h4><ul><li>В редакторе места или на карточке сцены: <b>«Экран игроков»</b>. Откроется отдельное окно: перетащите его на телевизор, нажмите «Во весь экран» (или двойной щелчок).</li><li>Всё, что вы делаете с этим местом — туман, скрытое, рисование, — появляется на экране сразу. Рассеянное проявляется из темноты, изменённое на миг подсвечивается.</li><li>«Метки: да/нет» — номера меток и список описаний сбоку. «Убрать» — заставка «Летопись героя». Другое место — нажмите «Экран игроков» в нём.</li></ul>'+
+  '<div class="gd-if"><b>Условия для живого экрана</b><ul><li>Мастер и экран — на <b>одном компьютере</b>, в одном браузере. Телефон и отдельный телевизор так не свяжутся.</li><li>Телевизор подключён как <b>второй монитор в режиме «Расширить»</b>: HDMI, AirPlay на Mac («Как отдельный дисплей»), Miracast на Windows (Win+K → «Расширить»). В режиме «Повторить» игроки увидят окно мастера.</li><li>Браузер должен разрешить всплывающие окна для летописи — при первом нажатии он спросит.</li><li>Окно экрана ничего не записывает. Если перезагрузить страницу мастера, экран найдёт её сам за пару секунд.</li></ul></div>'},
+
+ {id:'bestiary',t:'Бестиарий',tab:'bestiary',b:
+  '<ul><li>Кто это героям: <b>супостат</b>, <b>союзник</b> (подмога: дружинники, стрельцы, верный пёс) или <b>пришлый</b> (сам по себе). Над списком — переключатель «Все / Супостаты / Союзники / Пришлые».</li><li>«В бой» ставит запись на её сторону: союзник — к своим. В заготовке боя можно смешивать врагов и подмогу.</li><li>«В дар» у союзника и пришлого кладёт героям <b>знакомца</b>, у супостата — запись в «Супостаты».</li><li>Род — от Чуши до Идолища, с отметками опасности. <b>Люд</b> (разбойники, тати, стрельцы) — без отметок: сила у людей разная.</li><li>Здоровье, Сила, Скорость, Внимание, Гибкость, Понимание.</li><li><b>Атака и Защита</b> — составной бросок (например 2d20 + d10) плюс выбранная характеристика. Видны в бою.</li><li>Особенности, слабость, где водится. Поиск над списком.</li><li>«В бой» — в очередь боя. «В дар» — знание о супостате ляжет герою в «Супостаты»; слабость добавляется по вашему желанию.</li></ul>'},
+
+ {id:'boy',t:'Бой',tab:'boy',b:
+  '<h4>Участники</h4><ul><li>«Героев» — из героев на этом устройстве (здоровье берётся из листа, в бою меняется отдельно). «Из бестиария». «Быстро» — имя, здоровье, скорость, сторона.</li><li>Заготовки боёв (раздел ниже): «В бой» добавит или заменит врагов, свои остаются.</li><li>Порядок — стрелками. <b>«Инициатива»</b> — окно со всеми участниками: впишите каждому выпавшее значение (Enter — к следующему) и «Выстроить по инициативе». Пустая инициатива уходит в конец.</li></ul>'+
+  '<h4>Ход боя</h4><ul><li>«Следующий ход» передаёт ход, после последнего начинается новый круг. Нажатие на имя — отдать ход ему.</li><li>Здоровье: − / + по единице, нажатие на число — урон, лечение или точные значения.</li><li><b>Инициатива</b> у каждого видна под здоровьем, нажатие — поправить. Мастер заполняет её сам; при новом круге она не сбрасывается.</li><li><b>Скорость</b> — сколько действий за ход. Берётся из бестиария или листа героя. Нажмите, чтобы поправить; «Как в листе» вернёт исходную.</li><li><b>Токены состояний</b>: «+ Состояние» — кровотечение, оглушён, обезоружен, упал, пригвождён, в захвате и др., или своё. Нажатие на токен — счётчик ходов или «Снять». Счётчик убывает в начале хода участника, на нуле токен спадает. Подсказка при передаче хода напомнит, что на участнике висит.</li><li>«Новый бой» очищает очередь.</li><li><b>Экран игроков</b> (в шапке боя) — бой в отдельном окне на телевизоре: очередь с отметкой «Ходит», круг, скорость всех, состояния всех. Вместо полосы здоровья — <b>состояние</b> по десятым долям здоровья: Бодр, Крепок, Задет, Ранен, Потрёпан, Изранен, Тяжело ранен, Обессилен, Едва стоит, При смерти (и Повержен на нуле); цвет темнеет от зелёного к багровому. Числа здоровья на экран не выводятся. То же состояние вы видите у себя в строке участника.</li><li><b>Главарь</b>: кнопка с печатью в строке участника (или галочка «Главарь» в бестиарии — тогда печать ставится сама при добавлении в бой). На экране игроков главарь отмечен сургучной печатью с короной и золотой рамкой. Заметки мастера и инициатива на экран не идут. Условия — как у живой карты (раздел «Показать карту игрокам»).</li></ul>'},
+
+ {id:'wiki',t:'Вики мастера',tab:'wiki',b:
+  '<ul><li>Записи разложены так же, как разделы героя: оружие, одёжа, вещи, чары, сглазы и благословения, знания. Из них удобно собирать дары.</li><li><b>Знакомцы</b> — тайные записи мастера о людях. Дарятся выборочно: в окне «В дар» отметьте, что открыть героям; ваше описание по умолчанию не отмечено. У героя запись ляжет в «Знакомцы».</li></ul>'},
+
+ {id:'dary',t:'Дары героям',tab:'dary',b:
+  '<ul><li>Соберите дар: монеты (золото, серебро, медь), оружие, одёжа, вещи, чары, сглазы, знания, супостат, знакомец, перо Жар-птицы (вдохновение).</li><li><b>Обязательно</b> — такую запись игрок отклонить не сможет.</li><li><b>Заготовки даров</b> — собрать заранее и выдать одной кнопкой (в том числе из сцены истории).</li><li>«Показать QR-код» / код / ссылка / файл. Игрок открывает <b>своего</b> героя и жмёт значок подарка в шапке; отмечает галочками, что берёт.</li></ul>'+
+  '<div class="gd-if"><b>Условия</b><ul><li>Большой дар может не влезть в QR — полоска объёма предупредит, передайте кодом или файлом.</li><li>Дар ложится в героя, открытого в момент принятия.</li></ul></div>'},
+
+ {id:'zayavki',t:'Тайные заявки',tab:'zayavki',b:
+  '<ul><li>Игрок: значок конверта в шапке героя → пишет заявку → показывает мастеру QR-код со словом <b>«ЗАЯВКА»</b>.</li><li>Мастер: «Заявки» → «Сканировать», «Вставить код» или «Файл». Новые заявки отмечены, прочитанные можно убрать.</li></ul>'+
+  '<div class="gd-if"><b>Условия</b><ul><li>Кнопка «Сканировать» есть там, где браузер умеет читать QR сам (Chrome на Андроиде и часть компьютеров). Нет кнопки — просите игрока прислать код или файл, либо, если летопись на сайте, наведите обычную камеру телефона.</li></ul></div>'},
+
+ {id:'ustanovka',t:'Установка и обновление',tab:'',b:
+  '<ul><li><b>Сайт (GitHub Pages)</b>: открывается по ссылке, ставится на экран телефона и потом работает без интернета. Новая версия приходит сама при заходе с интернетом.</li><li><b>Один HTML-файл</b>: просто откройте в браузере. QR-коды тогда содержат код, а не ссылку: читайте их сканером летописи или передавайте код и файл.</li><li>Айфон: Safari → «Поделиться» → «На экран „Домой“». Памятка с шагами — на главном экране.</li><li>Андроид: Chrome → ⋮ → «Добавить на главный экран» / «Установить приложение».</li></ul>'}
+];
+function guideHtml(open,q){
+ q=(q||'').trim().toLowerCase();
+ var hit=function(g){return !q||(g.t+' '+g.b.replace(/<[^>]+>/g,' ')).toLowerCase().indexOf(q)>-1};
+ var list=GUIDE.filter(hit);
+ return '<div class="gd-top"><button class="ibtn plain" data-gd="close" aria-label="Закрыть справку">'+svg(IC.back)+'</button><h2>Справка мастера</h2></div>'+
+  '<div class="srch gd-srch"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5 L21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg><input type="search" id="gd-q" placeholder="Искать в справке: туман, скорость, QR…" aria-label="Искать в справке" autocomplete="off" value="'+esc(q)+'"></div>'+
+  '<nav class="gd-toc" aria-label="Разделы справки">'+GUIDE.map(function(g){return '<button data-gd="go" data-id="'+g.id+'"'+(hit(g)?'':' disabled')+'>'+esc(g.t)+'</button>'}).join('')+'</nav>'+
+  '<div class="gd-body">'+(list.length?list.map(function(g){var o=q||g.id===open; return '<details class="gd-sec" id="gd-'+g.id+'"'+(o?' open':'')+'><summary>'+esc(g.t)+'</summary><div class="gd-in">'+g.b+'</div></details>'}).join(''):'<p class="hint">Ничего не нашлось.</p>')+'</div>';
+}
+function guideOpen(sec){
+ var old=document.getElementById('guide'); if(old) old.remove();
+ var d=document.createElement('div'); d.id='guide'; d.className='guide'; d.setAttribute('role','dialog'); d.setAttribute('aria-modal','true'); d.setAttribute('aria-label','Справка мастера');
+ d.innerHTML='<div class="gd-col">'+guideHtml(sec)+'</div>'; document.body.appendChild(d); document.body.classList.add('gd-lock');
+ setTimeout(function(){var el=sec&&document.getElementById('gd-'+sec); if(el) el.scrollIntoView({block:'start'}); else d.scrollTop=0},30);
+}
+function guideClose(){var d=document.getElementById('guide'); if(d) d.remove(); document.body.classList.remove('gd-lock')}
+document.addEventListener('click',function(e){
+ var el=e.target.closest('[data-gd]'); if(!el) return; var a=el.dataset.gd;
+ if(a==='open'){var t=store.mode==='gm'?gmTabName():''; var s0=GUIDE.filter(function(g){return g.tab===t})[0]; guideOpen(el.dataset.id||(s0&&s0.id)||'osnova')}
+ if(a==='close') guideClose();
+ if(a==='go'){var sec=document.getElementById('gd-'+el.dataset.id); if(sec){sec.open=true; sec.scrollIntoView({block:'start',behavior:'smooth'})}}
+});
+document.addEventListener('input',function(e){if(e.target.id!=='gd-q') return; var c=document.querySelector('#guide .gd-col'), v=e.target.value, pos=e.target.selectionStart; c.innerHTML=guideHtml('',v); var i=document.getElementById('gd-q'); i.focus(); try{i.setSelectionRange(pos,pos)}catch(_){}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&document.getElementById('guide')&&!document.querySelector('.sheet')) guideClose()});
+
+/* ---------- СТРАНИЦЫ В СПИСКАХ (по 10) ---------- */
+var PG_N=10, pgState={}, PG_SEL='#app .list, #app .bcards, #app .loc-cards, #app .zv-list, #app .mq-list, #app .skills, #app .hero-list';
+function pgItems(box){return [].filter.call(box.children,function(x){return !x.classList.contains('grp')&&!x.classList.contains('np-none')&&!x.classList.contains('pg-bar')&&x.tagName!=='P'})}
+function pgKey(box,i){var sec=box.closest('[id^="body-"],section'), sid=sec&&(sec.id||((sec.querySelector('h2')||{}).textContent||'')); return (box.id||'')+'|'+(sid||'')+'|'+box.className+'|'+i}
+function pgRun(box,i){
+ var key=box.dataset.pgk||(box.dataset.pgk=pgKey(box,i)), all=pgItems(box), cand=all.filter(function(x){return !x.hidden});
+ var st=pgState[key]||(pgState[key]={p:0,sig:''}), sig=all.length-cand.length+':'+all.length;
+ if(st.sig&&st.sig!==sig){var ph=Number(st.sig.split(':')[0]), pa=Number(st.sig.split(':')[1]); if(all.length-cand.length!==ph) st.p=0; else if(all.length>pa) st.p=1e6} st.sig=sig;
+ var pages=Math.max(1,Math.ceil(cand.length/PG_N)); if(st.p>=pages) st.p=pages-1;
+ var from=st.p*PG_N, to=from+PG_N;
+ all.forEach(function(x){var k=cand.indexOf(x), off=pages>1&&k>-1&&(k<from||k>=to); if(x.classList.contains('pg-off')!==off) x.classList.toggle('pg-off',off)});
+ [].forEach.call(box.children,function(g){ if(!g.classList.contains('grp')) return; var n=g.nextElementSibling, any=false; while(n&&!n.classList.contains('grp')){ if(!n.hidden&&!n.classList.contains('pg-off')&&!n.classList.contains('np-none')&&!n.classList.contains('pg-bar')) any=true; n=n.nextElementSibling}
+  if(g.classList.contains('pg-off')===any) g.classList.toggle('pg-off',!any)});
+ var bar=box.nextElementSibling&&box.nextElementSibling.classList.contains('pg-bar')?box.nextElementSibling:null;
+ if(pages<=1){if(bar) bar.remove(); return}
+ var h='<button type="button" data-pgo="prev" aria-label="Назад"'+(st.p?'':' disabled')+'>‹</button>', shown={};
+ [0,pages-1,st.p-1,st.p,st.p+1].forEach(function(n){if(n>=0&&n<pages) shown[n]=1});
+ var last=-1; Object.keys(shown).map(Number).sort(function(a,b){return a-b}).forEach(function(n){ if(last>-1&&n>last+1) h+='<span class="pg-gap">…</span>'; h+='<button type="button" data-pgo="'+n+'"'+(n===st.p?' aria-current="page"':'')+'>'+(n+1)+'</button>'; last=n});
+ h+='<button type="button" data-pgo="next" aria-label="Дальше"'+(st.p<pages-1?'':' disabled')+'>›</button><span class="pg-info">'+(from+1)+'–'+Math.min(to,cand.length)+' из '+cand.length+'</span>';
+ if(!bar){bar=document.createElement('div'); bar.className='pg-bar'; bar.setAttribute('role','navigation'); bar.setAttribute('aria-label','Страницы списка'); box.parentNode.insertBefore(bar,box.nextSibling)}
+ if(bar.dataset.h!==h){bar.innerHTML=h; bar.dataset.h=h}
+}
+var pgBusy=false, pgT=0;
+function pgRunAll(){ if(pgBusy) return; pgBusy=true; try{document.querySelectorAll(PG_SEL).forEach(function(b,i){ if(!b.closest('.fight-list')) pgRun(b,i)})}finally{pgBusy=false}}
+function pgSoon(){if(pgT) return; pgT=requestAnimationFrame(function(){pgT=0; pgRunAll()})}
+document.addEventListener('click',function(e){
+ var el=e.target.closest('[data-pgo]'); if(!el||el.disabled) return; var bar=el.closest('.pg-bar'), box=bar&&bar.previousElementSibling; if(!box||!box.dataset.pgk) return;
+ var st=pgState[box.dataset.pgk]; if(!st) return; var v=el.dataset.pgo;
+ st.p=v==='prev'?st.p-1:v==='next'?st.p+1:Number(v); pgRun(box,0);
+ var r=box.getBoundingClientRect(); if(r.top<60) window.scrollBy(0,r.top-80);
+});
+if(!SCREEN){ try{ new MutationObserver(function(ms){ if(pgBusy) return; for(var i=0;i<ms.length;i++){var t=ms[i].target; if(ms[i].type==='attributes'||!(t.classList&&t.classList.contains('pg-bar'))){pgSoon(); return}} }).observe(document.getElementById('app'),{childList:true,subtree:true,attributes:true,attributeFilter:['hidden']}) }catch(e){} }
 applyTheme(getTheme());
-boot();
+if(SCREEN) scrBoot(); else boot();
 })();
 </script>
 
