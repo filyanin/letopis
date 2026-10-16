@@ -1781,6 +1781,82 @@ body.gd-lock{overflow:hidden}
 .doc-qsz{display:inline-block;font-size:12px;color:var(--muted);border:1.5px solid var(--hair);padding:0 6px;margin:2px 0;width:max-content}
 .doc-qsz.dense{color:var(--ink);border-color:var(--temp)}
 .doc-qsz.over{color:var(--accent);border-color:var(--accent);font-weight:700}
+
+.zm-seg{margin:0 0 12px}
+.zm-seg span{display:inline-flex;align-items:center;gap:6px}
+.zm-seg svg{width:18px;height:18px}
+.zm-bar{margin-bottom:8px}
+.zm-head{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.zm-name{flex:1 1 180px;font-family:var(--f-display);font-size:20px}
+.zm-tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:4px}
+.zm-tool{flex:1 1 240px}
+.zm-tool span{display:inline-flex;align-items:center;gap:5px}
+.zm-tool svg{width:17px;height:17px}
+.zm-tip{margin:4px 0 6px}
+.zm-wrap{position:relative;height:min(68vh,640px);overflow:hidden;border:2px solid var(--ink);background:#d9cdb1;touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none}
+.zm-wrap.t-pin,.zm-wrap.t-party{cursor:crosshair}
+.zm-plane{position:absolute;left:0;top:0;transform-origin:0 0;--is:1}
+.zm-img{display:block;width:100%;height:100%;pointer-events:none;-webkit-user-drag:none}
+.zm-wait{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:calc(40px*var(--is))}
+.zm-pin{position:absolute;transform:translate(-50%,-100%) scale(var(--is));transform-origin:50% 100%;display:flex;flex-direction:column;align-items:center;gap:1px;background:none;border:0;padding:0;cursor:pointer;color:var(--ink);font:inherit}
+.zm-pin i{display:grid;place-items:center;width:30px;height:30px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#fbf6ea;border:2.5px solid #6b6155;box-shadow:0 2px 3px rgba(0,0,0,.35)}
+.zm-pin i svg{width:17px;height:17px;transform:rotate(45deg);color:#4a4239}
+.zm-pin b{font-size:12.5px;font-weight:700;background:rgba(251,246,234,.92);color:#2a2420;padding:0 5px;border:1px solid rgba(0,0,0,.25);white-space:nowrap;margin-top:3px;order:2}
+.zm-pin.open i{border-color:#A8281C}
+.zm-pin.open i svg{color:#A8281C}
+.zm-pin:not(.open) i{opacity:.85;border-style:dashed}
+.zm-pin:not(.open) b{font-style:italic;opacity:.85}
+.zm-pin.sel i{box-shadow:0 0 0 4px #E9BE45,0 2px 3px rgba(0,0,0,.35)}
+.zm-pin.sel b{background:#2a2420;color:#fbf6ea}
+.zm-party{position:absolute;transform:translate(-20%,-100%) scale(var(--is));transform-origin:20% 100%;display:flex;align-items:flex-end;gap:2px;color:#A8281C;pointer-events:none}
+.zm-party svg{width:30px;height:34px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.4))}
+.zm-party b{font-size:11px;background:#A8281C;color:#fff;padding:0 4px;margin-bottom:4px}
+.zm-card{border:2px solid var(--ink);background:var(--card);box-shadow:4px 4px 0 var(--accent);padding:10px 12px;margin:10px 0;display:flex;flex-direction:column;gap:8px}
+.zm-card-h{display:flex;gap:10px;align-items:center}
+.zm-card-h>div{flex:1;min-width:0}
+.zm-card-h b{font-family:var(--f-display);font-weight:400;font-size:21px;display:block;line-height:1.15}
+.zm-card-h small{color:var(--muted);font-size:13px}
+.zm-open{color:var(--accent);font-weight:700}
+.zm-d{margin:0;white-space:pre-line}
+.zm-links{display:flex;flex-direction:column;gap:6px}
+.zm-link{display:flex;gap:8px;align-items:center;flex-wrap:wrap;border:1.5px solid var(--hair);padding:6px 8px;background:var(--paper)}
+.zm-lk{display:flex;align-items:center;gap:6px;flex:1 1 180px;min-width:0}
+.zm-lk svg{width:18px;height:18px;color:var(--accent);flex:none}
+.zm-lk small{color:var(--muted);font-size:12px}
+.zm-lk b{font-weight:700}
+.zm-la{display:flex;gap:6px;flex-wrap:wrap}
+.zm-card .row-btns{display:flex;flex-wrap:wrap;gap:6px}
+.zm-card .row-btns .btn svg{width:15px;height:15px}
+.zm-legend{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:13.5px;color:var(--muted);margin:8px 0}
+.zm-lh{margin:14px 0 8px;font-family:var(--f-display);font-weight:400;font-size:21px}
+.zm-filt{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.zm-filt .pbtn svg{width:15px;height:15px}
+.zm-it.on{outline:2.5px solid var(--accent);outline-offset:-2px}
+.zm-ic svg{width:20px;height:20px}
+.zm-up{margin-top:12px;display:inline-flex}
+.zm-kinds{display:flex;flex-wrap:wrap;gap:6px}
+.zm-kind{display:inline-flex;align-items:center;gap:5px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);padding:5px 9px;font:inherit;font-size:13.5px;min-height:36px;cursor:pointer}
+.zm-kind svg{width:17px;height:17px}
+.zm-kind.on{background:var(--ink);color:var(--paper)}
+.sl{width:100%;height:100%;min-height:0;display:grid;place-items:center}
+.sl-box{position:relative;box-shadow:0 0 0 3px #E9BE45,0 0 0 6px #8E1B14,0 10px 40px rgba(0,0,0,.6);--u:1}
+.sl-img{display:block;width:100%;height:100%}
+.sl-wait{position:absolute;inset:0;display:grid;place-items:center;color:#d9d0c0;font-size:24px}
+.sl-pins{position:absolute;inset:0}
+.sl-pin{position:absolute;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:2px}
+.sl-pin i{display:grid;place-items:center;width:calc(34px*var(--u));height:calc(34px*var(--u));border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#fbf6ea;border:3px solid #A8281C;box-shadow:0 3px 6px rgba(0,0,0,.5)}
+.sl-pin i svg{width:calc(19px*var(--u));height:calc(19px*var(--u));transform:rotate(45deg);color:#8E1B14}
+.sl-pin b{order:2;font-family:var(--f-display);font-weight:400;font-size:calc(17px*var(--u));color:#2a2420;background:rgba(251,246,234,.92);padding:0 6px;border:1px solid rgba(0,0,0,.3);white-space:nowrap;margin-top:3px}
+.sl-pin.here i{box-shadow:0 0 0 5px rgba(233,190,69,.85),0 3px 6px rgba(0,0,0,.5)}
+.zm-pin.party{z-index:3}
+.zm-flag{position:absolute;right:58%;top:-24px;color:#A8281C;display:block}
+.zm-flag svg{width:24px;height:28px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.4))}
+.sl-pin.here{z-index:3}
+.sl-flag{position:absolute;right:56%;top:calc(-34px*var(--u));color:#A8281C;display:block}
+.sl-flag svg{width:calc(32px*var(--u));height:calc(38px*var(--u));filter:drop-shadow(0 2px 3px rgba(0,0,0,.6))}
+.sl-party{position:absolute;transform:translate(-20%,-100%);display:flex;align-items:flex-end;gap:3px;color:#A8281C}
+.sl-party svg{width:calc(38px*var(--u));height:calc(44px*var(--u));filter:drop-shadow(0 2px 3px rgba(0,0,0,.6))}
+.sl-party b{font-size:calc(14px*var(--u));background:#A8281C;color:#fff;padding:0 5px;margin-bottom:6px}
 </style>
 </head>
 <body>
@@ -2728,7 +2804,7 @@ document.getElementById('importFile').addEventListener('change',function(e){
   if(d&&d.format===ZV_FORMAT&&d.zv){zvAdd(d.zv); return}
   if(d&&d.format===MAP_FORMAT&&d.map){var fm=mapNorm(d.map); if(fm) mapAcceptSheet(fm); else toast('Карта повреждена'); return}
   if(d&&d.format===DAR_FORMAT&&d.dar){var dd=darNorm(d.dar); if(!dd.list.length){toast('Дар пуст');return} darFrom='file'; darAcceptSheet(dd,''); return}
-  if(d&&d.format===GM_FORMAT&&d.gm){pendingGM=d.gm; var ng=gmNorm(d.gm);
+  if(d&&d.format===GM_FORMAT&&d.gm){pendingGM=d.gm; pendingImgs=d.imgs&&typeof d.imgs==='object'?d.imgs:null; var ng=gmNorm(d.gm);
    openSheet('<h2>Открыть стол мастера?</h2><p class="hint">В файле: мест '+ng.locs.length+', супостатов '+ng.beasts.length+', записей вики '+ng.wiki.length+'. Текущий стол мастера на этом устройстве будет заменён. Герои не пострадают.</p><div class="row-btns"><button class="btn pri" data-g="gmImportYes">Заменить</button><button class="btn" data-act="closeSheet">Отмена</button></div>'); return}
   var list=d&&d.format===FORMAT&&Array.isArray(d.characters)?d.characters:(d&&d.info?[d]:null);
   if(!list){toast('В файле нет героев');return}
@@ -3000,7 +3076,7 @@ var SHIELD_IC='<path d="M12 2.5 L20 5.5 V11 C20 16 16.5 19.6 12 21.5 C7.5 19.6 4
 var ATK_IC='<path d="M4 20 L15.5 8.5 M13 6 L18 11 M5.5 15.5 L8.5 18.5 M20 20 L8.5 8.5 M11 6 L6 11 M18.5 15.5 L15.5 18.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>';
 function rollRow(b,r,lbl,ic){return '<div class="roll-row"><span class="rr-l">'+svg(ic)+lbl+'</span><b>'+rollText(b,r)+'</b>'+(r.st?'<small>'+statIcon(r.st)+bstName(r.st)+'</small>':'<small>&nbsp;</small>')+'</div>'}
 
-function gmBlank(){return {locs:[],beasts:[],fight:{round:1,turn:0,list:[]},wiki:[],openLoc:null,wikiFilter:'',gift:{title:'',list:[]},gifts:[],zv:[],packs:[],story:storyBlank(),docs:[],time:timeNorm(),clocks:[],cal:calDefault()}}
+function gmBlank(){return {locs:[],beasts:[],fight:{round:1,turn:0,list:[]},wiki:[],openLoc:null,wikiFilter:'',gift:{title:'',list:[]},gifts:[],zv:[],packs:[],story:storyBlank(),docs:[],time:timeNorm(),clocks:[],cal:calDefault(),zemli:[]}}
 function gmNorm(g){
  var o=gmBlank(); if(!g||typeof g!=='object') return o;
  if(Array.isArray(g.locs)) o.locs=g.locs.filter(Boolean).map(function(l){
@@ -3041,7 +3117,7 @@ function gmNorm(g){
  o.packs=Array.isArray(g.packs)?g.packs.map(packNorm).filter(Boolean):[];
  o.story=storyNorm(g.story);
  if(Array.isArray(g.zv)) o.zv=g.zv.map(zvNorm).filter(Boolean);
- o.docs=Array.isArray(g.docs)?g.docs.filter(Boolean).map(docNorm):[]; o.time=timeNorm(g.time); o.cal=calNorm(g.cal,g.time); o.clocks=Array.isArray(g.clocks)?g.clocks.filter(Boolean).map(clockNorm):[];
+ o.docs=Array.isArray(g.docs)?g.docs.filter(Boolean).map(docNorm):[]; o.time=timeNorm(g.time); o.cal=calNorm(g.cal,g.time); o.zemli=Array.isArray(g.zemli)?g.zemli.filter(Boolean).slice(0,40).map(zmNorm):[]; o.clocks=Array.isArray(g.clocks)?g.clocks.filter(Boolean).map(clockNorm):[];
  return o;
 }
 function gmSeed(){
@@ -3251,7 +3327,7 @@ function gmTabBody(tab){
  return gmPlaces();
 }
 function gmRerender(){var m=document.getElementById('gmMain'), w=document.getElementById('sgWrap'), sl=w&&w.scrollLeft, stp=w&&w.scrollTop; if(m){m.innerHTML=gmTabBody(gmTabName()); gmAfter(); var w2=document.getElementById('sgWrap'); if(w&&w2){w2.scrollLeft=sl; w2.scrollTop=stp}} else render()}
-function gmAfter(){if(typeof srchApplyAll==='function') setTimeout(srchApplyAll,0); gmApplyFilter('beasts'); gmApplyFilter('wiki'); if(gmTabName()==='dary') darMeterUpdate(); var pc=document.querySelector('.plot-chip.on'); if(pc){var pb=pc.parentNode; pb.scrollLeft=pc.offsetLeft-pb.offsetLeft-pb.clientWidth/2+pc.offsetWidth/2} if(gmTabName()==='mesta'&&document.getElementById('mapMeter')) mapMeterUpdate(locById(gm().openLoc))}
+function gmAfter(){if(typeof zmAfter==='function') zmAfter(); if(typeof srchApplyAll==='function') setTimeout(srchApplyAll,0); gmApplyFilter('beasts'); gmApplyFilter('wiki'); if(gmTabName()==='dary') darMeterUpdate(); var pc=document.querySelector('.plot-chip.on'); if(pc){var pb=pc.parentNode; pb.scrollLeft=pc.offsetLeft-pb.offsetLeft-pb.clientWidth/2+pc.offsetWidth/2} if(gmTabName()==='mesta'&&document.getElementById('mapMeter')) mapMeterUpdate(locById(gm().openLoc))}
 function gmHead(key,title,count){return secHead(key,title,count)}
 function gmQ(key,n,ph){
  if(n<2) return '';
@@ -3272,7 +3348,8 @@ function locById(id){var l=gm().locs;for(var i=0;i<l.length;i++)if(l[i].id===id)
 function gmPlaces(){
  var g=gm(), L=g.openLoc&&locById(g.openLoc);
  if(L) return gmLocEditor(L);
- var h='<section class="sec">'+gmHead('gm-locs','Места',g.locs.length?g.locs.length+' шт.':'')+
+ if(zmView==='zemli') return zmSegHtml()+zemliHtml();
+ var h=zmSegHtml()+'<section class="sec">'+gmHead('gm-locs','Места',g.locs.length?g.locs.length+' шт.':'')+
   '<p class="hint">Схемы урочищ, изб и подземелий. Откройте место, выберите кисть и водите по клеткам пальцем или мышью.</p>';
  if(!g.locs.length) h+='<div class="empty">Пока ни одного места. Создайте первое.</div>';
  else{
@@ -3530,9 +3607,9 @@ document.addEventListener('click',function(e){
     '<button class="btn pri menu-btn" data-g="gmExport">'+svg(IC.save)+'<span>Скачать стол мастера .save</span></button>'+
     '<button class="btn menu-btn" data-g="gmImport">'+svg(IC.open)+'<span>Открыть стол мастера .save<small>Заменит текущие места, бестиарий, бой и вики</small></span></button>'+
     '<button class="btn" data-act="closeSheet">Закрыть</button></div>'); break;
-  case 'gmExport': store.lastSave=Date.now(); persist(false); closeSheet(); download('stol-mastera',JSON.stringify({format:GM_FORMAT,version:1,saved:new Date().toISOString(),gm:g},null,1)); break;
+  case 'gmExport': store.lastSave=Date.now(); persist(false); closeSheet(); download('stol-mastera',JSON.stringify({format:GM_FORMAT,version:1,saved:new Date().toISOString(),gm:g,imgs:zmImgsExport(g)},null,1)); break;
   case 'gmImport': closeSheet(); document.getElementById('importFile').click(); break;
-  case 'gmImportYes': if(pendingGM){store.gm=gmNorm(pendingGM); pendingGM=null; store.mode='gm'; gmSave(); closeSheet(); render(); toast('Стол мастера загружен')} break;
+  case 'gmImportYes': if(pendingGM){store.gm=gmNorm(pendingGM); pendingGM=null; zmImgsImport(pendingImgs); pendingImgs=null; store.mode='gm'; gmSave(); closeSheet(); render(); toast('Стол мастера загружен')} break;
   /* места */
   case 'newLoc':
    openSheet('<h2>Новое место</h2><form class="stack" style="gap:14px" data-gform="loc"><div class="fld"><label for="gl-name">Название</label><input class="inp" id="gl-name" name="name" autocomplete="off" placeholder="Например: Корчма у переправы (или имя заготовки)"></div>'+
@@ -5856,8 +5933,8 @@ function linkPlot(P,B){['players','mode','z'].forEach(function(k){var d=Object.g
 function story(){var B=book(); if(!B.plots.length) B.plots.push(plotBlank('Сюжет 1')); return linkPlot(B.plots[plotIdx()],B)}
 function sNode(id){var l=story().nodes;for(var i=0;i<l.length;i++)if(l[i].id===id)return l[i];return null}
 function sOut(id){return story().edges.filter(function(e){return e.a===id})}
-function attObj(a){return a.k==='npc'?wikiById(a.id):a.k==='beast'?beastById(a.id):a.k==='gift'?tplById(a.id):a.k==='pack'?packById(a.id):a.k==='loc'?locById(a.id):a.k==='doc'?docById(a.id):null}
-function attName(a){var o=attObj(a); return o?(o.name||o.title||o.t||'Без названия'):'(удалено)'}
+function attObj(a){return a.k==='pin'?zmPinById(a.id):a.k==='npc'?wikiById(a.id):a.k==='beast'?beastById(a.id):a.k==='gift'?tplById(a.id):a.k==='pack'?packById(a.id):a.k==='loc'?locById(a.id):a.k==='doc'?docById(a.id):null}
+function attName(a){var o=attObj(a); return o?(o.name||o.title||o.t||o.n||'Без названия'):'(удалено)'}
 function storyLayout(){
  var S=story(), depth={}, q=[], inc={};
  S.edges.forEach(function(e){inc[e.b]=(inc[e.b]||0)+1});
@@ -6003,6 +6080,7 @@ function storyAttCard(a){
  if(k==='gift') h+='<p>'+o.list.map(function(x){return esc(darNameText(x))}).join(' · ')+'</p><div class="sp-acts"><button class="btn sm pri" data-dar="tplUse" data-id="'+esc(o.id)+'">'+svg(DAR_IC.gift)+'Взять в дар</button><button class="btn sm" data-st="toTab" data-t="dary">Открыть Дары</button></div>';
  if(k==='pack') h+='<p>'+esc(packText(o))+(o.note?' · '+esc(o.note):'')+'</p><div class="sp-acts"><button class="btn sm pri" data-pk="use" data-id="'+esc(o.id)+'">'+svg(tabIc('boy'))+'Начать бой</button></div>';
  if(k==='doc') h+='<div class="sp-doc">'+docHtml(o,'mini')+'</div><div class="sp-acts"><button class="btn sm pri" data-scr="doc" data-id="'+esc(o.id)+'">'+svg(SCR_IC)+'На экран</button><button class="btn sm" data-doc="qr" data-id="'+esc(o.id)+'">'+svg(QR_ICS)+'Игроку тайно</button><button class="btn sm" data-doc="gift" data-id="'+esc(o.id)+'">'+svg(DAR_IC.gift)+'В дар</button><button class="btn sm" data-doc="edit" data-id="'+esc(o.id)+'">Изменить</button></div>';
+ if(k==='pin') h+=zmAttCard(o);
  if(k==='loc') h+=fogQuickHtml(o)+'<div class="sp-acts"><button class="btn sm" data-st="openLoc" data-id="'+esc(o.id)+'">Открыть место</button><button class="btn sm pri" data-st="shareLoc" data-id="'+esc(o.id)+'">Показать игрокам</button>'+scrBtnHtml(o,true)+'</div>';
  return h+'</div>';
 }
@@ -6026,12 +6104,12 @@ function storyMove(to,label,own){
  if(S.cur!==to){markPass(to,carryFrom(S.cur)); msg=sceneSpend(S)}
  storyGo(to); if(msg&&!own) toast(msg); return msg;
 }
-function storyFocus(id){var S=story(); if(!sNode(id)||id===S.cur) return; if(S.cur) S.trail.push(S.cur); S.trail=S.trail.slice(-50); S.cur=id; S.seen[id]=1; spMovers=null; gmSave(); closeSheet(); gmRerender(); window.scrollTo(0,0)}
+function storyFocus(id){var S=story(); if(!sNode(id)||id===S.cur) return; if(S.cur) S.trail.push(S.cur); S.trail=S.trail.slice(-50); S.cur=id; S.seen[id]=1; spMovers=null; zmAutoParty(sNode(id)); gmSave(); closeSheet(); gmRerender(); window.scrollTo(0,0)}
 function freeSpot(x,y){var S=story(), ok=false, n=0; while(!ok&&n<60){ok=!S.nodes.some(function(o){return Math.abs(o.x-x)<SG_W+30&&Math.abs(o.y-y)<SG_H+30}); if(!ok) y+=SG_H+50; n++} return {x:x,y:y}}
 function storyGo(id){ spMovers=null;
  var S=story(); if(!sNode(id)||id===S.cur) return;
  if(S.cur) S.trail.push(S.cur); S.trail=S.trail.slice(-50);
- S.cur=id; S.seen[id]=1; gmSave(); closeSheet(); gmRerender(); window.scrollTo(0,0);
+ S.cur=id; S.seen[id]=1; zmAutoParty(sNode(id)); gmSave(); closeSheet(); gmRerender(); window.scrollTo(0,0);
 }
 function storyNodeSheet(n){
  var S=story(), out=sOut(n.id), inc=S.edges.filter(function(e){return e.b===n.id});
@@ -6048,7 +6126,7 @@ function storyNodeSheet(n){
  storySel=n.id; openSheet(h);
 }
 function storyAttPicker(){
- var g=gm(), groups=[['npc','Знакомцы',g.wiki.filter(function(w){return w.type==='npc'})],['beast','Бестиарий',g.beasts],['gift','Заготовки даров',g.gifts],['pack','Заготовки боёв',g.packs],['loc','Места',g.locs],['doc','Грамоты',g.docs||[]]];
+ var g=gm(), groups=[['npc','Знакомцы',g.wiki.filter(function(w){return w.type==='npc'})],['beast','Бестиарий',g.beasts],['gift','Заготовки даров',g.gifts],['pack','Заготовки боёв',g.packs],['loc','Места',g.locs],['doc','Грамоты',g.docs||[]],['pin','Места на карте',zmPickList()]];
  var h='<h2>Привязать к узлу</h2><div class="srch"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5 L21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg><input type="search" id="sa-q" placeholder="Искать" aria-label="Искать" autocomplete="off"></div><div class="stack" style="gap:12px" id="sa-list">';
  groups.forEach(function(gr){ if(!gr[2].length) return;
   h+='<div class="sa-grp"><p class="lbl" style="margin:0 0 6px">'+gr[1]+'</p><div class="list">'+gr[2].map(function(o){return '<button class="item sa-it" data-st="attPick" data-k="'+gr[0]+'" data-id="'+esc(o.id)+'" data-q="'+esc(String(o.name||o.title||o.t||'').toLowerCase())+'"><span class="dar-ico" aria-hidden="true">'+svg(ST_K[gr[0]][1])+'</span><span class="item-name">'+esc(o.name||o.title||'Без названия')+'</span></button>'}).join('')+'</div></div>'});
@@ -6152,8 +6230,8 @@ document.addEventListener('click',function(e){
  var el=e.target.closest('[data-st]'); if(!el||el.disabled) return;
  var a=el.dataset.st, S=story(), n=storySel&&sNode(storySel);
  switch(a){
-  case 'play': S.mode='play'; if(!S.cur){S.cur=S.start; S.seen[S.start]=1} if(S.cur&&!Object.keys(S.by).length) markPass(S.cur,S.players.map(function(p){return p.id})); gmSave(); gmRerender(); window.scrollTo(0,0); break;
-  case 'playHere': if(n){S.mode='play'; if(S.cur&&S.cur!==n.id) S.trail.push(S.cur); S.cur=n.id; S.seen[n.id]=1; gmSave(); gmRerender(); window.scrollTo(0,0)} break;
+  case 'play': S.mode='play'; if(!S.cur){S.cur=S.start; S.seen[S.start]=1} zmAutoParty(sNode(S.cur)); if(S.cur&&!Object.keys(S.by).length) markPass(S.cur,S.players.map(function(p){return p.id})); gmSave(); gmRerender(); window.scrollTo(0,0); break;
+  case 'playHere': if(n){S.mode='play'; if(S.cur&&S.cur!==n.id) S.trail.push(S.cur); S.cur=n.id; S.seen[n.id]=1; zmAutoParty(n); gmSave(); gmRerender(); window.scrollTo(0,0)} break;
   case 'graph': S.mode='graph'; storySel=S.cur; gmSave(); gmRerender(); setTimeout(function(){var el2=document.querySelector('.sg-node.sel'); if(el2) el2.scrollIntoView({block:'center',inline:'center'})},30); break;
   case 'newNode': storyNewNode(null); break;
   case 'child': if(n){closeSheet(); storyNewNode(n)} break;
@@ -6490,7 +6568,7 @@ function mqEditSheet(q){
  openSheet(h);
 }
 function mqAttPicker(q,i){
- var g=gm(), groups=[['npc','Знакомцы',g.wiki.filter(function(w){return w.type==='npc'})],['beast','Бестиарий',g.beasts],['gift','Заготовки даров',g.gifts],['pack','Заготовки боёв',g.packs],['loc','Места',g.locs],['doc','Грамоты',g.docs||[]]];
+ var g=gm(), groups=[['npc','Знакомцы',g.wiki.filter(function(w){return w.type==='npc'})],['beast','Бестиарий',g.beasts],['gift','Заготовки даров',g.gifts],['pack','Заготовки боёв',g.packs],['loc','Места',g.locs],['doc','Грамоты',g.docs||[]],['pin','Места на карте',zmPickList()]];
  var h='<h2>Привязать к шагу '+(i+1)+'</h2><div class="srch"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5 L21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg><input type="search" id="sa-q" placeholder="Искать" aria-label="Искать" autocomplete="off"></div><div class="stack" style="gap:12px" id="sa-list">';
  groups.forEach(function(gr){ if(!gr[2].length) return;
   h+='<div class="sa-grp"><p class="lbl" style="margin:0 0 6px">'+gr[1]+'</p><div class="list">'+gr[2].map(function(o){return '<button class="item sa-it" data-mq="attPick" data-i="'+i+'" data-k="'+gr[0]+'" data-id="'+esc(o.id)+'" data-q="'+esc(String(o.name||o.title||o.t||'').toLowerCase())+'"><span class="dar-ico" aria-hidden="true">'+svg(ST_K[gr[0]][1])+'</span><span class="item-name">'+esc(o.name||o.title||'Без названия')+'</span></button>'}).join('')+'</div></div>'});
@@ -6623,7 +6701,7 @@ document.addEventListener('click',function(e){
 var SCREEN=/^#ekran/.test(location.hash);
 var SCR_IC='<rect x="2.5" y="4" width="19" height="12.5" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 20.5 H16 M12 16.5 V20.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6.5 13 L10 9.5 L12.5 12 L17.5 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>';
 var darQrLast=null;
-var scr={win:null,mode:null,qr:null,doc:null,loc:null,marks:false,hpAll:false,last:'',timer:null};
+var scr={win:null,mode:null,qr:null,doc:null,loc:null,land:null,sentImg:null,marks:false,hpAll:false,last:'',timer:null};
 function scrAlive(){try{return !!(scr.win&&!scr.win.closed)}catch(e){return false}}
 var HPST=[['Повержен','#5b5550'],['При смерти','#8E1B14'],['Едва стоит','#B8301F'],['Обессилен','#CC4B23'],['Тяжело ранен','#D96A22'],['Изранен','#D98A24'],['Потрёпан','#C9A227'],['Ранен','#A7A42E'],['Задет','#7FA235'],['Крепок','#5A9A3E'],['Бодр','#3E8E4E']];
 function hpBand(hp,max){if(!(max>0)) return -1; if(hp<=0) return 0; return Math.max(1,Math.min(10,Math.ceil(hp/max*10)))}
@@ -6639,6 +6717,7 @@ function scrFightPayload(){
 function scrPayload(){
  if(scr.mode==='fight'&&store.gm) return scrFightPayload();
  if(scr.mode==='doc'&&scr.doc&&store.gm){var dd=docById(scr.doc); if(dd) return {letopis:'scr',t:'doc',d:dd}}
+ if(scr.mode==='land'&&scr.land&&store.gm){var Lz=zmById(scr.land); if(Lz) return zmPayload(Lz)}
  if(scr.mode==='qr'&&scr.qr) return {letopis:'scr',t:'qr',title:scr.qr.title,text:scr.qr.text,n:scr.qr.n,doc:scr.qr.doc?1:0,link:darLinkable()};
  var L=scr.mode==='map'&&scr.loc&&store.gm&&locById(scr.loc);
  if(!L) return {letopis:'scr',t:'idle'};
@@ -6646,7 +6725,9 @@ function scrPayload(){
 }
 function scrPush(force){
  scr.timer=null; if(!scrAlive()) return;
- var p=scrPayload(); if(p.t!=='idle'){var tmp=scrTimePayload(); if(tmp) p.tm=tmp} var j=JSON.stringify(p); if(!force&&j===scr.last) return; scr.last=j;
+ var p=scrPayload(); if(p.t!=='idle'){var tmp=scrTimePayload(); if(tmp) p.tm=tmp}
+ if(p.t==='land'&&p.k&&scr.sentImg!==p.k){var isrc=zmSrcByKey(p.k); if(isrc){try{scr.win.postMessage({letopis:'scr',t:'limg',k:p.k,src:isrc},'*'); scr.sentImg=p.k}catch(e){}}}
+ var j=JSON.stringify(p); if(!force&&j===scr.last) return; scr.last=j;
  try{scr.win.postMessage(p,'*')}catch(e){}
 }
 function scrSchedule(){if(scr.mode&&!scr.timer) scr.timer=setTimeout(scrPush,90)}
@@ -6655,11 +6736,11 @@ function scrOpen(){
  var url=location.href.split('#')[0]+'#ekran';
  var w=null; try{w=window.open(url,'letopis-ekran','popup=yes,width=1280,height=760')}catch(e){w=null}
  if(!w){toast('Браузер не дал открыть окно. Разрешите всплывающие окна для этой страницы'); return false}
- scr.win=w; scr.last=''; return true;
+ scr.win=w; scr.last=''; scr.sentImg=null; return true;
 }
 function scrShow(id){if(!scrOpen()) return; scr.mode='map'; scr.loc=id; scr.last=''; scrPush(true); gmRerender(); var L=locById(id); toast('На экране игроков: «'+(L&&L.name||'место')+'»')}
 function scrShowFight(){if(!scrOpen()) return; scr.mode='fight'; scr.last=''; scrPush(true); gmRerender(); toast('Бой на экране игроков')}
-function scrHide(){var qb=document.querySelector('.sheet [data-scr="hide"]'); scr.mode=null; scr.loc=null; scr.qr=null; if(qb&&qb.closest('.row-btns')) setTimeout(function(){var b2=document.querySelector('.sheet .scr-on'); if(b2) b2.outerHTML=scrQrBtnHtml()},0); scr.last=''; scrPush(true); gmRerender(); toast('Экран игроков очищен')}
+function scrHide(){var qb=document.querySelector('.sheet [data-scr="hide"]'); scr.mode=null; scr.loc=null; scr.land=null; scr.qr=null; if(qb&&qb.closest('.row-btns')) setTimeout(function(){var b2=document.querySelector('.sheet .scr-on'); if(b2) b2.outerHTML=scrQrBtnHtml()},0); scr.last=''; scrPush(true); gmRerender(); toast('Экран игроков очищен')}
 function scrQrBtnHtml(){
  if(scr.mode==='qr'&&scrAlive()&&scr.qr&&darQrLast&&scr.qr.text===darQrLast.text) return '<span class="scr-on"><span class="scr-dot" aria-hidden="true"></span>'+(darQrLast.doc?'Грамота на экране':'Дар на экране')+'<button class="btn sm" data-scr="hide">Убрать</button></span>';
  return '<button class="btn" data-scr="qr">'+svg(SCR_IC)+'На экран игроков</button>';
@@ -6676,7 +6757,7 @@ function scrBtnHtml(L,small){
 window.addEventListener('message',function(e){
  var d=e.data; if(!d||d.letopis!=='scr') return;
  if(SCREEN){if(e.source===window.opener) scrRecv(d); return}
- if(d.t==='hello'){ if(!scrAlive()||scr.win!==e.source){scr.win=e.source; scr.last=''; scrPush(true)} else if(d.fresh){scr.last=''; scrPush(true)} }
+ if(d.t==='hello'){ if(d.fresh||scr.win!==e.source) scr.sentImg=null; if(!scrAlive()||scr.win!==e.source){scr.win=e.source; scr.last=''; scrPush(true)} else if(d.fresh){scr.last=''; scrPush(true)} }
  if(d.t==='bye'&&e.source===scr.win){scr.win=null; if(store.mode==='gm') gmRerender()}
 });
 document.addEventListener('click',function(e){
@@ -6755,11 +6836,13 @@ function scrMapFit(){
 window.addEventListener('resize',function(){if(SCREEN) scrMapFit()});
 document.addEventListener('fullscreenchange',function(){if(SCREEN) setTimeout(scrMapFit,60)});
 function scrRecv(d){
+ if(d.t==='limg'){if(typeof d.src==='string'&&d.src.indexOf('data:image/')===0){scrImgs[d.k]=d.src; var bx=document.querySelector('.sl-box'); if(bx&&bx.dataset.k.indexOf(d.k+'|')===0&&!bx.querySelector('img')){var wt=bx.querySelector('.sl-wait'); if(wt) wt.remove(); bx.insertAdjacentHTML('afterbegin','<img class="sl-img" src="'+d.src+'" alt="">')}} return}
  if(d.t!=='fight'){scrLastJ=''; scrLastTurn=-1}
  if(d.t==='idle'){scrIdle(); return}
  scrTimeRender(d.tm);
  if(d.t==='doc'){scrDoc(d); return}
  if(d.t==='qr'){scrQr(d); return}
+ if(d.t==='land'){scrLand(d); return}
  if(d.t==='fight'){scrFight(d); return}
  if(d.t!=='map') return;
  var m=mapNorm(d.m); if(!m) return;
@@ -6800,6 +6883,8 @@ var GUIDE=[
   '<ul><li>«История» → <b>Грамоты</b>. Три заготовки: <b>официальная грамота</b> (заголовок, от кого, кому, текст с буквицей, подпись, дата, красная или чёрная печать), <b>полусожжённая записка</b> (обугленные края; слова в {фигурных скобках} обуглятся и не прочтутся; три степени обгорания) и <b>записка на бересте</b> (процарапанные буквы, можно писать без пробелов, как в старину).</li><li>Предпросмотр меняется прямо при вводе. Поиск по тексту, подписи и адресату.</li><li><b>«На экран»</b> — крупно на экране игроков, под подписью «Летопись Посланий». <b>«В дар»</b> — грамота целиком ложится в общий дар. <b>«Игроку тайно»</b> — отдельный QR-код только с этой грамотой: покажите его одному игроку, он отсканирует «Принять дар» → «Сканировать QR». У героя грамота появится в «Записях» → «Грамоты» в том же виде — с буквицей, печатью, обугленными краями; прочесть её можно в любой момент. Кнопка «На экран игроков» выводит этот код крупно под подписью «Летопись Посланий» — если грамоту получают все.</li><li>Грамоту можно привязать к сцене истории и показать прямо из игры.</li></ul>'},
  {id:'vremya',t:'Время, луна, погода и часы угроз',tab:'istoria',b:
   '<ul><li>«История» → <b>Время</b>. День похода, время суток (утро, день, вечер, ночь), день недели, число и месяц по календарю мастера, праздник или пост, фаза луны и погода.</li><li>Время идёт по часам: утро с 5:00, день с 11:00, вечер с 17:00, ночь с 22:00; новый день — с полуночи. «Дальше» переводит к началу следующего времени суток, «−1 ч» и «+1 ч» — на час, «+ день» — на сутки. Точное время — в «Начале похода» → «Который час». Луна считается сама; в полнолуние приложение напомнит. «По сезону» выберет погоду, подходящую месяцу.</li><li>«Начало похода» — с какого числа, месяца (и года, если он ведётся) и с какого дня недели начался поход.</li><li>Под погодой — <b>лист месяца</b>: стрелки листают месяцы, сегодняшний день обведён, праздники отмечены точкой, посты и прочие поры — чертой, полнолуние и новолуние — кружком, сроки часов — песочными часами. Нажмите на день — увидите, что в нём, и сможете «Перейти к этому дню» (часы «Со временем» прибавятся, сроки сработают).</li></ul><h4>Свой календарь</h4><ul><li>Кнопка <b>«Календарь …»</b> внизу панели времени. За основу можно взять «Старый счёт» (12 месяцев по 30 дней) или «Солнечный год» (365 дней) — заменяются только месяцы и неделя.</li><li><b>Месяцы</b>: название, форма «чего?» (сечня — для «5 сечня»), число дней, пора года (от неё зависит погода «По сезону»). Порядок меняется стрелкой, лишние убираются.</li><li><b>Неделя</b>: своё название (седмица) и дни со своими названиями — от 1 до 14 дней.</li><li><b>Луна</b>: длина цикла в днях и дата любого новолуния; 0 — луну не показывать.</li><li><b>Праздники и посты</b>: одним днём или с одного числа по другое (можно через новый год, как Святки). Вид: праздник, пост, поминовение или иное. Заметка — обычаи и что творит нечисть; мастер видит её в панели времени и в листе месяца.</li><li>Название года (например «лето») — тогда в «Начале похода» появится год, а на листе месяца — год рядом с месяцем.</li><li><b>Часы угроз</b> — шкалы на 4, 6, 8 или 12 делений: нажатие прибавляет деление, полная шкала «пробивает». «Со временем» — часы прибавляются сами при каждом новом времени суток. «На экране игроков» — видны столу.</li><li><b>Срок</b> часов — число, месяц и время суток, когда угроза свершится сама. Можно задать «через сколько дней». На карточке часов виден остаток: «через 3 дня», в день срока — часы. Когда время доходит до срока, шкала заполняется и пробивает.</li><li>В режиме «Вести игру» над карточкой — полоска времени с часами и кнопкой «Дальше».</li></ul><h4>Время сцен</h4><ul><li>В узле истории («Изменить») — <b>«Сколько длится сцена»</b>: 15 мин, 30 мин, 1 ч, 2 ч, 4 ч, полдня, сутки или своё число часов. На графе длительность видна в углу узла. У шагов мини-квеста — то же поле «Длится», при вплетении оно переносится в сцены.</li><li>На карточке сцены в игре — <b>«Займёт …»</b> и когда сцена кончится. Если герои справились лихо или провозились, поправьте одним касанием: «Лихо» (×½), «Как задумано», «Замешкались» (×1½), «Провозились» (×2), ±30 мин. <b>«Нет»</b> — сцена не тратит времени: удобно, когда ватага разделилась и одна часть играет, пока время второй стоит, — так их часы сходятся.</li><li>Когда герои выбирают путь «Что дальше», «Свой путь» или следующий сюжет, время само сдвигается на длительность покинутой сцены; часы «Со временем» прибавляются за каждое наступившее время суток. «К любому узлу» и «Играть отсюда» время не трогают.</li><li>На экране игроков в шапке видны день, время суток, число, луна, погода и открытые часы. Отключается в «Начале похода».</li></ul>'},
+ {id:'zemli',t:'Земли: глобальная карта',tab:'mesta',b:
+  '<ul><li>«Места» → <b>Земли</b>. «Загрузить карту» — любая картинка JPG, PNG или WebP: царство, край, уезд. Картинка хранится на этом устройстве как есть, без сжатия, и попадает в файл стола мастера .save. В саму летопись она не встраивается. Карт может быть несколько.</li><li>Инструменты: <b>Смотреть</b> — двигать карту, колёсико или два пальца — масштаб; <b>Метка</b> — касание ставит новую метку, метку можно перетащить; <b>Ватага</b> — касание ставит знамя ватаги. «Вместить» — показать карту целиком.</li><li><b>Метка</b>: название, вид (город, село, крепость, храм, гора, озеро, лес, погост, логово, иное), что знают все, тайное мастера, «Открыто игрокам». Привязываются схемы мест, вики и грамоты; из карточки метки — «Открыть» схему, «На экран», «Игроку тайно».</li><li>Ниже карты — <b>список мест</b> с поиском и фильтром по виду. Нажатие — карта приблизится к метке.</li><li><b>Сцены истории</b>: в узле — «Привязать» → «Места на карте». На карточке сцены в игре — «На карте», «Ватага здесь», «Открыть игрокам». Когда герои переходят в сцену с привязанным местом, знамя ватаги само переезжает туда. У метки видно все её сцены, «К сцене» открывает граф.</li><li><b>Экран игроков</b> — «Летопись Земель»: карта целиком, только открытые метки и знамя ватаги (можно скрыть). Картинка передаётся на экран один раз, дальше — только метки.</li><li>«Карта…» — заменить картинку (метки останутся на местах), открыть или скрыть все метки, убрать знамя, удалить карту.</li></ul>'},
  {id:'mesta',t:'Места и карты',tab:'mesta',b:
   '<h4>Новое место</h4><ul><li>Вид: малая карта, большая карта, лес, подземье, погост и пожарище. От вида зависит, какие кисти открыты сразу.</li><li>Размер от 12×9 до 32×24 — или <b>заготовка</b> 16×12: засада у бревна, святой источник, грот, старые ходы, погост, пожарище. В заготовках супостаты и ловушки уже скрыты.</li></ul>'+
   '<h4>Кисти</h4><ul><li>Инструменты: рука (двигать схему), стёрка.</li><li>Для мастера: метка с номером (описание — в списке «Метки» под картой), супостат, свои, туман, рассеять, скрыть.</li><li>Местность, малая и большая карта, приказы и управа, лес, пещеры и подземелья, погост и пожарище.</li></ul>'+
@@ -7323,6 +7408,236 @@ function seedDur(B){var M={'Дорога к мельнице':2,'Изба вед
  'Дорога к Лихой горе':16,'Пепелище':1,'Под пеплом':1,'Старый погост':1,'Склеп сотника':1,'Лихо одноглазое':0.5,'Проводы':2};
  (B.plots||[]).forEach(function(P){(P.nodes||[]).forEach(function(n){if(n.example&&!n.dur){if(M[n.t]) n.dur=M[n.t]; else if(n.mq) n.dur=0.5}})});
  (B.side||[]).forEach(function(q){if(q.example)(q.steps||[]).forEach(function(st){if(!st.dur) st.dur=0.5})})}
+/* ---------- ЗЕМЛИ: глобальная карта мастера с метками ---------- */
+var ZM_IC='<path d="M3 6.5 L9 4 L15 6.5 L21 4 V17.5 L15 20 L9 17.5 L3 20 Z M9 4 V17.5 M15 6.5 V20" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>';
+var ZM_PARTY='<path d="M6 21.5 V3 M6 3.5 H18 L15.5 7.5 L18 11.5 H6" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>';
+var LAND_K={
+ gorod:['Город','<path d="M3 21 V10 L7 7 L11 10 V21 M11 21 V6 L15 3 L19 6 V21 M2 21 H22 M6 14 h2 M14 10 h2 M14 14 h2" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>'],
+ selo:['Село','<path d="M3 11 L9 6 L15 11 V20 H3 Z M7 20 V15 H11 V20 M15 13 L18.5 10 L22 13 V20 H15" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>'],
+ krep:['Крепость, застава','<path d="M4 21 V8 H7 V5 H10 V8 H14 V5 H17 V8 H20 V21 Z M10 21 V16 A2 2 0 0 1 14 16 V21" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>'],
+ hram:['Храм, обитель','<path d="M12 2 V5 M10.5 3.5 H13.5 M9 9 C9 6.5 12 5 12 5 C12 5 15 6.5 15 9 Z M7 21 V12 H17 V21 M5 21 H19 M10.5 21 V17 A1.5 1.5 0 0 1 13.5 17 V21 M9 9 H15 V12" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>'],
+ gora:['Гора, холм','<path d="M2 20 L9 7 L13 13 L15.5 10 L22 20 Z M7.2 10.5 L9 12 L10.8 10.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>'],
+ voda:['Озеро, река','<path d="M3 9 C5 7 7 7 9 9 S13 11 15 9 S19 7 21 9 M3 14 C5 12 7 12 9 14 S13 16 15 14 S19 12 21 14 M5 19 C7 17.5 9 17.5 11 19 S15 20.5 17 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'],
+ les:['Лес, урочище','<path d="M8 3 L3.5 11 H6 L3 16.5 H13 L10 11 H12.5 Z M8 16.5 V21 M16.5 7 L13.5 13 H15 L13 17.5 H20 L18 13 H19.5 Z M16.5 17.5 V21" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>'],
+ pogost:['Погост, капище','<path d="M8 21 V10 A4 4 0 0 1 16 10 V21 Z M12 11.5 V17 M10 13.5 H14 M4 21 H20" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>'],
+ logovo:['Логово, опасность','<path d="M12 3 L22 20 H2 Z M12 9.5 V14 M12 17 v.01" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>'],
+ inoe:['Иное','<circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 21.5 C7 15.5 5 12.5 5 9.5 A7 7 0 0 1 19 9.5 C19 12.5 17 15.5 12 21.5 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>']
+};
+var ZM_ATT={loc:['Место (схема)',tabIc('mesta')],wiki:['Вики',NPC_IC],doc:['Грамота',DOC_IC]};
+var LAND_IMG={}, zmView='locs', zmCur=null, zmSel=null, zmTool='hand', zmKindF='', zmViews={}, zmCenterReq=null, pendingImgs=null;
+ST_K.pin=['Место на карте',ZM_IC];
+function zmS(v,n){return String(v==null?'':v).slice(0,n)}
+function zmPinNorm(p){p=p&&typeof p==='object'?p:{}; var c=function(v){v=Number(v); return isFinite(v)?Math.max(0,Math.min(1,v)):0.5};
+ return {id:typeof p.id==='string'?p.id:uid(),n:zmS(p.n,120)||'Место',k:LAND_K[p.k]?p.k:'inoe',x:c(p.x),y:c(p.y),d:zmS(p.d,3000),note:zmS(p.note,3000),open:!!p.open,
+  att:(Array.isArray(p.att)?p.att:[]).filter(function(a){return a&&ZM_ATT[a.k]&&typeof a.id==='string'}).slice(0,40).map(function(a){return {k:a.k,id:a.id}})}}
+function zmNorm(L){L=L&&typeof L==='object'?L:{};
+ var o={id:typeof L.id==='string'?L.id:uid(),n:zmS(L.n,80)||'Карта',img:typeof L.img==='string'?L.img:'',w:Math.max(1,Math.round(Number(L.w)||1000)),h:Math.max(1,Math.round(Number(L.h)||1000)),
+  pins:(Array.isArray(L.pins)?L.pins:[]).filter(Boolean).slice(0,600).map(zmPinNorm),party:null,partyPin:typeof L.partyPin==='string'?L.partyPin:'',showParty:L.showParty!==false};
+ if(L.party&&isFinite(Number(L.party.x))&&isFinite(Number(L.party.y))) o.party={x:Math.max(0,Math.min(1,Number(L.party.x))),y:Math.max(0,Math.min(1,Number(L.party.y)))};
+ return o}
+function zmList(){var g=gm(); if(!Array.isArray(g.zemli)) g.zemli=[]; return g.zemli}
+function zmById(id){var l=zmList(); for(var i=0;i<l.length;i++) if(l[i].id===id) return l[i]; return null}
+function zmPinById(id){var l=zmList(); for(var i=0;i<l.length;i++) for(var j=0;j<l[i].pins.length;j++) if(l[i].pins[j].id===id) return l[i].pins[j]; return null}
+function zmLandOfPin(id){var l=zmList(); for(var i=0;i<l.length;i++) if(l[i].pins.some(function(p){return p.id===id})) return l[i]; return null}
+function zmCurLand(){var L=zmCur&&zmById(zmCur); if(!L){L=zmList()[0]||null; zmCur=L&&L.id} return L}
+function zmKey(L){return L.img.indexOf('k:')===0?L.img.slice(2):('in:'+L.id)}
+function zmSrc(L){if(!L||!L.img) return ''; if(L.img.indexOf('k:')===0) return LAND_IMG[L.img.slice(2)]||''; return L.img}
+function zmSrcByKey(k){if(k.indexOf('in:')===0){var L=zmById(k.slice(3)); return L?L.img:''} return LAND_IMG[k]||''}
+function idbDel(k){try{var tx=IDB.transaction('kv','readwrite'); tx.objectStore('kv').delete(k)}catch(e){}}
+function zmImgPut(src){
+ if(backend==='idb'&&IDB){var key='limg_'+uid(); LAND_IMG[key]=src; return idbPut(key,src).then(function(){return 'k:'+key},function(){delete LAND_IMG[key]; toast('Картинка не поместилась в хранилище — она останется только до перезагрузки'); return src})}
+ return Promise.resolve(src)}
+var zmLoading={};
+function zmEnsure(L){if(!L||L.img.indexOf('k:')!==0) return; var k=L.img.slice(2); if(LAND_IMG[k]||zmLoading[k]||!IDB) return; zmLoading[k]=1;
+ idbGet(k).then(function(v){delete zmLoading[k]; if(typeof v==='string'){LAND_IMG[k]=v; if(store.mode==='gm') gmRerender(); if(scr.mode==='land') {scr.sentImg=null; scrPush(true)}}})}
+function zmImgsExport(g){var o={}; (g.zemli||[]).forEach(function(L){if(L.img.indexOf('k:')===0){var k=L.img.slice(2); if(LAND_IMG[k]) o[k]=LAND_IMG[k]}}); return o}
+function zmImgsImport(imgs){if(!imgs||typeof imgs!=='object') return; Object.keys(imgs).forEach(function(k){var v=imgs[k]; if(typeof v!=='string'||v.indexOf('data:image/')!==0) return; LAND_IMG[k]=v;
+ if(backend==='idb'&&IDB) idbPut(k,v).catch(function(){}); else (gm().zemli||[]).forEach(function(L){if(L.img==='k:'+k) L.img=v})})}
+function zmReadFile(f){return new Promise(function(res,rej){var r=new FileReader(); r.onload=function(){var src=String(r.result||''); var im=new Image(); im.onload=function(){res({src:src,w:im.naturalWidth,h:im.naturalHeight})}; im.onerror=function(){rej(new Error('img'))}; im.src=src}; r.onerror=function(){rej(r.error)}; r.readAsDataURL(f)})}
+function zmKB(src){var n=Math.round(src.length*0.75/1024); return n>1024?(n/1024).toFixed(1).replace('.',',')+' МБ':n+' КБ'}
+
+/* --- вид --- */
+function zmSegHtml(){return '<div class="seg zm-seg" role="tablist" aria-label="Места"><label><input type="radio" name="zmv" data-zmv="locs"'+(zmView!=='zemli'?' checked':'')+'><span>'+svg(tabIc('mesta'))+'Схемы мест</span></label><label><input type="radio" name="zmv" data-zmv="zemli"'+(zmView==='zemli'?' checked':'')+'><span>'+svg(ZM_IC)+'Земли'+(zmList().length?' · '+zmList().length:'')+'</span></label></div>'}
+function zmPinHtml(p,L,isParty){var K=LAND_K[p.k];
+ return '<button class="zm-pin k-'+p.k+(p.open?' open':'')+(zmSel===p.id?' sel':'')+(L.partyPin===p.id?' party':'')+'" data-zpin="'+esc(p.id)+'" style="left:'+(p.x*100).toFixed(3)+'%;top:'+(p.y*100).toFixed(3)+'%" aria-label="'+esc(p.n+(p.open?'':' (скрыто от игроков)'))+'"><i>'+svg(K[1])+'</i><b>'+esc(p.n)+'</b>'+(L.partyPin===p.id?'<em class="zm-flag" title="Ватага здесь">'+svg(ZM_PARTY)+'</em>':'')+'</button>'}
+function zemliHtml(){
+ var Ls=zmList(), L=zmCurLand();
+ var h='<section class="sec zm">'+gmHead('gm-zemli','Земли',Ls.length?Ls.length+' '+plural(Ls.length,'карта','карты','карт'):'')+
+  '<p class="hint">Глобальная карта: загрузите свою картинку — царство, край, уезд — и расставьте метки городов, сёл, застав и урочищ. Метки связываются со схемами мест, вики, грамотами и сценами истории. Игроки видят карту только на экране игроков, и только открытые метки.</p>';
+ var up='<label class="btn'+(Ls.length?'':' pri')+' zm-up">'+svg(IC.plus)+(Ls.length?'Ещё карта':'Загрузить карту')+'<input type="file" accept="image/*" data-zmfile="new" hidden></label>';
+ if(!L) return h+'<div class="empty">Карт пока нет. Загрузите картинку — JPG, PNG или WebP. Картинка хранится на этом устройстве и в файле стола мастера .save, в саму летопись не встраивается.</div>'+up+'</div></section>';
+ if(Ls.length>1) h+='<div class="plot-bar zm-bar" role="tablist" aria-label="Карты">'+Ls.map(function(x,i){return '<button class="plot-chip'+(x.id===L.id?' on':'')+'" data-zm="land" data-id="'+esc(x.id)+'" role="tab" aria-selected="'+(x.id===L.id)+'"><i>'+(i+1)+'</i>'+esc(x.n)+'</button>'}).join('')+'</div>';
+ zmEnsure(L); var src=zmSrc(L), onScr=scr.mode==='land'&&scr.land===L.id&&scrAlive();
+ h+='<div class="zm-head"><input class="inp zm-name" data-zmf="n" value="'+esc(L.n)+'" aria-label="Название карты" autocomplete="off">'+
+  (onScr?'<span class="scr-on sm"><span class="scr-dot" aria-hidden="true"></span>На экране<button class="btn sm" data-scr="hide">Убрать</button></span>':'<button class="btn sm pri" data-zm="scr">'+svg(SCR_IC)+'Экран игроков</button>')+
+  '<button class="btn sm" data-zm="menu">Карта…</button></div>';
+ h+='<div class="zm-tools"><div class="seg three zm-tool" role="group" aria-label="Инструмент">'+[['hand','Смотреть','<path d="M8 13 V5.5 a1.5 1.5 0 0 1 3 0 V11 M11 10 V4 a1.5 1.5 0 0 1 3 0 V11 M14 10.5 V5.5 a1.5 1.5 0 0 1 3 0 V13 c0 4 -2 7.5 -6 7.5 c-3 0 -4.5 -1.5 -6 -4 l-2 -3.5 a1.5 1.5 0 0 1 2.6 -1.5 L8 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>'],['pin','Метка',LAND_K.inoe[1]],['party','Ватага',ZM_PARTY]].map(function(t){return '<label><input type="radio" name="zmt" data-zmt="'+t[0]+'"'+(zmTool===t[0]?' checked':'')+'><span>'+svg(t[2])+t[1]+'</span></label>'}).join('')+'</div>'+
+  '<div class="sg-zoom" role="group" aria-label="Масштаб"><button class="ibtn" data-zm="zoom" data-d="-1" aria-label="Мельче">−</button><button class="ibtn" data-zm="fit" aria-label="Вместить">'+svg('<path d="M4 9 V4 H9 M15 4 H20 V9 M20 15 V20 H15 M9 20 H4 V15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>')+'</button><button class="ibtn" data-zm="zoom" data-d="1" aria-label="Крупнее">+</button></div></div>';
+ h+='<p class="hint zm-tip">'+(zmTool==='pin'?'Коснитесь карты — встанет новая метка. Метку можно перетащить.':zmTool==='party'?'Коснитесь карты — туда встанет знамя ватаги.':'Двигайте карту пальцем или мышью, колёсико и два пальца — масштаб. Коснитесь метки — откроется её карточка.')+'</p>';
+ h+='<div class="zm-wrap'+(zmTool!=='hand'?' t-'+zmTool:'')+'" id="zmWrap" data-id="'+esc(L.id)+'"><div class="zm-plane" id="zmPlane" style="width:'+L.w+'px;height:'+L.h+'px">'+
+  (src?'<img class="zm-img" src="'+src+'" alt="" draggable="false">':'<div class="zm-wait">Картинка загружается…</div>')+
+  L.pins.map(function(p){return zmPinHtml(p,L)}).join('')+
+  (L.party&&!L.partyPin?'<span class="zm-party" style="left:'+(L.party.x*100).toFixed(3)+'%;top:'+(L.party.y*100).toFixed(3)+'%" title="Ватага">'+svg(ZM_PARTY)+'<b>Ватага</b></span>':'')+
+  '</div></div>';
+ var sp=zmSel&&L.pins.filter(function(p){return p.id===zmSel})[0];
+ if(sp) h+=zmSelHtml(sp,L);
+ var open=L.pins.filter(function(p){return p.open}).length;
+ h+='<div class="zm-legend"><span>'+L.pins.length+' '+plural(L.pins.length,'метка','метки','меток')+' · открыто игрокам '+open+'</span>'+(L.party?'<label class="chk sm"><input type="checkbox" data-zmf="showParty"'+(L.showParty?' checked':'')+'> Знамя ватаги на экране</label>':'')+'</div>';
+ var kinds=Object.keys(LAND_K).filter(function(k){return L.pins.some(function(p){return p.k===k})});
+ if(L.pins.length){
+  h+='<h3 class="zm-lh">Места на карте</h3>'+srchHtml('#zm-list','Искать место: название, описание, заметка');
+  if(kinds.length>1) h+='<div class="filt zm-filt" role="group" aria-label="Вид места"><button class="pbtn sm'+(zmKindF?'':' on')+'" data-zm="kf" data-v="">Все</button>'+kinds.map(function(k){return '<button class="pbtn sm'+(zmKindF===k?' on':'')+'" data-zm="kf" data-v="'+k+'">'+svg(LAND_K[k][1])+LAND_K[k][0]+'</button>'}).join('')+'</div>';
+  var L2=L.pins.filter(function(p){return !zmKindF||p.k===zmKindF}).slice().sort(function(a,b){return a.n.localeCompare(b.n,'ru')});
+  h+='<div class="list zm-list" id="zm-list">'+L2.map(function(p){var sc=zmScenes(p.id).length;
+   return '<button class="item zm-it'+(p.id===zmSel?' on':'')+'" data-zm="pick" data-id="'+esc(p.id)+'" data-q="'+srchQ(p.n,p.d,p.note,LAND_K[p.k][0])+'"><span class="dar-ico zm-ic k-'+p.k+'" aria-hidden="true">'+svg(LAND_K[p.k][1])+'</span><span class="item-main" style="cursor:pointer"><span class="item-name">'+esc(p.n)+(L.partyPin===p.id?' <span class="chip neu">ватага здесь</span>':'')+'</span><span class="item-note">'+LAND_K[p.k][0]+(p.open?' · открыто игрокам':' · скрыто')+(p.att.length+sc?' · связей: '+(p.att.length+sc):'')+(p.d?' · '+esc(p.d.slice(0,80)):'')+'</span></span></button>'}).join('')+'</div><p class="np-none hint" hidden>Ничего не нашлось</p>';
+ }
+ return h+up+'</div></section>';
+}
+function zmScenes(pid){var r=[]; (gm().story&&gm().story.plots||[]).forEach(function(P){P.nodes.forEach(function(n){if(n.att.some(function(a){return a.k==='pin'&&a.id===pid})) r.push({P:P,n:n})})}); return r}
+function zmAttObj(a){return a.k==='loc'?locById(a.id):a.k==='wiki'?wikiById(a.id):a.k==='doc'?docById(a.id):null}
+function zmAttName(a){var o=zmAttObj(a); return o?(o.name||o.t||o.title||'Без названия'):'(удалено)'}
+function zmSelHtml(p,L){var K=LAND_K[p.k], sc=zmScenes(p.id);
+ var h='<article class="zm-card k-'+p.k+'"><div class="zm-card-h"><span class="dar-ico zm-ic k-'+p.k+'" aria-hidden="true">'+svg(K[1])+'</span><div><b>'+esc(p.n)+'</b><small>'+K[0]+(p.open?' · <span class="zm-open">открыто игрокам</span>':' · скрыто от игроков')+'</small></div><button class="xbtn" data-zm="unsel" aria-label="Закрыть карточку">×</button></div>';
+ if(p.d) h+='<p class="zm-d">'+esc(p.d)+'</p>';
+ if(p.note) h+='<p class="sp-secret">'+esc(p.note)+'</p>';
+ if(p.att.length||sc.length) h+='<div class="zm-links">'+p.att.map(function(a){var o=zmAttObj(a);
+   var act=!o?'':a.k==='loc'?'<button class="btn sm" data-g="openLoc" data-id="'+esc(a.id)+'">Открыть</button>'+scrBtnHtml(o,true):a.k==='doc'?'<button class="btn sm" data-scr="doc" data-id="'+esc(a.id)+'">'+svg(SCR_IC)+'На экран</button><button class="btn sm" data-doc="qr" data-id="'+esc(a.id)+'">'+svg(QR_ICS)+'Игроку тайно</button>':'<button class="btn sm" data-zm="wiki" data-id="'+esc(a.id)+'">Прочесть</button>';
+   return '<div class="zm-link"><span class="zm-lk">'+svg(ZM_ATT[a.k][1])+'<small>'+(a.k==='wiki'&&o&&WIKI_T[o.type]?WIKI_T[o.type][0]:ZM_ATT[a.k][0])+'</small><b>'+esc(zmAttName(a))+'</b></span><span class="zm-la">'+act+'</span></div>'}).join('')+
+  sc.map(function(s){return '<div class="zm-link"><span class="zm-lk">'+svg(tabIc('istoria'))+'<small>Сцена · '+esc(s.P.t)+'</small><b>'+esc(s.n.t||'Без названия')+'</b></span><span class="zm-la"><button class="btn sm" data-zm="scene" data-p="'+esc(s.P.id)+'" data-id="'+esc(s.n.id)+'">К сцене</button></span></div>'}).join('')+'</div>';
+ h+='<div class="row-btns"><button class="btn sm pri" data-zm="edit" data-id="'+esc(p.id)+'">Изменить</button><button class="btn sm" data-zm="open" data-id="'+esc(p.id)+'">'+(p.open?'Скрыть от игроков':'Открыть игрокам')+'</button><button class="btn sm" data-zm="here" data-id="'+esc(p.id)+'">'+svg(ZM_PARTY)+(L.partyPin===p.id?'Ватага здесь ✓':'Ватага здесь')+'</button></div>';
+ return h+'</article>'}
+function zmEditSheet(p){
+ var h='<h2>'+svg(LAND_K[p.k][1])+' Место на карте</h2><div class="stack" style="gap:12px">'+
+  '<div class="fld"><label for="zp-n">Название</label><input class="inp" id="zp-n" data-zpf="n" value="'+esc(p.n)+'" autocomplete="off"></div>'+
+  '<div class="fld"><span class="lbl">Вид</span><div class="zm-kinds">'+Object.keys(LAND_K).map(function(k){return '<button type="button" class="zm-kind'+(p.k===k?' on':'')+'" data-zm="kind" data-v="'+k+'" aria-pressed="'+(p.k===k)+'">'+svg(LAND_K[k][1])+LAND_K[k][0]+'</button>'}).join('')+'</div></div>'+
+  '<label class="chk"><input type="checkbox" data-zpf="open"'+(p.open?' checked':'')+'> <span>Открыто игрокам — метка видна на экране игроков</span></label>'+
+  '<div class="fld"><label for="zp-d">Что о месте знают все</label><textarea class="inp" id="zp-d" data-zpf="d" rows="3" placeholder="Стольный город на озере, торг у собора…">'+esc(p.d)+'</textarea></div>'+
+  '<div class="fld"><label for="zp-note">Тайное мастера</label><textarea class="inp" id="zp-note" data-zpf="note" rows="3" placeholder="Что здесь на самом деле">'+esc(p.note)+'</textarea></div>'+
+  '<div><p class="lbl" style="margin:0 0 6px">Связано</p>'+(p.att.length?'<div class="list">'+p.att.map(function(a,i){return '<div class="item"><span class="dar-ico" aria-hidden="true">'+svg(ZM_ATT[a.k][1])+'</span><span class="item-main" style="cursor:default"><span class="item-name">'+esc(zmAttName(a))+'</span><span class="item-note">'+ZM_ATT[a.k][0]+'</span></span><button class="xbtn" data-zm="attRm" data-i="'+i+'" aria-label="Отвязать">×</button></div>'}).join('')+'</div>':'<p class="hint">Привяжите схему места, знакомцев из вики или грамоты. Сцены истории привязываются в узле истории — «Привязать» → «Места на карте».</p>')+
+  '<button class="btn sm" data-zm="attAdd" style="margin-top:8px">'+svg(IC.plus)+'Привязать</button></div>'+
+  '<div class="row-btns"><button class="btn pri" data-zm="done">Готово</button><button class="btn danger" data-zm="del" data-id="'+esc(p.id)+'">Удалить метку</button></div></div>';
+ openSheet(h)}
+function zmAttPicker(p){var g=gm(), groups=[['loc','Схемы мест',g.locs],['wiki','Вики и знакомцы',g.wiki],['doc','Грамоты',g.docs||[]]];
+ var h='<h2>Привязать к месту</h2>'+srchHtml('#zma-list','Искать')+'<div id="zma-list">';
+ groups.forEach(function(gr){if(!gr[2].length) return; h+='<div class="sa-grp"><p class="lbl" style="margin:0 0 6px">'+gr[1]+'</p><div class="stack" style="gap:6px">'+gr[2].map(function(o){var on=p.att.some(function(a){return a.k===gr[0]&&a.id===o.id});
+   return '<button class="item sa-it'+(on?' on':'')+'" data-zm="attPick" data-k="'+gr[0]+'" data-id="'+esc(o.id)+'" data-q="'+srchQ(o.name||o.t||o.title||'')+'"><span class="dar-ico" aria-hidden="true">'+svg(ZM_ATT[gr[0]][1])+'</span><span class="item-name">'+esc(o.name||o.t||o.title||'Без названия')+(on?' ✓':'')+'</span></button>'}).join('')+'</div></div>'});
+ h+='<p class="np-none hint" hidden>Ничего не нашлось</p></div><button class="btn" data-zm="back">Назад к месту</button>';
+ openSheet(h)}
+function zmMenuSheet(L){openSheet('<h2>'+svg(ZM_IC)+' '+esc(L.n)+'</h2><div class="stack" style="gap:10px"><p class="hint">Картинка '+L.w+'×'+L.h+' · '+zmKB(zmSrc(L)||'')+' · хранится на этом устройстве и попадает в файл стола мастера .save.</p>'+
+ '<label class="btn">Заменить картинку<input type="file" accept="image/*" data-zmfile="replace" hidden></label><p class="hint" style="margin-top:-4px">Метки останутся на тех же местах относительно краёв картинки.</p>'+
+ '<button class="btn" data-zm="allOpen">Открыть игрокам все метки</button><button class="btn" data-zm="allHide">Скрыть от игроков все метки</button>'+(L.party?'<button class="btn" data-zm="noParty">Убрать знамя ватаги</button>':'')+
+ '<button class="btn danger" data-zm="landDel">Удалить карту</button><button class="btn" data-act="closeSheet">Закрыть</button></div>')}
+function zmPickList(){var r=[]; zmList().forEach(function(L){L.pins.forEach(function(p){r.push({id:p.id,name:p.n+' — '+L.n})})}); return r}
+function zmAttCard(p){var L=zmLandOfPin(p.id); if(!L) return '';
+ return '<p>'+LAND_K[p.k][0]+' · '+esc(L.n)+(p.open?' · открыто игрокам':' · скрыто от игроков')+'</p>'+(p.d?'<p>'+esc(p.d)+'</p>':'')+(p.note?'<p class="sp-secret">'+esc(p.note)+'</p>':'')+
+  '<div class="sp-acts"><button class="btn sm pri" data-zm="goto" data-id="'+esc(p.id)+'">'+svg(ZM_IC)+'На карте</button><button class="btn sm" data-zm="here" data-id="'+esc(p.id)+'">'+svg(ZM_PARTY)+(L.partyPin===p.id?'Ватага здесь ✓':'Ватага здесь')+'</button><button class="btn sm" data-zm="open" data-id="'+esc(p.id)+'">'+(p.open?'Скрыть от игроков':'Открыть игрокам')+'</button></div>'}
+function zmSetParty(p){var L=zmLandOfPin(p.id); if(!L) return null; L.party={x:p.x,y:p.y}; L.partyPin=p.id; return L}
+function zmAutoParty(n){if(!n||!n.att) return; var a=n.att.filter(function(x){return x.k==='pin'})[0]; var p=a&&zmPinById(a.id); if(p) zmSetParty(p)}
+
+/* --- масштаб и жесты --- */
+function zmApply(){var w=document.getElementById('zmWrap'), pl=document.getElementById('zmPlane'); if(!w||!pl) return; var v=zmViews[w.dataset.id]; if(!v) return;
+ pl.style.transform='translate('+v.x.toFixed(1)+'px,'+v.y.toFixed(1)+'px) scale('+v.s.toFixed(5)+')'; pl.style.setProperty('--is',(1/v.s).toFixed(5))}
+function zmFit(L,w){var W=w.clientWidth||600, H=w.clientHeight||500, s=Math.min(W/L.w,H/L.h); return {x:(W-L.w*s)/2,y:(H-L.h*s)/2,s:s,min:s*0.6}}
+function zmAfter(){var w=document.getElementById('zmWrap'); if(!w) return; var L=zmById(w.dataset.id); if(!L) return;
+ var f=zmFit(L,w); if(!zmViews[L.id]) zmViews[L.id]=f; else zmViews[L.id].min=f.min;
+ if(zmCenterReq){var p=L.pins.filter(function(x){return x.id===zmCenterReq})[0]; zmCenterReq=null; if(p){var v=zmViews[L.id], s=Math.max(v.s,f.s*2.2); v.s=s; v.x=w.clientWidth/2-p.x*L.w*s; v.y=w.clientHeight/2-p.y*L.h*s}}
+ zmApply()}
+function zmZoomAt(L,cx,cy,k){var v=zmViews[L.id]; if(!v) return; var ns=Math.max(v.min||0.05,Math.min(6,v.s*k)); v.x=cx-(cx-v.x)*(ns/v.s); v.y=cy-(cy-v.y)*(ns/v.s); v.s=ns; zmApply()}
+var zmG=null;
+document.addEventListener('pointerdown',function(e){var w=e.target.closest&&e.target.closest('#zmWrap'); if(!w) return; var L=zmById(w.dataset.id); if(!L||!zmViews[L.id]) return;
+ if(!zmG) zmG={L:L,pts:{},moved:false,pin:null,start:null};
+ var r=w.getBoundingClientRect(); zmG.pts[e.pointerId]={x:e.clientX-r.left,y:e.clientY-r.top};
+ var ids=Object.keys(zmG.pts);
+ if(ids.length===1){var pe=e.target.closest('[data-zpin]'); zmG.start={x:e.clientX,y:e.clientY,vx:zmViews[L.id].x,vy:zmViews[L.id].y}; zmG.pin=pe?pe.dataset.zpin:null; zmG.drag=!!(pe&&zmTool==='pin'); zmG.moved=false}
+ else if(ids.length===2){var a=zmG.pts[ids[0]], b=zmG.pts[ids[1]]; zmG.pinch={d:Math.hypot(a.x-b.x,a.y-b.y)||1}; zmG.moved=true; zmG.drag=false}
+ try{w.setPointerCapture(e.pointerId)}catch(_){}
+ e.preventDefault()});
+document.addEventListener('pointermove',function(e){if(!zmG||!zmG.pts[e.pointerId]) return; var w=document.getElementById('zmWrap'); if(!w) {zmG=null; return} var L=zmG.L, v=zmViews[L.id], r=w.getBoundingClientRect();
+ zmG.pts[e.pointerId]={x:e.clientX-r.left,y:e.clientY-r.top}; var ids=Object.keys(zmG.pts);
+ if(ids.length>=2&&zmG.pinch){var a=zmG.pts[ids[0]], b=zmG.pts[ids[1]], d=Math.hypot(a.x-b.x,a.y-b.y)||1; zmZoomAt(L,(a.x+b.x)/2,(a.y+b.y)/2,d/zmG.pinch.d); zmG.pinch.d=d; return}
+ var dx=e.clientX-zmG.start.x, dy=e.clientY-zmG.start.y; if(!zmG.moved&&Math.hypot(dx,dy)<6) return; zmG.moved=true;
+ if(zmG.drag&&zmG.pin){var p=L.pins.filter(function(x){return x.id===zmG.pin})[0]; if(p){var pt=zmG.pts[e.pointerId]; p.x=Math.max(0,Math.min(1,(pt.x-v.x)/v.s/L.w)); p.y=Math.max(0,Math.min(1,(pt.y-v.y)/v.s/L.h)); var el=w.querySelector('[data-zpin="'+p.id+'"]'); if(el){el.style.left=(p.x*100)+'%'; el.style.top=(p.y*100)+'%'}} return}
+ v.x=zmG.start.vx+dx; v.y=zmG.start.vy+dy; zmApply()});
+function zmUp(e){if(!zmG||!zmG.pts[e.pointerId]) return; var G=zmG, L=G.L, w=document.getElementById('zmWrap'), pt=G.pts[e.pointerId]; delete G.pts[e.pointerId];
+ if(Object.keys(G.pts).length) {G.pinch=null; var k=Object.keys(G.pts)[0]; G.start={x:e.clientX,y:e.clientY,vx:zmViews[L.id].x,vy:zmViews[L.id].y}; return}
+ zmG=null; if(!w||e.type==='pointercancel') return; var v=zmViews[L.id];
+ if(G.drag&&G.moved){if(G.pin&&L.partyPin===G.pin){var pp=zmPinById(G.pin); if(pp) L.party={x:pp.x,y:pp.y}} gmSave(); return}
+ if(G.moved) return;
+ var ix=(pt.x-v.x)/v.s/L.w, iy=(pt.y-v.y)/v.s/L.h;
+ if(G.pin){zmSel=zmSel===G.pin?null:G.pin; gmRerender(); return}
+ if(ix<0||iy<0||ix>1||iy>1) return;
+ if(zmTool==='pin'){var np=zmPinNorm({n:'Новое место',k:'inoe',x:ix,y:iy}); L.pins.push(np); zmSel=np.id; gmSave(); gmRerender(); zmEditSheet(np); var f=document.getElementById('zp-n'); if(f){f.focus(); f.select()} return}
+ if(zmTool==='party'){L.party={x:ix,y:iy}; L.partyPin=''; gmSave(); gmRerender(); toast('Знамя ватаги поставлено'); return}
+ if(zmSel){zmSel=null; gmRerender()}}
+document.addEventListener('pointerup',zmUp); document.addEventListener('pointercancel',zmUp);
+document.addEventListener('wheel',function(e){var w=e.target.closest&&e.target.closest('#zmWrap'); if(!w) return; var L=zmById(w.dataset.id); if(!L) return; e.preventDefault(); var r=w.getBoundingClientRect(); zmZoomAt(L,e.clientX-r.left,e.clientY-r.top,e.deltaY<0?1.15:1/1.15)},{passive:false});
+
+/* --- действия --- */
+function zmRefreshSheet(p){var sh=document.querySelector('.sheet'); var st=sh&&sh.querySelector('.panel').scrollTop; zmEditSheet(p); var p2=document.querySelector('.sheet .panel'); if(p2&&st) p2.scrollTop=st}
+document.addEventListener('click',function(e){var el=e.target.closest('[data-zm]'); if(!el) return; var a=el.dataset.zm, L=zmCurLand(), p=(a==='attPick'||a==='attRm'||a==='back'||a==='kind'||a==='attAdd'||!el.dataset.id)?(zmSel&&zmPinById(zmSel)):zmPinById(el.dataset.id);
+ switch(a){
+  case 'land': zmCur=el.dataset.id; zmSel=null; zmKindF=''; gmRerender(); return;
+  case 'zoom': var w=document.getElementById('zmWrap'); if(L&&w) zmZoomAt(L,w.clientWidth/2,w.clientHeight/2,Number(el.dataset.d)>0?1.35:1/1.35); return;
+  case 'fit': var w2=document.getElementById('zmWrap'); if(L&&w2){zmViews[L.id]=zmFit(L,w2); zmApply()} return;
+  case 'unsel': zmSel=null; gmRerender(); return;
+  case 'pick': zmSel=el.dataset.id; zmCenterReq=el.dataset.id; gmRerender(); var ww=document.getElementById('zmWrap'); if(ww) ww.scrollIntoView({block:'center',behavior:'smooth'}); return;
+  case 'kf': zmKindF=el.dataset.v; gmRerender(); return;
+  case 'edit': if(p) zmEditSheet(p); return;
+  case 'kind': if(p){p.k=el.dataset.v; gmSave(); zmRefreshSheet(p); gmRerender()} return;
+  case 'open': if(p){p.open=!p.open; gmSave(); gmRerender(); toast(p.open?'«'+p.n+'» открыто игрокам':'«'+p.n+'» скрыто от игроков')} return;
+  case 'here': if(p){var Lp=zmSetParty(p); gmSave(); gmRerender(); toast('Ватага: '+p.n+(Lp&&!p.open?' — место пока скрыто от игроков':''))} return;
+  case 'done': closeSheet(); gmRerender(); return;
+  case 'del': if(p){var Ld=zmLandOfPin(p.id), i=Ld.pins.indexOf(p); Ld.pins.splice(i,1); if(Ld.partyPin===p.id) Ld.partyPin=''; zmSel=null; closeSheet(); gmSave(); gmRerender(); undo=null; toast('Метка «'+p.n+'» удалена')} return;
+  case 'attAdd': if(p) zmAttPicker(p); return;
+  case 'attPick': if(p){var ix=-1; p.att.forEach(function(x,j){if(x.k===el.dataset.k&&x.id===el.dataset.id) ix=j}); if(ix>-1) p.att.splice(ix,1); else p.att.push({k:el.dataset.k,id:el.dataset.id}); gmSave(); var pa=document.querySelector('.sheet .panel'), pst=pa?pa.scrollTop:0; zmAttPicker(p); var pb=document.querySelector('.sheet .panel'); if(pb) pb.scrollTop=pst} return;
+  case 'attRm': if(p){p.att.splice(Number(el.dataset.i),1); gmSave(); zmRefreshSheet(p)} return;
+  case 'back': if(p) zmEditSheet(p); return;
+  case 'wiki': var wk=wikiById(el.dataset.id); if(wk) openSheet('<h2>'+esc(wk.name)+'</h2>'+(wk.who?'<p class="hint">'+esc(wk.who)+(wk.where?' · '+esc(wk.where):'')+'</p>':'')+'<p style="white-space:pre-line">'+esc(wk.text||'')+'</p><button class="btn" data-act="closeSheet">Закрыть</button>'); return;
+  case 'scene': var B=book(); if(B.plots.some(function(x){return x.id===el.dataset.p})){B.open=el.dataset.p; B.mode='graph'; storySel=el.dataset.id; stView='plots'; store.gmTab='istoria'; gmSave(); render(); window.scrollTo(0,0)} return;
+  case 'goto': var Lg=zmLandOfPin(el.dataset.id); if(Lg){zmView='zemli'; zmCur=Lg.id; zmSel=el.dataset.id; zmCenterReq=el.dataset.id; gm().openLoc=null; store.gmTab='mesta'; gmSave(); render(); var wg=document.getElementById('zmWrap'); if(wg) wg.scrollIntoView({block:'center'})} return;
+  case 'scr': if(L&&scrOpen()){scr.mode='land'; scr.land=L.id; scr.last=''; scrPush(true); gmRerender(); toast('На экране игроков: «'+L.n+'»')} return;
+  case 'menu': if(L) zmMenuSheet(L); return;
+  case 'allOpen': case 'allHide': if(L){L.pins.forEach(function(x){x.open=a==='allOpen'}); gmSave(); closeSheet(); gmRerender(); toast(a==='allOpen'?'Все метки открыты игрокам':'Все метки скрыты')} return;
+  case 'noParty': if(L){L.party=null; L.partyPin=''; gmSave(); closeSheet(); gmRerender()} return;
+  case 'landDel': if(L&&confirm('Удалить карту «'+L.n+'» вместе с метками?')){var Z=zmList(); Z.splice(Z.indexOf(L),1); if(L.img.indexOf('k:')===0&&IDB){idbDel(L.img.slice(2)); delete LAND_IMG[L.img.slice(2)]} if(scr.land===L.id&&scr.mode==='land') scrHide(); zmCur=null; zmSel=null; closeSheet(); gmSave(); gmRerender(); toast('Карта удалена')} return;
+ }
+});
+document.addEventListener('change',function(e){var t=e.target; if(!t.dataset) return;
+ if(t.dataset.zmv){zmView=t.dataset.zmv; gm().openLoc=null; gmRerender(); return}
+ if(t.dataset.zmt){zmTool=t.dataset.zmt; gmRerender(); return}
+ if(t.dataset.zmf==='showParty'){var L=zmCurLand(); if(L){L.showParty=t.checked; gmSave()} return}
+ if(t.dataset.zpf==='open'){var p=zmSel&&zmPinById(zmSel); if(p){p.open=t.checked; gmSave(); gmRerender()} return}
+ if(t.dataset.zmfile){var f=t.files&&t.files[0]; if(!f) return; if(!/^image\//.test(f.type)){toast('Это не картинка'); return}
+  var mode=t.dataset.zmfile; toast('Загружаю карту…');
+  zmReadFile(f).then(function(r){return zmImgPut(r.src).then(function(img){
+   if(mode==='replace'){var L=zmCurLand(); if(!L) return; var old=L.img; L.img=img; L.w=r.w; L.h=r.h; if(old.indexOf('k:')===0&&old!==img&&IDB){idbDel(old.slice(2)); delete LAND_IMG[old.slice(2)]} delete zmViews[L.id]; scr.sentImg=null; closeSheet()}
+   else {var nL=zmNorm({n:f.name.replace(/\.[^.]+$/,'').slice(0,80)||'Карта',img:img,w:r.w,h:r.h,pins:[]}); zmList().push(nL); zmCur=nL.id; zmSel=null}
+   gmSave(); gmRerender(); if(scr.mode==='land') scrPush(true); toast('Карта загружена: '+r.w+'×'+r.h+', '+zmKB(r.src))})}).catch(function(){toast('Не удалось прочитать картинку')});
+ }
+});
+document.addEventListener('input',function(e){var t=e.target; if(!t.dataset) return;
+ if(t.dataset.zmf==='n'){var L=zmCurLand(); if(L){L.n=t.value.slice(0,80)||'Карта'; gmSave()} return}
+ if(t.dataset.zpf&&t.dataset.zpf!=='open'){var p=zmSel&&zmPinById(zmSel); if(p){p[t.dataset.zpf]=t.value.slice(0,3000); gmSave()}}
+});
+
+/* --- экран игроков --- */
+function zmPayload(L){var r={letopis:'scr',t:'land',id:L.id,n:L.n,k:zmKey(L),w:L.w,h:L.h,pins:L.pins.filter(function(p){return p.open}).map(function(p){return {id:p.id,n:p.n,k:p.k,x:+p.x.toFixed(4),y:+p.y.toFixed(4)}}),party:null,here:''}; (function(o){if(!L.showParty||!L.party) return; var hp=L.partyPin&&zmPinById(L.partyPin); if(hp&&hp.open) o.here=hp.id; else o.party={x:+L.party.x.toFixed(4),y:+L.party.y.toFixed(4)}})(r); return r}
+var scrImgs={};
+function scrLand(d){var st=document.getElementById('scrStage'); scrPrev=null; st.style.removeProperty('--ar');
+ document.getElementById('scrName').textContent=String(d.n||'').slice(0,80); scrCap('Летопись Земель');
+ var w=Math.max(1,Number(d.w)||1), h=Math.max(1,Number(d.h)||1), key=String(d.k||'')+'|'+w+'x'+h, src=scrImgs[d.k]||'';
+ var box=st.querySelector('.sl-box');
+ if(!box||box.dataset.k!==key){st.innerHTML='<div class="sl"><div class="sl-box" data-k="'+esc(key)+'" data-w="'+w+'" data-h="'+h+'">'+(src?'<img class="sl-img" src="'+src+'" alt="">':'<div class="sl-wait">Карта загружается…</div>')+'<div class="sl-pins"></div></div></div>'; box=st.querySelector('.sl-box')}
+ else if(src&&!box.querySelector('img')){var wt=box.querySelector('.sl-wait'); if(wt) wt.remove(); box.insertAdjacentHTML('afterbegin','<img class="sl-img" src="'+src+'" alt="">')}
+ var P=(Array.isArray(d.pins)?d.pins:[]).slice(0,600);
+ box.querySelector('.sl-pins').innerHTML=P.map(function(p){var k=LAND_K[p.k]?p.k:'inoe'; return '<span class="sl-pin k-'+k+(p.id&&p.id===d.here?' here':'')+'" style="left:'+(Number(p.x)*100)+'%;top:'+(Number(p.y)*100)+'%"><i>'+svg(LAND_K[k][1])+'</i><b>'+esc(String(p.n||'').slice(0,60))+'</b>'+(p.id&&p.id===d.here?'<em class="sl-flag">'+svg(ZM_PARTY)+'</em>':'')+'</span>'}).join('')+
+  (d.party?'<span class="sl-party" style="left:'+(Number(d.party.x)*100)+'%;top:'+(Number(d.party.y)*100)+'%">'+svg(ZM_PARTY)+'<b>Ватага</b></span>':'');
+ scrLandFit()}
+function scrLandFit(){var st=document.getElementById('scrStage'), box=st&&st.querySelector('.sl-box'); if(!box) return; var W=st.clientWidth-8, H=st.clientHeight-8, w=Number(box.dataset.w), h=Number(box.dataset.h), s=Math.min(W/w,H/h);
+ box.style.width=Math.floor(w*s)+'px'; box.style.height=Math.floor(h*s)+'px'; box.style.setProperty('--u',Math.max(0.6,Math.min(1.6,Math.min(W,H)/800)).toFixed(3))}
+window.addEventListener('resize',function(){if(SCREEN) scrLandFit()});
+document.addEventListener('fullscreenchange',function(){if(SCREEN) setTimeout(scrLandFit,60)});
+
 applyTheme(getTheme());
 if(SCREEN) scrBoot(); else boot();
 })();
